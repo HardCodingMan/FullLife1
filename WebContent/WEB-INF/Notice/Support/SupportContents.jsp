@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div id="list">
-                <a href="supportnotice.html"><button>목록</button></a>
+                <a href="/Notice/Support/SupportNotice"><button>목록</button></a>
             </div>
         </section>
         </div>
