@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import apply.model.vo.ApplyNotice;
+
 /**
  * Servlet implementation class ApplyNoticeWriterServlet
  */
@@ -33,8 +35,13 @@ public class ApplyNoticeWriterServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		request.setCharacterEncoding("UTF-8");//한글인코딩
+		String subject = request.getParameter("apply-notice-sub");
+		String Contents = request.getParameter("apply-notice-contents");
+		// 작성자 아이디는 로그인 서블렛에서 가져오기
+		
+		//ApplyNotice 객체에 정보 세팅
+		ApplyNotice applyNotice = new ApplyNotice();
 	}
 
 }
