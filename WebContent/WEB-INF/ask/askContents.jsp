@@ -10,7 +10,7 @@
 <body>
 	<div class="wrapper">
     <header>
-        <div id="header-div"></div>
+        <jsp:include page="/html/header.html"></jsp:include>
     </header>
     <main>
         <section>
@@ -59,5 +59,8 @@
         </section>
         </div>
     </main>
+    <footer>
+    	<jsp:include page="/html/footer.html"></jsp:include>
+    </footer>
 </body>
 </html>
