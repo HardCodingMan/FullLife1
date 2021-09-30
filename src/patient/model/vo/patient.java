@@ -8,7 +8,7 @@ public class patient {
 	private String patientPhone;
 	private String relation;
 	private String patientZumin;
-	private int organId;
+	private int organNo;
 	private Date hospitalTime;
 	private int hospitalNo;
 	private String userId;
@@ -19,14 +19,14 @@ public class patient {
 	
 	
 	public patient(String patientName, String patientAddr, String patientPhone, String relation, String patientZumin,
-			int organId, Date hospitalTime, int hospitalNo, String userId, int historyNo) {
+			int organNo, Date hospitalTime, int hospitalNo, String userId, int historyNo) {
 		super();
 		this.patientName = patientName;
 		this.patientAddr = patientAddr;
 		this.patientPhone = patientPhone;
 		this.relation = relation;
 		this.patientZumin = patientZumin;
-		this.organId = organId;
+		this.organNo = organNo;
 		this.hospitalTime = hospitalTime;
 		this.hospitalNo = hospitalNo;
 		this.userId = userId;
@@ -75,12 +75,12 @@ public class patient {
 		this.patientZumin = patientZumin;
 	}
 
-	public int getOrganId() {
-		return organId;
+	public int getOrganNo() {
+		return organNo;
 	}
 
-	public void setOrganId(int organId) {
-		this.organId = organId;
+	public void setOrganNo(int organNo) {
+		this.organNo = organNo;
 	}
 
 	public Date getHospitalTime() {
@@ -118,7 +118,7 @@ public class patient {
 	@Override
 	public String toString() {
 		return "환자이름=" + patientName + ", 주소=" + patientAddr + ", 전화번호=" + patientPhone
-				+ ", 회원과의관계=" + relation + ", 환자주민번호=" + patientZumin + ", 장기식별번호=" + organId
+				+ ", 회원과의관계=" + relation + ", 환자주민번호=" + patientZumin + ", 장기식별번호=" + organNo
 				+ ", 병원예약시간=" + hospitalTime + ", 병원고유번호=" + hospitalNo + ", 아이디=" + userId
 				+ ", 주문번호=" + historyNo;
 	}
@@ -126,3 +126,6 @@ public class patient {
 	
 
 }
+	
+	
+

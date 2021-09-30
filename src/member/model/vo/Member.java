@@ -7,7 +7,7 @@ public class Member {
 	private int userNo;
 	private String userPwd;
 	private String userName;
-	private double userZumin;
+	private String userZumin;
 	private String userAddr;
 	private String userPhone;
 	private Date regDate;
@@ -19,7 +19,7 @@ public class Member {
 	
 	
 
-	public Member(String userId, int userNo, String userPwd, String userName, double userZumin, String userAddr,
+	public Member(String userId, int userNo, String userPwd, String userName, String userZumin, String userAddr,
 			String userPhone, Date regDate, String relation, char enrolled, int totalPoint) {
 		super();
 		this.userId = userId;
@@ -68,11 +68,11 @@ public class Member {
 		this.userName = userName;
 	}
 
-	public double getUserZumin() {
+	public String getUserZumin() {
 		return userZumin;
 	}
 
-	public void setUserZumin(double userZumin) {
+	public void setUserZumin(String userZumin) {
 		this.userZumin = userZumin;
 	}
 
