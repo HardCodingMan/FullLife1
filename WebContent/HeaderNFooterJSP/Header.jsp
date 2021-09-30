@@ -15,16 +15,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/mooooo
 <<<<<<< HEAD
 <<<<<<< HEAD:WebContent/html/header.html
 <<<<<<< HEAD
 
+=======
+<<<<<<< HEAD:WebContent/HeaderNFooterJSP/Header.jsp
+>>>>>>> origin/JaeWon
             <img src="../img/HSfulllife로고3 (1).png" alt="">
-
 =======
             <img src="/img/HSfulllife로고3 (1).png" alt="">
+<<<<<<< HEAD
 >>>>>>> fb2d342018278e195e30e9ae35a700719bf9a968
 =======
             <img src="../img/HSfulllife로고3 (1).png" alt="">
@@ -48,9 +52,12 @@
 =======
             <img src="/img/HSfulllife로고3 (1).png" alt="">
 >>>>>>> origin/JaeWon
+=======
+>>>>>>> fa09d816ebb29d3ab02cb7c2d92341a7b82c8fa6:WebContent/html/header.html
+>>>>>>> origin/JaeWon
         </div>
         <div id="blank"></div>
-        <div id="header-menu" >
+        <div id="header-menu">
             <ul>
                 <li class="main-menu"><a href="#">장기이식</a></li>
                 <li class="main-menu">
