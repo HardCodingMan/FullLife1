@@ -18,6 +18,7 @@ public class Member {
 	
 	public Member() {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 	
 	public Member(String userId, int userNo, String userPwd, String userName, String userZumin, String userPhone,
@@ -27,6 +28,11 @@ public class Member {
 	public Member(String userId, int userNo, String userPwd, String userName, String userZumin, String userAddr,
 			String userPhone, Date regDate, char enrolled, int totalPoint) {
 >>>>>>> d12308c4e12a0b555794a2d8d5031fd40f8a403c
+=======
+
+	public Member(String userId, int userNo, String userPwd, String userName, String userZumin, String userPhone,
+			String userAddr, String userEmail, Date regDate, char enrolled, int totalPoint) {
+>>>>>>> origin/stitchkang
 		super();
 		this.userId = userId;
 		this.userNo = userNo;
@@ -41,21 +47,6 @@ public class Member {
 		this.totalPoint = totalPoint;
 	}
 	
-	public Member(String userId, String userPwd, String userName, String userZumin, String userPhone, String userAddr,
-			String userEmail) {
-		super();
-		this.userId = userId;
-		this.userPwd = userPwd;
-		this.userName = userName;
-		this.userZumin = userZumin;
-		this.userPhone = userPhone;
-		this.userAddr = userAddr;
-		this.userEmail = userEmail;
-	}
-
-
-
-
 	public String getUserId() {
 		return userId;
 	}
