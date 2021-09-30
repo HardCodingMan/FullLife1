@@ -13,6 +13,7 @@
         <div id="logo">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:WebContent/html/header.html
 <<<<<<< HEAD
 
@@ -39,6 +40,9 @@
             <img src="/img/HSfulllife로고3 (1).png" alt="">
 >>>>>>> origin/Hyunseok
 >>>>>>> origin/mooooo
+=======
+            <img src="/img/HSfulllife로고3 (1).png" alt="">
+>>>>>>> origin/JaeWon
         </div>
         <div id="blank"></div>
         <div id="header-menu" >
