@@ -30,7 +30,7 @@ public class ApplyNoticeWriterServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/Notice/Apply/ApplyNoticeWriter.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/views/Notice/Apply/ApplyNoticeWriter.jsp").forward(request, response);
 	}
 
 	/**
@@ -51,7 +51,7 @@ public class ApplyNoticeWriterServlet extends HttpServlet {
 		if(result > 0) {
 			response.sendRedirect("/Notice/Apply/ApplyNotice");
 		}else {
-			request.getRequestDispatcher("/WEB-INF/Notice/NoticeError.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/views/Notice/NoticeError.jsp").forward(request, response);
 		}
 	}
 }
