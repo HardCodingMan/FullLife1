@@ -1,6 +1,8 @@
 package apply.model.vo;
 
 import java.sql.Date;
+import java.util.List;
+
 
 public class ApplyNotice {
 	
@@ -13,12 +15,28 @@ public class ApplyNotice {
 	private String userId;
 	private int picSize;
 	private String picPath;
-	private char mngCheck;
+	private String mngCheck;
+	
+	// 댓글
+		private List<ApplyNoticeReply> replist;
+		
+		public ApplyNotice(List<ApplyNoticeReply> replist) {
+			super();
+			this.replist = replist;
+		}
+
+		public List<ApplyNoticeReply> getReplist() {
+			return replist;
+		}
+
+		public void setReplist(List<ApplyNoticeReply> replist) {
+			this.replist = replist;
+		}
 	
 	public ApplyNotice() {};
 	
 	public ApplyNotice(int applyNo, String applyTitle, String applyContents, Date enrollDate, int applyLike,
-			int applyViews, String userId, int picSize, String picPath, char mngCheck) {
+			int applyViews, String userId, int picSize, String picPath, String mngCheck) {
 		super();
 		this.applyNo = applyNo;
 		this.applyTitle = applyTitle;
@@ -104,11 +122,11 @@ public class ApplyNotice {
 		this.picPath = picPath;
 	}
 
-	public char getMngCheck() {
+	public String getMngCheck() {
 		return mngCheck;
 	}
 
-	public void setMngCheck(char mngCheck) {
+	public void setMngCheck(String mngCheck) {
 		this.mngCheck = mngCheck;
 	}
 

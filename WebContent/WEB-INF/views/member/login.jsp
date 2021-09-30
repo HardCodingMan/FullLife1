@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="register-util">
-                <a href="#">FullLife에 처음이세요?</a>
+                <a href="/member/enroll">FullLife에 처음이세요?</a>
             </div>
         </div>
  
