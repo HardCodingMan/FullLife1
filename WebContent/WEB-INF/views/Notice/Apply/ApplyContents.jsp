@@ -10,8 +10,8 @@
 </head>
 <body>
 	 <header>
-            <jsp:include page="/html/header.html"></jsp:include>
-        </header>
+        <jsp:include page="/HeaderNFooterJSP/Header.jsp"></jsp:include>
+    </header>
         <main>
             <div class="wrapper">
             <section>
@@ -68,8 +68,8 @@
             </section>
             </div>
         </main>
-        <footer>
-            <jsp:include page="/html/footer.html"></jsp:include>
-        </footer>
+            <footer>
+    	<jsp:include page="/HeaderNFooterJSP/Footer.jsp"></jsp:include>
+    </footer>
 </body>
 </html>
