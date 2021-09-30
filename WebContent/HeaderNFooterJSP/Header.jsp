@@ -14,6 +14,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/mooooo
 <<<<<<< HEAD
@@ -44,6 +45,9 @@
 >>>>>>> origin/JaeWon
 =======
 >>>>>>> origin/mooooo
+=======
+            <img src="/img/HSfulllife로고3 (1).png" alt="">
+>>>>>>> origin/JaeWon
         </div>
         <div id="blank"></div>
         <div id="header-menu" >
