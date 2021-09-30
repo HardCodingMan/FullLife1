@@ -44,7 +44,7 @@ public class ApplyNoticeServlet extends HttpServlet {
 		if(!aList.isEmpty()) {
 			request.setAttribute("aList", aList);
 			request.setAttribute("pageNavi", applyPage.getPageNavi());
-			request.getRequestDispatcher("/WEB-INF/Notice/Apply/ApplyNotice.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/views/Notice/Apply/ApplyNotice.jsp").forward(request, response);
 		}else {
 			request.getRequestDispatcher("/WEB-INF/Notice/NoticeError.jsp").forward(request, response);
 		}
