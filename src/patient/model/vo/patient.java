@@ -118,7 +118,7 @@ public class patient {
 	@Override
 	public String toString() {
 		return "환자이름=" + patientName + ", 주소=" + patientAddr + ", 전화번호=" + patientPhone
-				+ ", 회원과의관계=" + relation + ", 환자주민번호=" + patientZumin + ", 장기식별번호=" + organNo
+				+ ", 구매자와의관계=" + relation + ", 환자주민번호=" + patientZumin + ", 장기식별번호=" + organNo
 				+ ", 병원예약시간=" + hospitalTime + ", 병원고유번호=" + hospitalNo + ", 아이디=" + userId
 				+ ", 주문번호=" + historyNo;
 	}
