@@ -62,9 +62,6 @@
     }
 
 </script>
-<header>
-<jsp:include page="/html/s_mainHeader.html"></jsp:include>
-</header>
    <main id="fullLifeWrap">
         <header class="header">
             <h2>
@@ -151,7 +148,7 @@
     </form>
     </main>
     <footer>
-    <jsp:include page="/html/s_footer.html"></jsp:include>
+    	<jsp:include page="/HeaderNFooterJSP/Footer.jsp"></jsp:include>
     </footer>
 </body>
 </html>
