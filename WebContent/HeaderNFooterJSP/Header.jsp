@@ -11,6 +11,7 @@
 <body>
 <header>
         <div id="logo">
+<<<<<<< HEAD
 <<<<<<< HEAD:WebContent/html/header.html
 <<<<<<< HEAD
 
@@ -22,6 +23,9 @@
 =======
             <img src="../img/HSfulllife로고3 (1).png" alt="">
 >>>>>>> 2fca2955899cce15ea944de7047abec963bed8ed:WebContent/HeaderNFooterJSP/Header.jsp
+=======
+            <img src="/img/HSfulllife로고3 (1).png" alt="">
+>>>>>>> origin/stitchkang
         </div>
         <div id="blank"></div>
         <div id="header-menu" >
