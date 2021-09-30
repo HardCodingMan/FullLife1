@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +11,7 @@
 <body>
 <header>
         <div id="logo">
+<<<<<<< HEAD:WebContent/html/header.html
 <<<<<<< HEAD
 
             <img src="../img/HSfulllife로고3 (1).png" alt="">
@@ -15,6 +19,9 @@
 =======
             <img src="/img/HSfulllife로고3 (1).png" alt="">
 >>>>>>> fb2d342018278e195e30e9ae35a700719bf9a968
+=======
+            <img src="../img/HSfulllife로고3 (1).png" alt="">
+>>>>>>> 2fca2955899cce15ea944de7047abec963bed8ed:WebContent/HeaderNFooterJSP/Header.jsp
         </div>
         <div id="blank"></div>
         <div id="header-menu" >

@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./FONT/fontawesome-free-5.15.4-web/css/all.css">
     <title>FullLife</title>
-    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
     <script>
@@ -39,7 +39,7 @@
     </script>
     <!-------------------------------------------------->
     <header>
-    	<jsp:include page="/html/header.html"></jsp:include>
+    	<jsp:include page="/HeaderNFooterJSP/Header.jsp"></jsp:include>
     </header>
     <main>
         <section class="slide-section" >
@@ -101,7 +101,7 @@
     </main>
         <!------------------------------------------------------------------------------------------------>
     <footer>
-    	<jsp:include page="/html/footer.html"></jsp:include>
+    	<jsp:include page="/HeaderNFooterJSP/Footer.jsp"></jsp:include>
     </footer>
 </body>
 </html>
