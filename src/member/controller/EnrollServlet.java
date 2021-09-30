@@ -37,7 +37,7 @@ public class EnrollServlet extends HttpServlet {
 		String email = request.getParameter("UserEmail");
 		System.out.println(userId);
 			
-		Member member = new Member(userId, userPwd, name, zumin, phone, address, email);
+		Member member = new Member(userId, userPwd, name, zumin, phone, address);
 		int result = new MemberService().registerMember(member);
 		
 		if(result > 0) {
