@@ -90,7 +90,6 @@ public class MemberDAO {
 			JDBCTemplate.close(pstmt);
 		}
 		
-		
 		return userPwd;
 	}
 
@@ -119,4 +118,3 @@ public class MemberDAO {
 		}
 	}
 
-}
