@@ -8,9 +8,9 @@
 <link rel="stylesheet" href="/css/mypage.css">
 </head>
 <body>
-<header>
-	<jsp:include page="/html/header.html"></jsp:include>
-</header>
+	<header>
+        <jsp:include page="/HeaderNFooterJSP/Header.jsp"></jsp:include>
+    </header>
 	<div style="margin: 0;width: 2080px;">
         <div class="mypage">
             <h2>마이페이지</h2>
@@ -61,7 +61,7 @@
         </article>
     </div>
 <footer>
-	<jsp:include page="/html/footer.html"></jsp:include>
+    	<jsp:include page="/HeaderNFooterJSP/Footer.jsp"></jsp:include>
 </footer>
 </body>
 </html>
