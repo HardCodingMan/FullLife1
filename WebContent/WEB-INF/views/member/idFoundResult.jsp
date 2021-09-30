@@ -27,7 +27,7 @@
         </div>
         <div class="footer">
             <div>
-                <a href="#">비밀번호가 기억나지 않으세요?</a>
+                <a href="/member/findPw">비밀번호가 기억나지 않으세요?</a>
             </div>
             <div>
             	<form action="/member/login" method="get">
