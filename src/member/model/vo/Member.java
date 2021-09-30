@@ -46,6 +46,16 @@ public class Member {
 	this.userEmail = userEmail;
 }
 
+   
+public Member(String userId, String userEmail, Date regDate, char enrolled, int totalPoint) {
+	super();
+	this.userId = userId;
+	this.userEmail = userEmail;
+	this.regDate = regDate;
+	this.enrolled = enrolled;
+	this.totalPoint = totalPoint;
+}
+
 public String getUserId() {
       return userId;
    }
