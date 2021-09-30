@@ -57,5 +57,13 @@ public class ApplyNoticeService {
 		return ap;
 	}
 
+	public ApplyNotice printOneByNo(int applyNoticeNo) {
+		ApplyNotice applyNotice = null;
+		Connection conn = null;
+		return null;
+	}
+
+	
+
 
 }

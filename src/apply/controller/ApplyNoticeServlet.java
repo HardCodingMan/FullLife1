@@ -48,7 +48,6 @@ public class ApplyNoticeServlet extends HttpServlet {
 		}else {
 			request.getRequestDispatcher("/WEB-INF/views/Notice/NoticeError.jsp").forward(request, response);
 		}
-		
 	}
 
 	/**
