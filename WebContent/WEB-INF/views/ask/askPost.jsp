@@ -10,7 +10,7 @@
 </head>
 <body>
 	<header>
-	
+	<jsp:include page="/HeaderNFooterJSP/Header.jsp"></jsp:include>
 	</header>
 	<main id="main">
         <div id="main-navi">
@@ -52,5 +52,8 @@
             </div>
         </div>
     </main>
+    <footer>
+    	<jsp:include page="/HeaderNFooterJSP/Footer.jsp"></jsp:include>
+    </footer>
 </body>
 </html>
