@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FullLife</title>
     
-    <link rel="stylesheet" href="../../../FONT/fontawesome-free-5.15.4-web/css/all.css">
-    <link rel="stylesheet" href="../../../CSS/FullLife-Hospital.css">
+    <link rel="stylesheet" href="/FONT/fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="/css/FullLife-Hospital.css">
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&display=swap" rel="stylesheet">
 </head>
@@ -31,41 +31,9 @@
         }
     </script>
     <header>
-        <div id="logo">
-            <img src="../../../img/FullLife_Logo.png" alt="">
-        </div>
-        <div id="blank"></div>
-        <div id="header-menu">
-            <ul>
-                <li class="main-menu"><a href="#">장기이식</a></li>
-                <li class="main-menu">
-                    <a href="#">후원</a>
-                    <ul class="serv-menu">
-                        <li><a href="#">후원</a></li>
-                        <li><a href="#">후원게시판</a></li>
-                        <li><a href="#">신청게시판</a></li>
-                    </ul>
-                </li>
-                <li class="main-menu">
-                    <a href="#">상담</a> 
-                    <ul class="serv-menu">
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">문의하기</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div id="btn-div">
-            <c:if test="${sessionScope.userId eq null }">
-            	<button><a href="/member/login">LOGIN</a></button>
-            </c:if>
-            <c:if test="${sessionScope.userId ne null }">
-            	<button style="width:90px;"><a href="/member/myInfo?userId=${sessionScope.userId }" style="font-weight: 800;">
-            	마이페이지</a></button>
-            </c:if>
-        </div>
+    	<jsp:include page="/HeaderNFooterJSP/Header.jsp"></jsp:include>
     </header>
-<!--     ------------------------------ -->
+	<!---------------------------------->
     <main>
         <section class="hospital-div">
             <div class="input-div">
@@ -195,57 +163,8 @@
     </main>
     <br>
     <!-- ------------------------------ -->
-    <footer class="footer">
-        <div>
-            <div class="footer-field1">
-                <h4>QUICK LINKS</h4> <br>
-                <a href="#">Distributors</a> <br>
-                <a href="#">Products </a><br>
-                <a href="#">News & Events</a> <br>
-                <input type="button" value="GET THE NEWSLETTER">
-            </div>
-            <div class="footer-field2">
-                <h4>LATEST APPLICATION NOTES</h4>
-                <p>Advanced 3D Luminal Breast Cancer Model in FullLife
-                    :Long-term 3D Cell Culture and Co-culture with Fibroblast Cells
-                    <br><br>
-                    Long Term 3D Tumor Spheroid Culture in VitroGel Hydrogel Matrix
-                    <br><br>
-                    3D Invasion of Giloblastoma Cells in vitro Gel Hydrogel System
-                </p>
-            </div>
-            <div class="footer-field3">
-                <h4>RESOURCES</h4>
-                <p>Citation/Publications <br>
-                    Knowledge Base /FAQ <br>
-                    Video Protocols <br></p>
-                    <hr>
-                <p> Order Support <br>
-                    Track Online Order Status
-                </p>
-            </div>
-            <div class="footer-field4">
-                <h4>CONTACT INFO</h4>
-                <p>FullLife BioScience Inc. <br>
-                    Seoul Korea <br>
-                    Seocho-dong, Gangnam-gu, 81634
-                    <br>
-                    <br>
-                    866.3D.CELLS | 010.3232.1010 <br>
-                    Phone: 010-1234-1234 <br>
-                    Faxes: 02-123-1234 <br>
-                    Email: office@fulllife.com <br>
-                    Email: support@fulllife.com <br>
-                    <div class="contact-logo">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram-square"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-twitter-square"></i></a>
-                    </div>
-                </p>
-
-            </div>
-        </div>
+    <footer>
+    	<jsp:include page="/HeaderNFooterJSP/Footer.jsp"></jsp:include>
     </footer>
 </body>
 </html>
