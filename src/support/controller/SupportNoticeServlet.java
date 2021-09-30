@@ -1,4 +1,4 @@
-package supportcontroller;
+package support.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class SupportContentsServlet
+ * Servlet implementation class SupportNoticeServlet
  */
-@WebServlet("/Notice/Support/SupportContents")
-public class SupportContentsServlet extends HttpServlet {
+@WebServlet("/Notice/Support/SupportNotice")
+public class SupportNoticeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SupportContentsServlet() {
+    public SupportNoticeServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,15 +26,14 @@ public class SupportContentsServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/Notice/Support/SupportContents.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/views/Notice/Support/SupportNotice.jsp").forward(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		
 	}
 
 }
