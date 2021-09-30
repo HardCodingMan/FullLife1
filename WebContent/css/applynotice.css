@@ -33,6 +33,10 @@ ul{
             justify-content: center;
             align-items: center;
         }
+	        .notice ul{
+	                border-top: 1px solid black;
+	                border-bottom: 1px solid black;
+	            }
             .notice ul li{
                 list-style: none;
                 text-align: center;
@@ -104,6 +108,9 @@ ul{
                             font-size: 15px;
                             padding: 0px;
                         }
+    #write{
+        float:right;
+    }
     #page{
         text-align: center;
     }

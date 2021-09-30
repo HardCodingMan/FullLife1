@@ -9,7 +9,7 @@
 </head>
 <body>
 	 <header>
-            <div id=header></div>
+            <jsp:include page="/html/header.html"></jsp:include>
         </header>
         <main>
             <div class="wrapper">
