@@ -12,12 +12,25 @@
 <header>
         <div id="logo">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:WebContent/html/header.html
+>>>>>>> origin/mooooo
+<<<<<<< HEAD
 
             <img src="/img/HSfulllife로고3 (1).png" alt="">
 
 =======
             <img src="/img/HSfulllife로고3 (1).png" alt="">
+<<<<<<< HEAD
 >>>>>>> b0edc3540adce6a60bbd3f230ffaaad07a614884
+=======
+>>>>>>> origin/stitchkang
+=======
+            <img src="/img/HSfulllife로고3 (1).png" alt="">
+>>>>>>> origin/Hyunseok
+>>>>>>> origin/mooooo
         </div>
         <div id="blank"></div>
         <div id="header-menu" >

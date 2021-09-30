@@ -63,6 +63,27 @@ public class MemberService {
 		}
 		return userPwd;
 	}
+
+	public int registerMember(Member member) {
+		int result = 0;
+		Connection conn =null;
+		try {
+			conn = jdbcTemplate.createConnection();
+			result = new MemberDAO().insertMember(conn,member);
+			if(result > 0) {
+				JDBCTemplate.commit(conn);
+			}else {
+				JDBCTemplate.rollback(conn);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			JDBCTemplate.close(conn);
+		}
+		
+		return result;
+	}
 	
 
 }
