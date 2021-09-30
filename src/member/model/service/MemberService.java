@@ -83,7 +83,6 @@ public class MemberService {
 		}
 		
 		return result;
-		return 0;
 	}
 	
 
