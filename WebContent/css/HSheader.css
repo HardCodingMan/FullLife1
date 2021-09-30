@@ -29,6 +29,8 @@ header{
     height: 38%;
     margin-top: 5%;
     text-align: center;
+    z-index: 20;
+    position:relative;
 }
     #header-menu ul{
         list-style-type: none;
@@ -47,11 +49,13 @@ header{
         .serv-menu{
             padding: 0;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            background-color: white;
             margin-top: 13%;
             text-align: center;
             line-height: 50px;
             display: none;
             border-top: none;
+            z-index: 20;
         }
             .serv-menu a{
                 display: block;
