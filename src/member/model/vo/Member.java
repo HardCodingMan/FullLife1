@@ -17,8 +17,6 @@ public class Member {
 
 	
 	public Member() {}
-	
-	
 
 
 	public Member(String userId, int userNo, String userPwd, String userName, String userZumin, String userPhone,

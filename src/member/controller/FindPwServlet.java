@@ -40,6 +40,7 @@ public class FindPwServlet extends HttpServlet {
 		String userName = request.getParameter("user-name");
 		String userId = request.getParameter("user-id");
 		String userPwd = new MemberService().getOneMemberForPw(userName, userId);
+		System.out.println(userPwd);
 		if(userPwd != "") {
 			request.setAttribute("userPwd", userPwd);
 		}

@@ -16,22 +16,22 @@
             <h1>비밀번호 찾기 결과</h1>
         </div>
         <div class="output-field">
-        <c:if test="${requestScope.userPwd ne '' }">
+        <c:if test="${requestScope.userPwd ne null }">
             <h4>회원님의 비밀번호입니다.</h4>
             <input type="text" value="${requestScope.userPwd }" readonly>
         </c:if>
-        <c:if test="${userPwd eq '' }">
-            <h4>회원가입해주세요.</h4>
+        <c:if test="${userPwd eq null }">
+            <h4>FullLife에 회원가입하세요.</h4>
             <input type="text" value="없는 회원정보입니다." readonly>
         </c:if>
         </div>
         <div class="footer">
-            <div>
-                <a href="#">비밀번호가 기억나지 않으세요?</a>
-            </div>
+<!--             <div> -->
+<!--                 <a href="#">비밀번호가 기억나지 않으세요?</a> -->
+<!--             </div> -->
             <div>
             	<form action="/member/login" method="get">
-                	<input type="button" value="로그인">
+                	<input type="submit" value="로그인">
                 </form>
             </div>
         </div>
