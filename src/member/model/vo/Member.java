@@ -34,7 +34,19 @@ public class Member {
       this.totalPoint = totalPoint;
    }
    
-   public String getUserId() {
+   public Member(String userId, String userPwd, String userName, String userZumin, String userPhone, String userAddr,
+      String userEmail) {
+   super();
+   this.userId = userId;
+   this.userPwd = userPwd;
+   this.userName = userName;
+   this.userZumin = userZumin;
+   this.userPhone = userPhone;
+   this.userAddr = userAddr;
+   this.userEmail = userEmail;
+}
+
+public String getUserId() {
       return userId;
    }
 
