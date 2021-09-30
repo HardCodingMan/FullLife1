@@ -22,7 +22,7 @@
             <div class="notice">
                 <ul>
                     <li>
-                        <a href="supnoticecontents.html" class="notice-link">
+                        <a href="/Notice/Support/SupportContents" class="notice-link">
                         <div class="list">
                             <div class="list-img">
                                 <img src="img/newsofa.jpg" alt="후원1" class="list-img">

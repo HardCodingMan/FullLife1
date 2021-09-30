@@ -1,4 +1,4 @@
-package applycontroller;
+package apply.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ApplyContentsServlet
+ * Servlet implementation class ApplyNoticeServlet
  */
-@WebServlet("/Notice/Apply/ApplyContents")
-public class ApplyContentsServlet extends HttpServlet {
+@WebServlet("/Notice/Apply/ApplyNotice")
+public class ApplyNoticeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ApplyContentsServlet() {
+    public ApplyNoticeServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,7 +26,7 @@ public class ApplyContentsServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/Notice/Apply/ApplyContents.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/Notice/Apply/ApplyNotice.jsp").forward(request, response);
 	}
 
 	/**
