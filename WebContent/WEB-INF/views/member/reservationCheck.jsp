@@ -10,7 +10,7 @@
 </head>
 <body>
  <header>
-    <jsp:include page="/html/s_mainHeader.html"></jsp:include>
+    <jsp:include page="/HeaderNFooterJSP/Header.jsp"></jsp:include>
  </header>
    <section>
         <div id="title-div">구매 예정 정보</div>
@@ -80,7 +80,7 @@
         </article>
     </section>
 <footer>
-   <jsp:include page="/html/s_footer.html"></jsp:include>
-</footer>
+    	<jsp:include page="/HeaderNFooterJSP/Footer.jsp"></jsp:include>
+    </footer>
 </body>
 </html>
