@@ -24,7 +24,7 @@ public class MemberDAO {
 			if(rset.next()) {
 				member = new Member();
 				member.setUserId(rset.getString("USER_ID"));
-				member.setUserPw(rset.getString("USER_PWD"));
+				member.setUserPwd(rset.getString("USER_PWD"));
 				member.setUserNo(rset.getInt("USER_NO"));
 				member.setUserName(rset.getString("USER_NAME"));
 				member.setTotalPoint(rset.getInt("POINT"));
