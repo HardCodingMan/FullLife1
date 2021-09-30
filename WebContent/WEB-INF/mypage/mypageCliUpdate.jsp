@@ -9,11 +9,11 @@
 </head>
 <body>
 <header>
-	<jsp:include page="/html/hjheader.html"></jsp:include>
+	<jsp:include page="/html/header.html"></jsp:include>
 </header>
 
 <footer>
-	<jsp:include page="/html/hjfooter.html"></jsp:include>
+	<jsp:include page="/html/footer.html"></jsp:include>
 </footer>
 </body>
 </html>
