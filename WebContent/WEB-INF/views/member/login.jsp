@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Full Life 로그인</title>
-    <link rel="stylesheet" href="/CSS/login.css">
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 <body> 
     <main>
