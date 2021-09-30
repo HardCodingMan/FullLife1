@@ -38,6 +38,9 @@
         }
     </script>
     <!-------------------------------------------------->
+    <header>
+    	<jsp:include page="/html/header.html"></jsp:include>
+    </header>
     <main>
         <section class="slide-section" >
             <div class="slides">    
@@ -97,6 +100,8 @@
         </section>
     </main>
         <!------------------------------------------------------------------------------------------------>
-    
+    <footer>
+    	<jsp:include page="/html/footer.html"></jsp:include>
+    </footer>
 </body>
 </html>
