@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import apply.model.vo.ApplyNotice;
+import apply.model.vo.ApplyNoticeReply;
 import common.JDBCTemplate;
 
 public class ApplyNoticeDAO {
@@ -131,6 +132,43 @@ public class ApplyNoticeDAO {
 		}
 		
 		return totalValue;
+	}
+
+	public ApplyNotice selectOneByNo(Connection conn, int applyNoticeNo) {
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		ApplyNotice applyNotice = null;
+		String query = "SELECT * FROM APPLY_NOTICE WHERE APPLY_NO = ?";
+		try {
+			pstmt = conn.prepareStatement(query);
+			pstmt.setInt(1, applyNoticeNo);
+			rset = pstmt.executeQuery();
+			if(rset.next()) {
+				applyNotice = new ApplyNotice();
+				applyNotice.setApplyNo(rset.getInt("APPLY_NO"));
+				applyNotice.setApplyTitle(rset.getString("APPLY_TITLE"));
+				applyNotice.setApplyContents(rset.getString("APPLY_CONTENTS"));
+				applyNotice.setUserId(rset.getString("USER_ID"));
+				applyNotice.setEnrollDate(rset.getDate("ENROLL_DATE"));
+				applyNotice.setApplyLike(rset.getInt("APPLY_LIKE"));
+				applyNotice.setApplyViews(rset.getInt("APPLY_VIEWS"));
+				applyNotice.setPicSize(rset.getInt("PIC_SIZE"));
+				applyNotice.setPicPath(rset.getString("PIC_PATH"));
+				applyNotice.setMngCheck(rset.getString("MNG_CHECK"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(pstmt);
+			JDBCTemplate.close(rset);
+		}
+		return applyNotice;
+	}
+
+	public List<ApplyNoticeReply> selectAllNoticeReply(Connection conn, int applyNoticeNo) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
