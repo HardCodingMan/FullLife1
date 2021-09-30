@@ -6,20 +6,20 @@
     <link rel="stylesheet" href="/css/HSheader.css">
 </head>
 <body>
-    <header>
+<header>
         <div id="logo">
-            <img src="/img/HSfulllife로고3 (1).png" alt="">
+            <img src="./img/FullLife_Logo.png" alt="">
         </div>
         <div id="blank"></div>
-        <div id="header-menu">
+        <div id="header-menu" >
             <ul>
                 <li class="main-menu"><a href="#">장기이식</a></li>
                 <li class="main-menu">
                     <a href="#">후원</a>
                     <ul class="serv-menu">
-                        <li><a href="/Notice/Support/Supportintroduce">후원</a></li>
-                        <li><a href="/Notice/Support/SupportNotice">후원게시판</a></li>
-                        <li><a href="/Notice/Apply/ApplyNotice">신청게시판</a></li>
+                        <li><a href="#">후원</a></li>
+                        <li><a href="#">후원게시판</a></li>
+                        <li><a href="#">신청게시판</a></li>
                     </ul>
                 </li>
                 <li class="main-menu">
@@ -32,7 +32,13 @@
             </ul>
         </div>
         <div id="btn-div">
-            <button><a href="#">LOGIN</a></button>
+           <c:if test="${sessionScope.userId eq null }">
+               <button><a href="/member/login">LOGIN</a></button>
+            </c:if>
+            <c:if test="${sessionScope.userId ne null }">
+               <button style="width:90px;"><a href="/member/myInfo?userId=${sessionScope.userId }" style="font-weight: 800;">
+               MYPAGE</a></button>
+            </c:if>
         </div>
     </header>
 </body>

@@ -9,7 +9,7 @@
 </head>
 <body>
 	<header>
-	<jsp:include page="/html/hjheader.html"></jsp:include>
+	<jsp:include page="/html/header.html"></jsp:include>
 	</header>
 	<div style="margin: 0;width: 1900px;">
     <div class="mypage">
