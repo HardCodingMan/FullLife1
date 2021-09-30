@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import apply.model.service.ApplyNoticeService;
 import apply.model.vo.ApplyNotice;
@@ -41,12 +42,13 @@ public class ApplyNoticeWriterServlet extends HttpServlet {
 		String subject = request.getParameter("apply-notice-sub");
 		String Contents = request.getParameter("apply-notice-contents");
 		// 작성자 아이디는 로그인 서블렛에서 가져오기
-		
+		HttpSession session = request.getSession();
+		String writeId = (String)session.getAttribute("userId");
 		//ApplyNotice 객체에 정보 세팅
 		ApplyNotice applyNotice = new ApplyNotice();
 		applyNotice.setApplyTitle(subject);
 		applyNotice.setApplyContents(Contents);
-		applyNotice.setUserId("user01");
+		applyNotice.setUserId(writeId);
 		int result = new ApplyNoticeService().noticeWrite(applyNotice);
 		if(result > 0) {
 			response.sendRedirect("/Notice/Apply/ApplyNotice");

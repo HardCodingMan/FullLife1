@@ -2,11 +2,13 @@ package apply.model.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.servlet.jsp.tagext.PageData;
 
 import apply.model.dao.ApplyNoticeDAO;
 import apply.model.vo.ApplyNotice;
+import apply.model.vo.ApplyNoticeReply;
 import apply.model.vo.ApplyPage;
 import common.JDBCTemplate;
 
@@ -60,7 +62,20 @@ public class ApplyNoticeService {
 	public ApplyNotice printOneByNo(int applyNoticeNo) {
 		ApplyNotice applyNotice = null;
 		Connection conn = null;
-		return null;
+		List<ApplyNoticeReply> aList = null;
+		ApplyNoticeDAO applyDAO = new ApplyNoticeDAO();
+		try {
+			conn = jdbcTemplate.createConnection();
+			applyNotice = applyDAO.selectOneByNo(conn, applyNoticeNo);
+			aList = applyDAO.selectAllNoticeReply(conn, applyNoticeNo);
+			applyNotice.setReplist(aList);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(conn);
+		}
+		return applyNotice;
 	}
 
 	

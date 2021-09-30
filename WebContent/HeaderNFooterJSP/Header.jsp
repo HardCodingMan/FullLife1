@@ -11,9 +11,13 @@
 <body>
 <header>
         <div id="logo">
+<<<<<<< HEAD
 
             <img src="/img/HSfulllife로고3 (1).png" alt="">
 
+=======
+            <img src="/img/HSfulllife로고3 (1).png" alt="">
+>>>>>>> b0edc3540adce6a60bbd3f230ffaaad07a614884
         </div>
         <div id="blank"></div>
         <div id="header-menu" >
