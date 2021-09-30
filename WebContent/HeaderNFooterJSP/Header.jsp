@@ -11,11 +11,7 @@
 <body>
 <header>
         <div id="logo">
-<<<<<<< HEAD:WebContent/html/header.html
             <img src="/img/HSfulllife로고3 (1).png" alt="">
-=======
-            <img src="../img/HSfulllife로고3 (1).png" alt="">
->>>>>>> origin/JaeWon:WebContent/HeaderNFooterJSP/Header.jsp
         </div>
         <div id="blank"></div>
         <div id="header-menu" >

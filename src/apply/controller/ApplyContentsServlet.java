@@ -34,9 +34,9 @@ public class ApplyContentsServlet extends HttpServlet {
 		if(aOne != null) {
 			request.setAttribute("aOne", aOne);
 			// NoticeReply setAttribute 해줌
-			request.getRequestDispatcher("/WEB-INF/views/notice/NoticeDetail.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/views/Notice/Apply/ApplyContents.jsp").forward(request, response);
 		}else {
-			request.getRequestDispatcher("/WEB-INF/views/Notice/Apply/ApplyError.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/views/Notice/ApplyError.jsp").forward(request, response);
 		}
 	}
 
