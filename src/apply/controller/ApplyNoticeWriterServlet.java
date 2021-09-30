@@ -46,14 +46,12 @@ public class ApplyNoticeWriterServlet extends HttpServlet {
 		ApplyNotice applyNotice = new ApplyNotice();
 		applyNotice.setApplyTitle(subject);
 		applyNotice.setApplyContents(Contents);
-//		applyNotice.setUserId();
+		applyNotice.setUserId("user01");
 		int result = new ApplyNoticeService().noticeWrite(applyNotice);
 		if(result > 0) {
-			response.sendRedirect("/Notice/Apply/ApplyContents");
+			response.sendRedirect("/Notice/Apply/ApplyNotice");
 		}else {
 			request.getRequestDispatcher("/WEB-INF/Notice/NoticeError.jsp").forward(request, response);
 		}
-		
 	}
-
 }
