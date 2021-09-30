@@ -11,7 +11,6 @@ public class Member {
 	private String userAddr;
 	private String userPhone;
 	private Date regDate;
-	private String relation;
 	private char enrolled;
 	private int totalPoint;
 	
@@ -20,7 +19,7 @@ public class Member {
 	
 
 	public Member(String userId, int userNo, String userPwd, String userName, String userZumin, String userAddr,
-			String userPhone, Date regDate, String relation, char enrolled, int totalPoint) {
+			String userPhone, Date regDate, char enrolled, int totalPoint) {
 		super();
 		this.userId = userId;
 		this.userNo = userNo;
@@ -30,7 +29,6 @@ public class Member {
 		this.userAddr = userAddr;
 		this.userPhone = userPhone;
 		this.regDate = regDate;
-		this.relation = relation;
 		this.enrolled = enrolled;
 		this.totalPoint = totalPoint;
 	}
@@ -100,14 +98,6 @@ public class Member {
 		this.regDate = regDate;
 	}
 
-	public String getRelation() {
-		return relation;
-	}
-
-	public void setRelation(String relation) {
-		this.relation = relation;
-	}
-
 	public char getEnrolled() {
 		return enrolled;
 	}
@@ -128,7 +118,7 @@ public class Member {
 	public String toString() {
 		return "회원아이디=" + userId + ", 회원번호=" + userNo + ", 비밀번호=" + userPwd + ", 이름=" + userName
 				+ ", 주민번호=" + userZumin + ", 주소=" + userAddr + ", 전화번호=" + userPhone + ", 가입날짜="
-				+ regDate + ", 환자와의관계=" + relation + ", 탈퇴여부=" + enrolled + ", 포인트=" + totalPoint;
+				+ regDate + ", 탈퇴여부=" + enrolled + ", 포인트=" + totalPoint;
 	}
 	
 	
