@@ -17,10 +17,16 @@ public class Member {
 
 	
 	public Member() {}
+<<<<<<< HEAD
 	
 	
 	public Member(String userId, int userNo, String userPwd, String userName, String userZumin, String userPhone,
 			String userAddr, String userEmail, Date regDate, char enrolled, int totalPoint) {
+=======
+
+	public Member(String userId, int userNo, String userPwd, String userName, String userZumin, String userAddr,
+			String userPhone, Date regDate, char enrolled, int totalPoint) {
+>>>>>>> d12308c4e12a0b555794a2d8d5031fd40f8a403c
 		super();
 		this.userId = userId;
 		this.userNo = userNo;
