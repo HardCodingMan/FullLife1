@@ -1,9 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>footer</title>
-    <link rel="stylesheet" href="./css/HSfooter.css">
+    <link rel="stylesheet" href="/css/HSfooter.css">
 </head>
 <body>
     <footer class="footer">
