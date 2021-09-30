@@ -11,7 +11,7 @@ public class AskDAO {
 	public int insertAsk(Connection conn, Ask ask) {
 		PreparedStatement pstmt = null;
 		int result = 0;
-		String query = "INSERT INTO ASK(ASK_NO,ASK_SUBJECT,ASK_CONTENTS,ANSWER_CONTENTS, VALUES(SEQ_ASK.NEXTVAL,?,?,NULL,DEFAULT,DEFAULT,"
+//		String query = "INSERT INTO ASK(ASK_NO,ASK_SUBJECT,ASK_CONTENTS,ANSWER_CONTENTS, VALUES(SEQ_ASK.NEXTVAL,?,?,NULL,DEFAULT,DEFAULT,"
 				
 		return 0;
 	}
@@ -25,8 +25,6 @@ public class AskDAO {
 		return null;
 	}
 
-	public int insertAsk(Connection conn, Ask ask) {
-		return 0;
-	}
+	
 
 }
