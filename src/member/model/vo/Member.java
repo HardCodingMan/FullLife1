@@ -19,8 +19,6 @@ public class Member {
 	public Member() {}
 	
 	
-
-
 	public Member(String userId, int userNo, String userPwd, String userName, String userZumin, String userPhone,
 			String userAddr, String userEmail, Date regDate, char enrolled, int totalPoint) {
 		super();
@@ -35,6 +33,18 @@ public class Member {
 		this.regDate = regDate;
 		this.enrolled = enrolled;
 		this.totalPoint = totalPoint;
+	}
+	
+	public Member(String userId, String userPwd, String userName, String userZumin, String userPhone, String userAddr,
+			String userEmail) {
+		super();
+		this.userId = userId;
+		this.userPwd = userPwd;
+		this.userName = userName;
+		this.userZumin = userZumin;
+		this.userPhone = userPhone;
+		this.userAddr = userAddr;
+		this.userEmail = userEmail;
 	}
 
 
