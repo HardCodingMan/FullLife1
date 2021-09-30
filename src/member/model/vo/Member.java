@@ -15,8 +15,6 @@ public class Member {
 	private int totalPoint;
 	
 	public Member() {}
-	
-	
 
 	public Member(String userId, int userNo, String userPwd, String userName, String userZumin, String userAddr,
 			String userPhone, Date regDate, char enrolled, int totalPoint) {

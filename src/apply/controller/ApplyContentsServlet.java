@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import apply.model.service.ApplyNoticeService;
+import apply.model.vo.ApplyNotice;
+
 /**
  * Servlet implementation class ApplyContentsServlet
  */
@@ -26,7 +29,15 @@ public class ApplyContentsServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/Notice/Apply/ApplyContents.jsp").forward(request, response);
+		int applyNoticeNo = Integer.parseInt(request.getParameter("noticeNo"));
+		ApplyNotice aOne = new ApplyNoticeService().printOneByNo(applyNoticeNo);
+		if(aOne != null) {
+			request.setAttribute("aOne", aOne);
+			// NoticeReply setAttribute 해줌
+			request.getRequestDispatcher("/WEB-INF/views/notice/NoticeDetail.jsp").forward(request, response);
+		}else {
+			request.getRequestDispatcher("/WEB-INF/views/Notice/Apply/ApplyError.jsp").forward(request, response);
+		}
 	}
 
 	/**

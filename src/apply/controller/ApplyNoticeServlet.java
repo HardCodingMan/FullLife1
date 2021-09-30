@@ -1,11 +1,17 @@
 package apply.controller;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import apply.model.service.ApplyNoticeService;
+import apply.model.vo.ApplyNotice;
+import apply.model.vo.ApplyPage;
 
 /**
  * Servlet implementation class ApplyNoticeServlet
@@ -26,7 +32,22 @@ public class ApplyNoticeServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/Notice/Apply/ApplyNotice.jsp").forward(request, response);
+		int currentPage = 0;
+		String getCurrentPage =	request.getParameter("currentPage");
+		if(getCurrentPage == null) {
+			currentPage = 1;
+		}else {
+			currentPage = Integer.parseInt(getCurrentPage);
+		}
+		ApplyPage applyPage = new ApplyNoticeService().printAllApply(currentPage);
+		List<ApplyNotice> aList = applyPage.getaList(); 
+		if(!aList.isEmpty()) {
+			request.setAttribute("aList", aList);
+			request.setAttribute("pageNavi", applyPage.getPageNavi());
+			request.getRequestDispatcher("/WEB-INF/views/Notice/Apply/ApplyNotice.jsp").forward(request, response);
+		}else {
+			request.getRequestDispatcher("/WEB-INF/views/Notice/NoticeError.jsp").forward(request, response);
+		}
 	}
 
 	/**

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,18 +22,19 @@
         <section id="notice-section">
             <div class="notice">
                 <ul>
+                	<c:forEach items="${aList }" var="aOne">
                     <li>
-                        <a href="/Notice/Apply/ApplyContents" class="notice-link">
+                        <a href="/Notice/Apply/ApplyContents?applyNo=${aOne.applyNo }" class="notice-link">
                             <div>
                                 <div class="list-img">
                                     <img src="img/newsofa.jpg" alt="후원1" class="li-img">
                                 </div>
                                 <div class="list-text">
-                                    <p class="notice-title">우리 동생이...</p>
+                                    <p class="notice-title">${aOne.applyTitle }</p>
                                 </div>
                                 <div id="list-text2">
-                                    <div>조회수 : 200</div>
-                                    <div>추천수 : 100</div>
+                                    <div>조회수 : ${aOne.applyViews }</div>
+                                    <div>추천수 : ${aOne.applyLike }</div>
                                 </div>
                                 <div class="list-btn">
                                     <button>자세히보기</button>
@@ -40,143 +42,11 @@
                             </div>
                         </a>
                     </li>
-                    <li>
-                        <a href="applycontents.html" class="notice-link">
-                            <div>
-                                <div class="list-img">
-                                    <img src="img/newsofa.jpg" alt="후원1" class="li-img">
-                                </div>
-                                <div class="list-text">
-                                    <p class="notice-title">우리 동생이...</p>
-                                </div>
-                                <div id="list-text2">
-                                    <div>조회수 : 200</div>
-                                    <div>추천수 : 100</div>
-                                </div>
-                                <div class="list-btn">
-                                    <button>자세히보기</button>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="applycontents.html" class="notice-link">
-                            <div>
-                                <div class="list-img">
-                                    <img src="img/newsofa.jpg" alt="후원1" class="li-img">
-                                </div>
-                                <div class="list-text">
-                                    <p class="notice-title">우리 동생이...</p>
-                                </div>
-                                <div id="list-text2">
-                                    <div>조회수 : 200</div>
-                                    <div>추천수 : 100</div>
-                                </div>
-                                <div class="list-btn">
-                                    <button>자세히보기</button>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="applycontents.html" class="notice-link">
-                            <div>
-                                <div class="list-img">
-                                    <img src="img/newsofa.jpg" alt="후원1" class="li-img">
-                                </div>
-                                <div class="list-text">
-                                    <p class="notice-title">우리 동생이...</p>
-                                </div>
-                                <div id="list-text2">
-                                    <div>조회수 : 200</div>
-                                    <div>추천수 : 100</div>
-                                </div>
-                                <div class="list-btn">
-                                    <button>자세히보기</button>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="applycontents.html" class="notice-link">
-                            <div>
-                                <div class="list-img">
-                                    <img src="img/newsofa.jpg" alt="후원1" class="li-img">
-                                </div>
-                                <div class="list-text">
-                                    <p class="notice-title">우리 동생이...</p>
-                                </div>
-                                <div id="list-text2">
-                                    <div>조회수 : 200</div>
-                                    <div>추천수 : 100</div>
-                                </div>
-                                <div class="list-btn">
-                                    <button>자세히보기</button>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="applycontents.html" class="notice-link">
-                            <div>
-                                <div class="list-img">
-                                    <img src="img/newsofa.jpg" alt="후원1" class="li-img">
-                                </div>
-                                <div class="list-text">
-                                    <p class="notice-title">우리 동생이...</p>
-                                </div>
-                                <div id="list-text2">
-                                    <div>조회수 : 200</div>
-                                    <div>추천수 : 100</div>
-                                </div>
-                                <div class="list-btn">
-                                    <button>자세히보기</button>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="applycontents.html" class="notice-link">
-                            <div>
-                                <div class="list-img">
-                                    <img src="img/newsofa.jpg" alt="후원1" class="li-img">
-                                </div>
-                                <div class="list-text">
-                                    <p class="notice-title">우리 동생이...</p>
-                                </div>
-                                <div id="list-text2">
-                                    <div>조회수 : 200</div>
-                                    <div>추천수 : 100</div>
-                                </div>
-                                <div class="list-btn">
-                                    <button>자세히보기</button>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="applycontents.html" class="notice-link">
-                            <div>
-                                <div class="list-img">
-                                    <img src="img/newsofa.jpg" alt="후원1" class="li-img">
-                                </div>
-                                <div class="list-text">
-                                    <p class="notice-title">우리 동생이...</p>
-                                </div>
-                                <div id="list-text2">
-                                    <div>조회수 : 200</div>
-                                    <div>추천수 : 100</div>
-                                </div>
-                                <div class="list-btn">
-                                    <button>자세히보기</button>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
+                    </c:forEach>
                 </ul>
             </div>
             <a href="/Notice/Apply/ApplyNoticeWriter"><button id="write">글쓰기</button></a>
-            <div id="page">1 2 3 4 5</div>
+            <div id="page">${pageNavi }</div>
         </section>
         </div>
     </main>
