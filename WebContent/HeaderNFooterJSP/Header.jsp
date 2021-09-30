@@ -11,49 +11,7 @@
 <body>
 <header>
         <div id="logo">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:WebContent/html/header.html
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD:WebContent/HeaderNFooterJSP/Header.jsp
->>>>>>> origin/JaeWon
-            <img src="../img/HSfulllife로고3 (1).png" alt="">
-=======
             <img src="/img/HSfulllife로고3 (1).png" alt="">
-<<<<<<< HEAD
->>>>>>> fb2d342018278e195e30e9ae35a700719bf9a968
-=======
-            <img src="../img/HSfulllife로고3 (1).png" alt="">
->>>>>>> 2fca2955899cce15ea944de7047abec963bed8ed:WebContent/HeaderNFooterJSP/Header.jsp
-=======
-            <img src="/img/HSfulllife로고3 (1).png" alt="">
->>>>>>> origin/stitchkang
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD:WebContent/HeaderNFooterJSP/Header.jsp
-            <img src="../img/HSfulllife로고3 (1).png" alt="">
-=======
-            <img src="/img/HSfulllife로고3 (1).png" alt="">
->>>>>>> fa09d816ebb29d3ab02cb7c2d92341a7b82c8fa6:WebContent/html/header.html
->>>>>>> origin/JaeWon
-=======
-            <img src="/img/HSfulllife로고3 (1).png" alt="">
->>>>>>> origin/Hyunseok
->>>>>>> origin/mooooo
-=======
-            <img src="/img/HSfulllife로고3 (1).png" alt="">
->>>>>>> origin/JaeWon
-=======
->>>>>>> fa09d816ebb29d3ab02cb7c2d92341a7b82c8fa6:WebContent/html/header.html
->>>>>>> origin/JaeWon
-=======
-            <img src="/img/HSfulllife로고3 (1).png" alt="">
->>>>>>> origin/stitchkang
         </div>
         <div id="blank"></div>
         <div id="header-menu">
