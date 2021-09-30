@@ -88,7 +88,7 @@
             <h4 class="join_title">
                 주민등록번호
             </h4>
-                <input type="text" class="wrong-input" name="userZumin1" id="userZumin1" placeholder="-를 제외한 숫자 13자리를 입력해주세요" size="13">
+                <input type="text" class="wrong-input" name="userZumin" id="userZumin" placeholder="-를 제외한 숫자 13자리를 입력해주세요" size="13">
         </div>
         <div id="phone">
             <h4 class="join_title">

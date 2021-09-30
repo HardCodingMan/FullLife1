@@ -30,13 +30,14 @@ public class EnrollServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String userId = request.getParameter("userId");
 		String userPwd = request.getParameter("userPwd");
-		String name = request.getParameter("name");
-		String zumin = request.getParameter("zumin");
-		String phone = request.getParameter("phone");
-		String address = request.getParameter("address");
+		String name = request.getParameter("UserName");
+		String zumin = request.getParameter("UserZumin");
+		String phone = request.getParameter("UserPhone");
+		String address = request.getParameter("UserAddr");
+		String email = request.getParameter("UserEmail");
 		System.out.println(userId);
 			
-		Member member = new Member(userId, userPwd, name, zumin, phone, address);
+		Member member = new Member(userId, userPwd, name, zumin, phone, address, email);
 		int result = new MemberService().registerMember(member);
 		
 		if(result > 0) {
