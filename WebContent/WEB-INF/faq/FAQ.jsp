@@ -10,9 +10,10 @@
 </head>
 <body>
 	 <header>
-        <div id="header-div"></div>
+        <jsp:include page="/html/header.html"></jsp:include>
     </header>
     <main>
+	<div class="wrapper">
         <div>
         <section>
             <div id="FAQ-header">
@@ -124,11 +125,12 @@
             </ul>
         </section>
         </div>
+    </div>
     </main>
     <script>
         
         function dis(int){
-//             onclik 버튼 클릭 시 값을 비교
+//           onclik 버튼 클릭 시 값을 비교
             if(int == '1' && $("#frist-question").css('display') == 'none'){
                 $('#frist-question').show();
             }else{
@@ -159,8 +161,7 @@
         });
     </script>
     <footer>
-        <div id="footer"></div>
+        <jsp:include page="/html/footer.html"></jsp:include>
     </footer>
-
 </body>
 </html>
