@@ -95,7 +95,7 @@
             <div class="pic-div">
                 <img src="./img/aside.png" alt="" style="width: 100%; height: 100%;">
             </div>
-            <p style="color:gray;">
+            <p style="color:gray;">  
          평균 생존율은 1년 95%, 5년 92% , FullLife는 언제나 최고의 연구진과 함께합니다.</p>
         </section>
     </main>
