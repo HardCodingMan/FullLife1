@@ -47,7 +47,11 @@ h2{
     float:left;
     background-color: cadetblue;
 }
-
+#result{
+    background-color: hotpink;
+    height: 500px;
+    /* width:95%; */
+}
 #selectDate{
     background-color: aqua;   
     height:70%;
