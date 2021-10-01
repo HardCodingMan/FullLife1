@@ -53,7 +53,7 @@
                         <th class="enrollDate">작성일</th>
                     </tr>
                     <tr>
-                        <td><%= aOne.getAskNo() %></td>
+                        <td><%= getAskNo() %></td>
                         <td><a href="/ask/detail?noticeNo=<%= nOne.getNoticeNo() %>"><%= nOne.getNoticeSubject() %></a></td>
                         <td>3</td>
                         <td>4</td>
