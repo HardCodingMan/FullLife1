@@ -116,5 +116,30 @@ public class MemberDAO {
 			}
 			return result;
 		}
+
+	public Member updateTotalPoint(Connection conn, String userId) {
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		Member member = null;
+		String query = "SELECT * FROM MEMBER WHERE USER_ID = ?";
+		
+		try {
+			pstmt = conn.prepareStatement(query);
+			pstmt.setString(1, userId);
+			rset = pstmt.executeQuery();
+			if(rset.next()) {
+				member = new Member();
+				member.setTotalPoint(rset.getInt("TOTALPOINT"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			JDBCTemplate.close(rset);
+			JDBCTemplate.close(pstmt);
+		}
+		
+		return member;
+	}
 	}
 
