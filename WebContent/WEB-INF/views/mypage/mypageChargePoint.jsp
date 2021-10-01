@@ -11,7 +11,7 @@
 	<header>
         <jsp:include page="/HeaderNFooterJSP/Header.jsp"></jsp:include>
     </header>
-	<div style="margin: 0;width: 2080px;">
+	<div style="margin: 0 auto;">
         <div class="mypage">
             <h2>마이페이지</h2>
         </div>
@@ -45,12 +45,12 @@
                     <input type="text" placeholder="충전할 포인트" class="po1" id="final-point"><a href="#"><button type="button" class="bt2" style="float:right">충전하기</button></a>
                     </form>
                 </div>
-                <hr style="width: 400px;margin-left: 450px;margin-top: 20px;">
+                <hr style="width: 400px;margin-left: 300px;margin-top: 20px;">
                 <div class="box">
                     ＊포인트 사용 시 적립 포인트 소진 후 충전 포인트가 차감됩니다.<br>
                     ＊미성년자가 법정대리인의 동의 없이 포인트를 사용한 경우, 본인 또는 법정대리인이 사용을 취소할 수 있습니다.<br>
-                    ＊충전시 1.1%의 포인트가 추가로 적립됩니다.<br>
                     ＊1원당 1P(포인트)가 충전됩니다.<br>
+                    ＊충전시 1.1배의 포인트가 추가로 적립됩니다.<br>
                     ＊원하는금액을 입력하여 충전할수 있습니다.<br>
                     ＊충전수단에 따라 충전수단 발행자가 부과하는 사용 수수료를 부담할 수 있습니다.<br>
                     &nbsp; &nbsp; &nbsp; - 충전 취소 및 환불 시 사용 수수료의 반환은 충전수단 발행자의 정책을 따릅니다.<br>
