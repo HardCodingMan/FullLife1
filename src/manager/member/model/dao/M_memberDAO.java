@@ -19,7 +19,7 @@ public class M_memberDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
 		List<M_member> mList = null;
-		String query = "SELECT * FROM(SELECT ROW_NUMBER() OVER(ORDER BY USER_NO DESC)AS NUM, USER_NO, USER_ID, USER_PWD, USER_NAME, ZUMIN, ADDRESS, PHONE, REG_DATE, ENROLLED, POINT FROM MEMBER) WHERE NUM BETWEEN ? AND ?";
+		String query = "SELECT * FROM(SELECT ROW_NUMBER() OVER(ORDER BY USER_NO DESC)AS NUM, USER_NO, USER_ID, USER_PWD, USER_NAME, ZUMIN, ADDRESS, PHONE, REG_DATE, ENROLLED, TOTALPOINT, EMAIL FROM MEMBER) WHERE NUM BETWEEN ? AND ?";
 		
 		try {
 			pstmt = conn.prepareStatement(query);
@@ -42,7 +42,8 @@ public class M_memberDAO {
 				member.setPhone(rset.getString("PHONE"));
 				member.setRegDate(rset.getDate("REG_DATE"));
 				member.setEnrolled(rset.getString("ENROLLED"));
-				member.setPoint(rset.getInt("POINT"));
+				member.setTotalPoint(rset.getInt("TOTALPOINT"));
+				member.setEmail(rset.getString("EMAIL"));
 				mList.add(member);
 			}
 			
@@ -58,7 +59,7 @@ public class M_memberDAO {
 	public List<M_member> selectAllMember(Connection conn, int currentPage) {
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
-		String query = "SELECT * FROM(SELECT ROW_NUMBER() OVER(ORDER BY USER_NO DESC)AS NUM, USER_NO, USER_ID, USER_PWD, USER_NAME, ZUMIN, ADDRESS, PHONE, REG_DATE, ENROLLED, POINT FROM MEMBER) WHERE NUM BETWEEN ? AND ?";
+		String query = "SELECT * FROM(SELECT ROW_NUMBER() OVER(ORDER BY USER_NO DESC)AS NUM, USER_NO, USER_ID, USER_PWD, USER_NAME, ZUMIN, ADDRESS, PHONE, REG_DATE, ENROLLED, TOTALPOINT, EMAIL FROM MEMBER) WHERE NUM BETWEEN ? AND ?";
 		List<M_member> mList = null;
 		
 		try {
@@ -80,7 +81,9 @@ public class M_memberDAO {
 				member.setAddr(rset.getString("ADDRESS"));
 				member.setPhone(rset.getString("PHONE"));
 				member.setRegDate(rset.getDate("REG_DATE"));
-				member.setPoint(rset.getInt("POINT"));
+				member.setEnrolled(rset.getString("ENROLLED"));
+				member.setTotalPoint(rset.getInt("TOTALPOINT"));
+				member.setEmail(rset.getString("EMAIL"));
 				mList.add(member);
 			}
 		} catch (SQLException e) {
@@ -162,14 +165,16 @@ public class M_memberDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
 		int result = 0;
-		String query = "UPDATE MEMBER SET USER_PWD = ?, ADDRESS = ?, PHONE = ? WHERE USER_ID= ?";
+		String query = "UPDATE MEMBER SET USER_PWD = ?, ADDRESS = ?, PHONE = ?, TOTALPOINT = ?,EMAIL = ? WHERE USER_ID= ?";
 		
 		try {
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, member.getUserPwd());
 			pstmt.setString(2, member.getAddr());
 			pstmt.setString(3, member.getPhone());
-			pstmt.setString(4, member.getUserId());
+			pstmt.setInt(4, member.getTotalPoint());
+			pstmt.setString(5, member.getEmail());
+			pstmt.setString(6, member.getUserId());
 			
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
@@ -199,6 +204,8 @@ public class M_memberDAO {
 				mOne.setZumin(rset.getString("ZUMIN"));
 				mOne.setAddr(rset.getString("ADDRESS"));
 				mOne.setPhone(rset.getString("PHONE"));
+				mOne.setTotalPoint(rset.getInt("TOTALPOINT"));
+				mOne.setEmail(rset.getString("EMAIL"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
