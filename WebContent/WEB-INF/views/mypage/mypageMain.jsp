@@ -11,7 +11,7 @@
 	<header>
         <jsp:include page="/HeaderNFooterJSP/Header.jsp"></jsp:include>
     </header>
-	<div style="margin: 0;width: 1900px;">
+	<div style="margin: 0 auto;width: 1500px;">
     <div class="mypage">
         <h2>마이페이지</h2>
     </div>
