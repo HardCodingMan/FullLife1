@@ -9,21 +9,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 import apply.model.vo.ApplyNotice;
+import apply.model.vo.ApplyNoticeFile;
 import apply.model.vo.ApplyNoticeReply;
 import common.JDBCTemplate;
 
 public class ApplyNoticeDAO {
 
-	public int insertNotice(Connection conn, ApplyNotice applyNotice) {
+	public int insertNotice(Connection conn, ApplyNotice applyNotice, ApplyNoticeFile fileData) {
 		PreparedStatement pstmt = null;
 		int result = 0;
-		String query = "INSERT INTO APPLY_NOTICE VALUES(SEQ_APPLY_NO.NEXTVAL,?,?,DEFAULT,DEFAULT,DEFAULT,?,0,'경로',DEFAULT,DEFAULT)";
+		String query = "INSERT INTO APPLY_NOTICE VALUES(SEQ_APPLY_NO.NEXTVAL,?,?,DEFAULT,DEFAULT,DEFAULT,?,?,?,DEFAULT,DEFAULT)";
 		
 		try {
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, applyNotice.getApplyTitle());
 			pstmt.setString(2, applyNotice.getApplyContents());
 			pstmt.setString(3, applyNotice.getUserId());
+			pstmt.setLong(4, fileData.getFileSize());
+			pstmt.setString(5, fileData.getFilePath());
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -154,7 +157,7 @@ public class ApplyNoticeDAO {
 				applyNotice.setApplyViews(rset.getInt("APPLY_VIEWS"));
 				applyNotice.setPicSize(rset.getInt("PIC_SIZE"));
 				applyNotice.setPicPath(rset.getString("PIC_PATH"));
-				applyNotice.setMngCheck(rset.getString("MNG_CHECK"));
+				applyNotice.setMngCheck(rset.getString("MNG_CHECK").charAt(0));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
