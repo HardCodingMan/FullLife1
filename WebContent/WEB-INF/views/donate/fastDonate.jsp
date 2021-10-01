@@ -80,9 +80,9 @@
             <div class="slide-wrapper">
                 <div class="support-info1">
                     <h1>BEST1. ${requestScope.firstSupport.noticeTitle }</h1>
-                    <img src="../../../img/main1.jpg" alt="" width="90%" height="70%">
+                    <img src="${firstSupport.picPath }" alt="" width="90%" height="70%">
                     <div class="support-percentage">
-                        <p>후원수: ${requestScope.firstSupport.supportHuman }</p>
+                        <p>조회수: ${requestScope.firstSupport.supportHuman }</p>
                         <p>달성금액: ${requestScope.firstSupport.nowSupport}</p>
                         <p>달성률: ${requestScope.firstPercentage }</p>
                         <div class="progress-bar">
@@ -92,9 +92,9 @@
                 </div>
                 <div class="support-info2">
                     <h1>BEST2. ${requestScope.secondSupport.noticeTitle }</h1>
-                    <img src="../../../img/main2.jpg" alt="" width="90%" height="70%">
+                    <img src="${secondSupport.picPath }" alt="" width="90%" height="70%">
                     <div class="support-percentage">
-                        <p>후원수: ${secondSupport.supportHuman }</p>
+                        <p>조회수: ${secondSupport.views }</p>
                         <p>달성금액: ${requestScope.secondSupport.nowSupport }</p>
                         <p>달성률: ${requestScope.secondPercentage }</p>
                         <div class="progress-bar second">

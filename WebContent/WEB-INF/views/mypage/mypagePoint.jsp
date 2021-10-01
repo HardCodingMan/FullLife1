@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/css/mypage.css">
 </head>
 <body>
-<header>
+	<header>
         <jsp:include page="/HeaderNFooterJSP/Header.jsp"></jsp:include>
     </header>
 	<div style="margin: 0;width: 2080px;">
