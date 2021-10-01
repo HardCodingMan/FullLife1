@@ -78,6 +78,27 @@ public class ApplyNoticeService {
 		return applyNotice;
 	}
 
+	public int registerApplyReply(String replyContents, int applyNo, String userId) {
+		Connection conn = null;
+		int result = 0;
+		
+		try {
+			conn = jdbcTemplate.createConnection();
+			result =  new ApplyNoticeDAO().insertNoticeReply(conn, replyContents, applyNo, userId);
+			if(result > 0) {
+				JDBCTemplate.commit(conn);
+			}else {
+				JDBCTemplate.rollback(conn);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(conn);
+		}
+		return result;
+	}
+
 	
 
 

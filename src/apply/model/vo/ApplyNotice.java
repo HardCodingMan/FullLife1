@@ -18,14 +18,6 @@ public class ApplyNotice {
 	private String mngCheck;
 	private int replyCount;
 	
-	public int getReplyCount() {
-		return replyCount;
-	}
-
-	public void setReplyCount(int replyCount) {
-		this.replyCount = replyCount;
-	}
-
 		// 댓글
 		private List<ApplyNoticeReply> replist;
 		
@@ -33,11 +25,11 @@ public class ApplyNotice {
 			super();
 			this.replist = replist;
 		}
-
-		public List<ApplyNoticeReply> getReplist() {
+		
+		public List<ApplyNoticeReply> getReplist(){
 			return replist;
 		}
-
+		
 		public void setReplist(List<ApplyNoticeReply> replist) {
 			this.replist = replist;
 		}
@@ -137,6 +129,14 @@ public class ApplyNotice {
 
 	public void setMngCheck(String mngCheck) {
 		this.mngCheck = mngCheck;
+	}
+	
+	public int getReplyCount() {
+		return replyCount;
+	}
+
+	public void setReplyCount(int replyCount) {
+		this.replyCount = replyCount;
 	}
 
 	@Override
