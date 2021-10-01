@@ -84,6 +84,23 @@ public class MemberService {
 		
 		return result;
 	}
+
+	public Member getMemberTotalPoint(String userId) {
+		Member member = null;
+		Connection conn = null;
+		
+		try {
+			conn = jdbcTemplate.createConnection();
+			member = new MemberDAO().updateTotalPoint(conn, userId);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			JDBCTemplate.close(conn);
+		}
+		return member;
+	}
 	
 
 }

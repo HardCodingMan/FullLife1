@@ -76,28 +76,29 @@
                     </form>
                 </div>
             </div>
+            
             <div class="slide-wrapper">
                 <div class="support-info1">
-                    <h1>BEST1. Title</h1>
+                    <h1>BEST1. ${requestScope.firstSupport.noticeTitle }</h1>
                     <img src="../../../img/main1.jpg" alt="" width="90%" height="70%">
                     <div class="support-percentage">
-                        <p>후원수: </p>
-                        <p>달성금액: </p>
-                        <p>달성률: </p>
+                        <p>후원수: ${requestScope.firstSupport.supportHuman }</p>
+                        <p>달성금액: ${requestScope.firstSupport.nowSupport}</p>
+                        <p>달성률: ${requestScope.firstPercentage }</p>
                         <div class="progress-bar">
-                            <div class="progress-done" id="bar1" data-done="50"></div>
+                            <div class="progress-done" id="bar1" data-done="${requestScope.firstPercentage }"></div>
                         </div>
                     </div>
                 </div>
                 <div class="support-info2">
-                    <h1>BEST2. Title</h1>
+                    <h1>BEST2. ${requestScope.secondSupport.noticeTitle }</h1>
                     <img src="../../../img/main2.jpg" alt="" width="90%" height="70%">
                     <div class="support-percentage">
-                        <p>후원수: </p>
-                        <p>달성금액: </p>
-                        <p>달성률: </p>
+                        <p>후원수: ${secondSupport.supportHuman }</p>
+                        <p>달성금액: ${requestScope.secondSupport.nowSupport }</p>
+                        <p>달성률: ${requestScope.secondPercentage }</p>
                         <div class="progress-bar second">
-                            <div class="progress-done" id="bar2" data-done="60"></div>
+                            <div class="progress-done" id="bar2" data-done="${requestScope.secondPercentage }"></div>
                         </div>
                     </div>
                 </div>
