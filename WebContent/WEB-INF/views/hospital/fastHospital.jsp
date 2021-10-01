@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/FullLife-Hospital.css">
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&display=swap" rel="stylesheet">
+    <script src="/js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <script>
@@ -25,8 +26,12 @@
 				result = locationTag.value;
 				location.href="/hospital/listAll?location="+result;	
             });
-            
-            
+
+            var hospitalNo = "";
+			document.querySelector("input[name=chosen-hospital]").addEventListener("change", function(){
+				hospitalNo = this.value;
+			});
+// 			document.querySelector("#")
         }
     </script>
     <header>
@@ -42,7 +47,7 @@
                 <div class="input-footer">
                     <p>가까운 병원 찾기</p>
                     <h6>지역을 선택해주세요.</h6>
-                    <form action="#" method="get">
+                    <form action="/reserve/reservation" method="get">
                         <div class="select">
                             <c:if test="${requestScope.location eq '' || requestScope.location eq null}">
                             <select name="metro-city" id="location">
@@ -106,9 +111,8 @@
                             </c:if>
                         </div>
                         <br><br><br>
-                        <form action="" method="get">
-                        <input type="submit" value="바로 예약하기">
-                        </form>
+                        
+                        <input type="submit" value="바로 예약하기" onclick="next();">
                     </form>
                 </div>
             </div>
@@ -124,7 +128,7 @@
                 </div>
                 <div id="hospital-result">
                 	<c:forEach items="${requestScope.hospitals }" var="hospital" varStatus="index">
-                		<label><input type="radio" id="hospital-name" name="chosen-hospital"><b style="font-size:25px">${hospital.hospitalName }</b></label>
+                		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
                 		<h4 style="margin:10px">${hospital.hospitalAddr }</h4>
                 		<a href="#"><h5 style="margin: 0 0 40px 30px">${hospital.hospitalPhone }</h5></a>
                 	</c:forEach>
