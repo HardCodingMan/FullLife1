@@ -167,8 +167,33 @@ public class ApplyNoticeDAO {
 	}
 
 	public List<ApplyNoticeReply> selectAllNoticeReply(Connection conn, int applyNoticeNo) {
-		// TODO Auto-generated method stub
-		return null;
+		PreparedStatement pstmt = null;
+		ResultSet rset= null;
+		List<ApplyNoticeReply> aList = null;
+		String query = "SELECT * FROM APPLY_REPLY WHERE APPLY_NO = ?";
+		
+		try {
+			pstmt = conn.prepareStatement(query);
+			pstmt.setInt(1, applyNoticeNo);
+			aList = new ArrayList<ApplyNoticeReply>();
+			rset = pstmt.executeQuery();
+			while(rset.next()) {
+				ApplyNoticeReply applyReply = new ApplyNoticeReply();
+				applyReply.setReplyNo(rset.getInt("REPLY_NO"));
+				applyReply.setReplyUserId(rset.getString("USER_ID"));
+				applyReply.setReplyContents(rset.getString("REPLY_CONTENTS"));
+				applyReply.setReplyDate(rset.getDate("REPLY_DATE"));
+				applyReply.setApplyNo(rset.getInt("APPLY_NO"));
+				aList.add(applyReply);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(rset);
+			JDBCTemplate.close(pstmt);
+		}
+		return aList;
 	}
 
 }
