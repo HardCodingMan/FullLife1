@@ -47,20 +47,23 @@
                 <div class="input-footer">
                     <p>가까운 병원 찾기</p>
                     <h6>지역을 선택해주세요.</h6>
+                    <c:if test="${sessionScope.userId ne null }">
                     <form action="/reserve/reservation" method="get">
+                    </c:if>
+                    <c:if test="${sessionScope.userId eq null }">
+                    <form action="/member/login" method="get">
+                    </c:if>
                         <div class="select">
-
                            	<select name="metro-city" id="location">
-                            	<option value="" disabled<c:if test="${requestScope.location eq null }">selected</c:if>>지역 선택</option>
+                            	<option value="" disabled <c:if test="${requestScope.location eq null }">selected</c:if>>지역 선택</option>
                                 <option value="seoul" <c:if test="${requestScope.location eq 'seoul' }">selected</c:if>>서울</option>
-                                <option value="daejeon"<c:if test="${requestScope.location eq 'daejeon' }">selected</c:if>>대전</option>
-                                <option value="daegu"<c:if test="${requestScope.location eq 'daegu' }">selected</c:if>>대구</option>
-                                <option value="busan"<c:if test="${requestScope.location eq 'busan' }">selected</c:if>>부산</option>
-                                <option value="gwangju"<c:if test="${requestScope.location eq 'gwangju' }">selected</c:if>>광주</option>
+                                <option value="daejeon" <c:if test="${requestScope.location eq 'daejeon' }">selected</c:if>>대전</option>
+                                <option value="daegu" <c:if test="${requestScope.location eq 'daegu' }">selected</c:if>>대구</option>
+                                <option value="busan" <c:if test="${requestScope.location eq 'busan' }">selected</c:if>>부산</option>
+                                <option value="gwangju" <c:if test="${requestScope.location eq 'gwangju' }">selected</c:if>>광주</option>
                             </select>
                         </div>
                         <br><br><br>
-                        
                         <input type="submit" value="바로 예약하기">
                     </form>
                 </div>
