@@ -49,7 +49,7 @@
                     </form>
                 </div>
            </div>
-            <form action="/manager/m_file_down" method="post">
+            <form action="/manager/m_file_upload" method="post">
                    <input type="submit" id="upload-btn" value="업로드">
            </form>
             <div id="table-div">

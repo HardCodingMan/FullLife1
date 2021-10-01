@@ -83,7 +83,7 @@
                         </tr>
                       </c:forEach>
                       	<tr>
-                      		<td colspan="10" align="center">
+                      		<td colspan="11" align="center">
                       			${pageNavi }
                       		</td>
                       	</tr>

@@ -53,4 +53,26 @@ public class M_resultService {
 		return fPd;
 	}
 
+
+	public int registerResultFile(M_result m_result) {
+		Connection conn = null;
+		int result = 0;
+		
+		try {
+			conn = jdbcTemplate.createConnection();
+			result = new M_resultDAO().insertResultFile(conn, m_result);
+			if(result > 0) {
+				JDBCTemplate.commit(conn);
+			}else {
+				JDBCTemplate.rollback(conn);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(conn);
+		}
+
+		return result;
+	}
+
 }
