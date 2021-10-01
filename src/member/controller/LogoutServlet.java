@@ -1,4 +1,4 @@
-package member.controller;
+	package member.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -30,7 +30,7 @@ public class LogoutServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		if(session != null) {
 			session.invalidate();
-			request.getRequestDispatcher("/index.jsp").forward(request, response);
+			response.sendRedirect("/index.jsp");
 		}
 	}
 
