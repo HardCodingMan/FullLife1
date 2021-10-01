@@ -6,22 +6,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import member.model.service.MemberService;
-import member.model.vo.Member;
 
 /**
- * Servlet implementation class MypagePoint
+ * Servlet implementation class MypageChargePoint
  */
-@WebServlet("/mypage/point")
-public class MypagePoint extends HttpServlet {
+@WebServlet("/mypage/chargePoint")
+public class ChargePointServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MypagePoint() {
+    public ChargePointServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,16 +26,8 @@ public class MypagePoint extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession();
-		String userId = (String)session.getAttribute("userId");
-		Member member = new MemberService().getMemberTotalPoint(userId);
-		if(member != null) {
-			int totalpoint = member.getTotalPoint();
-			request.setAttribute("totalpoint", totalpoint);
-		} else {
-			request.setAttribute("totalpoint", 0);
-		}
-		request.getRequestDispatcher("/WEB-INF/views/mypage/mypagePoint.jsp").forward(request, response);
+		
+		request.getRequestDispatcher("/WEB-INF/views/mypage/mypageChargePoint.jsp").forward(request, response);
 	}
 
 	/**

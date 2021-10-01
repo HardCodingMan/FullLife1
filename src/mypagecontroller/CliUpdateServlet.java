@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class MypageRegHospital
+ * Servlet implementation class MypageCliUpdate
  */
-@WebServlet("/mypage/regHospital")
-public class MypageRegHospital extends HttpServlet {
+@WebServlet("/mypage/cliUpdate")
+public class CliUpdateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MypageRegHospital() {
+    public CliUpdateServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,7 +26,7 @@ public class MypageRegHospital extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/views/mypage/mypageRegHospital.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/views/mypage/mypageCliUpdate.jsp").forward(request, response);
 	}
 
 	/**
