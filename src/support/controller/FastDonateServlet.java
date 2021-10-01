@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import support.model.service.SupportService;
+import support.model.vo.Support;
+
 /**
  * Servlet implementation class FastDonateServlet
  */
@@ -26,7 +29,25 @@ public class FastDonateServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/views/donate/fastDonate.jsp").forward(request, response);
+		int firstRank = Integer.parseInt(request.getParameter("rank1"));
+		int secondRank = Integer.parseInt(request.getParameter("rank2"));
+		double percentage1 = 0;
+		double percentage2 = 0;
+		Support firstSupport = new SupportService().getFirstSupportNotice(firstRank);
+		Support secondSupport = new SupportService().getSecondSupportNotice(secondRank);
+		
+		System.out.println(firstSupport.getNoticeTitle()+","+firstSupport.getNeedSupport()+","+firstSupport.getNowSupport()+","+firstSupport.getViews()+","+firstSupport.getPicPath());
+		System.out.println(secondSupport.getNoticeTitle()+","+secondSupport.getNeedSupport()+","+secondSupport.getNowSupport()+","+secondSupport.getViews()+","+secondSupport.getPicPath());
+		
+		if(firstSupport != null && secondSupport != null) {
+			request.setAttribute("firstSupport", firstSupport);
+			request.setAttribute("secondSupport", secondSupport);
+			request.setAttribute("firstPercentage", percentage1);
+			request.setAttribute("secondPercentage", percentage2);
+			request.getRequestDispatcher("/WEB-INF/views/donate/fastDonate.jsp").forward(request, response);
+			
+		} 
+	
 	}
 
 	/**
