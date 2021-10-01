@@ -28,8 +28,8 @@
                 <form action="/Notice/Apply/ApplyNoticeWriter" method="post" enctype="multipart/form-data">
                     <p>제목</p><input type="text" size="100" placeholder="제목을 입력하세요" name="apply-notice-sub" class="box"><br>
                     <p>내용</p><textarea rows="30" cols="100" placeholder="내용을 입력하세요" name="apply-notice-contents" class="box"></textarea><br>
-                    <p>사진첨부</p><input type="file" name="" id="apply-UpLoad" class="box">
-                    <p>첨부파일의 크기가 100MB 미만이여야 합니다.<br>첨부가능한 파일은 jpg.png.pdf 입니다</p>
+                    <p>사진첨부</p><input type="file" name="apply-File" id="apply-UpLoad" class="box">
+                    <p>첨부파일의 크기가 50MB 미만이여야 합니다.<br>첨부가능한 파일은 jpg.png 입니다</p>
                     <hr>
                     <div id="butn">
                     <input type="submit" value="저장하기" class="input-butn">
