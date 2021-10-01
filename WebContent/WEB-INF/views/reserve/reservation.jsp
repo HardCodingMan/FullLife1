@@ -6,8 +6,21 @@
 <head>
 <meta charset="UTF-8">
 <title>예약하기</title>
+
 </head>
 <body>
+<script>
+window.onload = function() {
+    var regionTag = document.querySelector("#region");
+    var result = "";
+
+    regionTag.addEventListener("change",function(){
+        result = regionTag.value;
+//         location.href="/reserve/select?location1="+result;
+		console.log(result);
+    });
+}
+</script>
 	<header>
     	<jsp:include page="/HeaderNFooterJSP/Header.jsp"></jsp:include>
     </header>
@@ -72,20 +85,22 @@
             <div id="findArea">
                 <tr>
                     <td>
-                        <select id="region" onchange="changehtml()" >
+                        <select id="region">
                             <option value="seoul">서울</option>
-                            <option value="dajeon">대전</option>
+                            <option value="daejeon">대전</option>
                             <option value="daegu">대구</option>
                             <option value="busan">부산</option>
-                            <option value="gwandju">광주</option>
+                            <option value="gwangju">광주</option>
                         </select>
                     </td>           
                 </tr>
             </div>
-            <div id="seoul">
-                <h4></h4>
+            <div id="result">
+                ${requestScope.hospitalNo }
+                ${requestScope.hospitalName} 
+                ${requestScope.hospitalAddr}
+                ${requestScope.hospitalPhone} 
             </div>
-    
             <br>
             <div id="hosDetail">
                 <div id="viewHos">
