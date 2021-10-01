@@ -39,10 +39,10 @@
                 </div><br>
                 <div class="mopoint2">
                     <form class="num">
-                    <input type="text" placeholder="금액을 입력해주세요" class="po1"><button type="button" class="bt2" style="float:right">포인트계산하기</button>
+                    <input type="text" placeholder="금액을 입력해주세요" class="po1" id="point"><button type="button" class="bt2" style="float:right" onclick="charge(); ">포인트계산하기</button>
                     </form>
                     <form class="num">
-                    <input type="text" placeholder="충전할 포인트" class="po1"><button type="button" class="bt2" style="float:right">충전하기</button>
+                    <input type="text" placeholder="충전할 포인트" class="po1" id="final-point"><a href="#"><button type="button" class="bt2" style="float:right">충전하기</button></a>
                     </form>
                 </div>
                 <hr style="width: 400px;margin-left: 450px;margin-top: 20px;">
@@ -63,5 +63,20 @@
 <footer>
     	<jsp:include page="/HeaderNFooterJSP/Footer.jsp"></jsp:include>
 </footer>
+
+<script>
+    // 33은 100에서 몇 퍼센트?
+    // var x = 33;
+    // var y = 100;
+    // result = x / y * 100;
+
+    function charge(){
+        let pointTag = document.querySelector("#point");
+        let finalPointTag = document.querySelector("#final-point");
+        var x = 1;
+        var y = pointTag.value;
+        finalPointTag.value = parseInt(y) + parseInt(y * 1.1 / 100);
+    }
+</script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,8 +27,8 @@
         </aside>
         <article id="point1">
             <h3>포인트 조회</h3>
-            <form class="save">보유포인트<input type="text"> </form>
-            <button type="button" onclick="location.href='/mypage/chargePoint'" class="bt">포인트 충전</button>
+            <form class="save">보유포인트 : <input type="text" value=${requestScope.totalpoint }> </form>
+            <a href="/mypage/chargePoint"><button type="button"  class="bt">포인트 충전</button></a>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </article>
     </div>
