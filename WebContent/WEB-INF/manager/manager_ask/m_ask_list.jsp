@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,28 +51,15 @@
                             <th>문의 날짜</th>
                             <th>답변 여부</th>
                         </tr>
+                        <c:forEach items="${requestScope.aList }" var="ask" varStatus="index">
                         <tr>
-                            <td>1</td>
-                            <td>rkdwodnjs11</td>
-                            <td><a href="/manager/m_ask_answer">상품 가격</a></td>
-                            <td>21.09.23</td>
-                            <td>Y</td>
+                            <td>${ask.askNo }</td>
+                            <td>${ask.askSub }</td>
+                            <td><a href="/manager/m_ask_answer?askNo=${ask.askNo }">${ask.askCon }</a></td>
+                            <td>${ask.askDate }</td>
+                            <td>${ask.reply }</td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>rkdgPwjd33</td>
-                            <td><a href="/manager/m_ask_answer">상품의 궁금한 점</a></td>
-                            <td>21.09.01</td>
-                            <td>N</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>dbsgustjr55</td>
-                            <td><a href="/manager/m_ask_answer">왜이렇게 비싸요?</a></td>
-                            <td>21.09.01</td>
-                            <td>N</td>
-                        </tr>
-                        
+                        </c:forEach>
                     </table>
             </div>
         </div>
