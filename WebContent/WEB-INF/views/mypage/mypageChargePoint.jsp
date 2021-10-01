@@ -75,7 +75,7 @@
         let finalPointTag = document.querySelector("#final-point");
         var x = 1;
         var y = pointTag.value;
-        finalPointTag.value = parseInt(y) + parseInt(y * 1.1 / 100);
+        finalPointTag.value = parseInt(y) + parseInt(y * 10 / 100);
     }
 </script>
 </body>

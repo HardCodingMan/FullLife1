@@ -35,12 +35,13 @@
             </ul>
         </div>
         <div id="btn-div">
-           <c:if test="${sessionScope.userId eq null }">
+           	<c:if test="${sessionScope.userId eq null }">
                <button><a href="/member/login">LOGIN</a></button>
             </c:if>
             <c:if test="${sessionScope.userId ne null }">
                <button style="width:90px;"><a href="/mypage/main?userId=${sessionScope.userId }" style="font-weight: 800;">
                MYPAGE</a></button>
+               <a href="/member/logout" style="font-size:12px;">로그아웃</a>
             </c:if>
         </div>
     </header>
