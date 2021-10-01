@@ -26,7 +26,7 @@
                     </ul>
                 </li>
                 <li class="main-menu">
-                    <a href="#">상담</a> 
+                    <a href="/ask/list">상담</a> 
                     <ul class="serv-menu">
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">문의하기</a></li>

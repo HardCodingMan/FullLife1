@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%
+     
+     String pageNavi = (String)request.getAttribute("pageNavi");
+    %>
     
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
@@ -49,13 +53,27 @@
                         <th class="enrollDate">작성일</th>
                     </tr>
                     <tr>
-                        <td>1</td>
-                        <td>2</td>
+                        <td><%= aOne.getAskNo() %></td>
+                        <td><a href="/ask/detail?noticeNo=<%= nOne.getNoticeNo() %>"><%= nOne.getNoticeSubject() %></a></td>
                         <td>3</td>
                         <td>4</td>
                         <td>5</td>
                         <td>6</td>
                     </tr>
+                    <tr>
+			<td colspan="4" align="center">
+				<%= pageNavi %>
+<!-- 				<a href="#">[이전]</a> -->
+<!-- 				<a href="/notice/list?currentPage=1">1</a> -->
+<!-- 				<a href="/notice/list?currentPage=2">2</a> -->
+<!-- 				<a href="/notice/list?currentPage=3">3</a> -->
+<!-- 				<a href="/notice/list?currentPage=4">4</a> -->
+<!-- 				<a href="/notice/list?currentPage=5">5</a> -->
+<!-- 				<a href="#">[다음]</a>
+						이렇게 하면 1,2,3,4,5 는 고정돼서 안됨 유연하게 움직일수있게 DAO에서 	 -->
+				
+			</td>
+		</tr>
 
                 </table>
             </div>
