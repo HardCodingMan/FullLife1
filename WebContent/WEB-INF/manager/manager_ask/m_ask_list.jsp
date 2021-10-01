@@ -54,12 +54,17 @@
                         <c:forEach items="${requestScope.aList }" var="ask" varStatus="index">
                         <tr>
                             <td>${ask.askNo }</td>
-                            <td>${ask.askSub }</td>
-                            <td><a href="/manager/m_ask_answer?askNo=${ask.askNo }">${ask.askCon }</a></td>
+                            <td>${ask.userId }</td>
+                            <td><a href="/manager/m_ask_answer?askNo=${ask.askNo }">${ask.askSub }</a></td>
                             <td>${ask.askDate }</td>
                             <td>${ask.reply }</td>
                         </tr>
                         </c:forEach>
+                        <tr>
+                        	<td colspan="5" align="center">
+                        		${pageNavi }
+                        	</td>
+                        </tr>
                     </table>
             </div>
         </div>
