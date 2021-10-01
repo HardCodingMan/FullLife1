@@ -8,6 +8,7 @@ import javax.servlet.jsp.tagext.PageData;
 
 import apply.model.dao.ApplyNoticeDAO;
 import apply.model.vo.ApplyNotice;
+import apply.model.vo.ApplyNoticeFile;
 import apply.model.vo.ApplyNoticeReply;
 import apply.model.vo.ApplyPage;
 import common.JDBCTemplate;
@@ -20,13 +21,13 @@ public class ApplyNoticeService {
 		jdbcTemplate = JDBCTemplate.getConnection();
 	}
 	
-	public int noticeWrite(ApplyNotice applyNotice) {
+	public int noticeWrite(ApplyNotice applyNotice, ApplyNoticeFile fileData) {
 		Connection conn = null;
 		int result = 0;
 		
 		try {
 			conn = jdbcTemplate.createConnection();
-			result = new ApplyNoticeDAO().insertNotice(conn, applyNotice);
+			result = new ApplyNoticeDAO().insertNotice(conn, applyNotice, fileData);
 			if(result > 0) {
 				JDBCTemplate.commit(conn);
 			}else {
@@ -98,8 +99,5 @@ public class ApplyNoticeService {
 		}
 		return result;
 	}
-
-	
-
 
 }
