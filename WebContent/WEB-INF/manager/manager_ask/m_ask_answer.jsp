@@ -59,7 +59,7 @@
                         </label>
                     </span>
                     <span class="contents_con">
-<textarea id="textarea" name="ask-con" cols="100" rows="30" placeholder="내용을 입력해주세요">${ask.askCon }</textarea>
+                        <textarea id="textarea" name="ask-con" cols="100" rows="30" placeholder="내용을 입력해주세요">${ask.askCon}</textarea>
                     </span>
                     <br>
                      <span class="contents-title" >
@@ -68,7 +68,7 @@
                         </label>
                     </span>
                     <span class="contents_con">
-<textarea  id="textarea" name="answer-con" cols="100" rows="30" placeholder="내용을 입력해주세요">${ask.answerCon }</textarea>
+                        <textarea  id="textarea" name="answer-con" cols="100" rows="30" placeholder="내용을 입력해주세요">${ask.answerCon}</textarea>
                     </span>
                     <br><br>
                     <input type="hidden" name="ask-no" value="${ask.askNo }">
