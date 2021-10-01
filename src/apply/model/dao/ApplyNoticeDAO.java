@@ -17,7 +17,7 @@ public class ApplyNoticeDAO {
 	public int insertNotice(Connection conn, ApplyNotice applyNotice) {
 		PreparedStatement pstmt = null;
 		int result = 0;
-		String query = "INSERT INTO APPLY_NOTICE VALUES(SEQ_APPLY_NO.NEXTVAL,?,?,DEFAULT,DEFAULT,DEFAULT,?,0,'경로',DEFAULT)";
+		String query = "INSERT INTO APPLY_NOTICE VALUES(SEQ_APPLY_NO.NEXTVAL,?,?,DEFAULT,DEFAULT,DEFAULT,?,0,'경로',DEFAULT,DEFAULT)";
 		
 		try {
 			pstmt = conn.prepareStatement(query);
@@ -195,5 +195,26 @@ public class ApplyNoticeDAO {
 		}
 		return aList;
 	}
+
+	public int insertNoticeReply(Connection conn, String replyContents, int applyNo, String userId) {
+		PreparedStatement pstmt = null;
+		int result = 0;
+		String query = "INSERT INTO APPLY_REPLY VALUES(SEQ_APPLY_REPLY_NO.NEXTVAL, ?,?,DEFAULT,?)";
+		
+		try {
+			pstmt = conn.prepareStatement(query);
+			pstmt.setString(1, userId);
+			pstmt.setString(2, replyContents);
+			pstmt.setInt(3, applyNo);
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(pstmt);
+		}
+		return result;
+	}
+
 
 }

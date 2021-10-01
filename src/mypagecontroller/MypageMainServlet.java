@@ -6,18 +6,19 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class MypageHistory
+ * Servlet implementation class MypageMain
  */
-@WebServlet("/mypage/history")
-public class MypageHistory extends HttpServlet {
+@WebServlet("/mypage/main")
+public class MypageMainServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MypageHistory() {
+    public MypageMainServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,7 +27,8 @@ public class MypageHistory extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/views/mypage/mypageHistory.jsp").forward(request, response);
+		
+		request.getRequestDispatcher("/WEB-INF/views/mypage/mypageMain.jsp").forward(request, response);
 	}
 
 	/**
@@ -34,7 +36,7 @@ public class MypageHistory extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+				doGet(request, response);
 	}
 
 }
