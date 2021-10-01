@@ -20,13 +20,12 @@
         window.onload = function() {
         	 	
             var locationTag = document.querySelector("#location");
-            var hospitalRadio = document.querySelector("#hospital-name");
 			var result = "";
             locationTag.addEventListener("change", function() {
 				result = locationTag.value;
-				location.href="/hospital/listAll?location="+result;
-				
+				location.href="/hospital/listAll?location="+result;	
             });
+            
             
         }
     </script>
@@ -107,7 +106,9 @@
                             </c:if>
                         </div>
                         <br><br><br>
+                        <form action="" method="get">
                         <input type="submit" value="바로 예약하기">
+                        </form>
                     </form>
                 </div>
             </div>
