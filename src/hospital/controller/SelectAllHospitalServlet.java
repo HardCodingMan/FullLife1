@@ -34,7 +34,6 @@ public class SelectAllHospitalServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String location = request.getParameter("location");
-//		System.out.println(location);
 		String done = "";
 		if(location.equals("gwangju")) {
 			done = "광주";
