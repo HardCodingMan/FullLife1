@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>예약하기</title>
+<link rel="stylesheet" type="text/css" href="/css/reservation.css">
 
 </head>
 <body>
