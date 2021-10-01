@@ -183,7 +183,7 @@ text-align: center;
     margin-left: 7%;
 }
 #table-div table{
-    width: 95%;
+    width: 97%;
     height: 20%;
     table-layout: fixed;
     text-align: center;
@@ -195,7 +195,7 @@ text-align: center;
         width: 5%;
     }
     table tr th:nth-child(2){
-        width: 10%;
+        width: 8%;
     }
     table tr th:nth-child(3){
         width: 10%;

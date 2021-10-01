@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,7 +42,7 @@
         </div>
         <div id="line-div"></div>
         <div id="main-contents">
-            <form action="">
+            <form action="/manager/m_ask_answer" method="post">
 
                 <div id="contents">
                     <br>
@@ -49,7 +50,7 @@
                         <label for="subject"><strong>제목</strong></label>
                     </span>
                     <span class="contents_con">
-                        <input type="text" name="subject" id="subject" placeholder="제목을 입력해주세요" value="제목도 자동으로!">
+                        <input type="text" id="subject" name="ask-sub" placeholder="제목을 입력해주세요" value="${ask.askSub }">
                     </span>
                     <br>
                     <span class="contents-title" >
@@ -58,22 +59,21 @@
                         </label>
                     </span>
                     <span class="contents_con">
-                        <textarea name="textarea" id="textarea" cols="100" rows="30" placeholder="내용을 입력해주세요">
-                            여기에는 문의 내용이 자동으로 입력되어있습니다.
-                        </textarea>
+<textarea id="textarea" name="ask-con" cols="100" rows="30" placeholder="내용을 입력해주세요">${ask.askCon }</textarea>
                     </span>
                     <br>
-                    <span class="contents-title">
-                        <strong>공개 여부</strong>
+                     <span class="contents-title" >
+                        <label for="textarea">
+                            <strong>답변내용</strong>
+                        </label>
                     </span>
-                    공개 <input type="checkbox" name="open" id="open">
-                    비공개 <input type="checkbox" name="close" id="close">
-                    <br>
-                    <span class="contents-select">
-                        <strong>답변 여부</strong>
+                    <span class="contents_con">
+<textarea  id="textarea" name="answer-con" cols="100" rows="30" placeholder="내용을 입력해주세요">${ask.answerCon }</textarea>
                     </span>
-                    완료 <input type="checkbox" name="yes" id="yes">
-                    <br>
+                    <br><br>
+                    <input type="hidden" name="ask-no" value="${ask.askNo }">
+                	<input type="hidden" name="reply" value="${ask.reply }">
+                	<input type="hidden" name="answer-date" value="${ask.answerDate }">
                     <button type="submit" id="btnJoin">답변완료</button>
                     
                 </div>
