@@ -186,7 +186,7 @@ header{
         }
         #table-div table{
             width: 95%;
-            height: 50%;
+
             table-layout: fixed;
             text-align: center;
         }
@@ -194,19 +194,22 @@ header{
                 background-color:rgba(173, 196, 136, 0.541);;
             }
             table tr th:first-child{
-                width: 5%;
+                width: 3%;
             }
             table tr th:nth-child(2){
-                width: 15%;
+                width: 10%;
             }
             table tr th:nth-child(3){
                 width: 15%;
             }
             
-            table tr th:nth-child(4){
-                width: 10%;
-            }
             table tr th:last-child{
-                width: 10%;
+                width: 5%;
             }
+#upload-btn{
+	margin-left: 70%;
+	width: 90px;
+	height: 30px;
+	font-size: 15px;
+}
         
