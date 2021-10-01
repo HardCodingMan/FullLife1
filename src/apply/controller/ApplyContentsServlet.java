@@ -29,7 +29,7 @@ public class ApplyContentsServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int applyNoticeNo = Integer.parseInt(request.getParameter("noticeNo"));
+		int applyNoticeNo = Integer.parseInt(request.getParameter("applyNo"));
 		ApplyNotice aOne = new ApplyNoticeService().printOneByNo(applyNoticeNo);
 		if(aOne != null) {
 			request.setAttribute("aOne", aOne);
