@@ -11,13 +11,13 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class ApplyReplyServlet
  */
 @WebServlet("/manager/m_apply_reply")
-public class ApplyReplyServlet extends HttpServlet {
+public class M_applyReplyServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ApplyReplyServlet() {
+    public M_applyReplyServlet() {
         super();
         // TODO Auto-generated constructor stub
     }

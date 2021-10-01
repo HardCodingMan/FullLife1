@@ -1,31 +1,30 @@
-package manager.result.controller;
+package manager.ask.controller;
 
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import manager.member.moder.vo.M_PageData;
-import manager.result.model.service.M_resultService;
-import manager.result.model.vo.M_FilePage;
-import manager.result.model.vo.M_result;
+import manager.ask.model.service.M_askService;
+import manager.ask.model.vo.M_ask;
+import manager.ask.model.vo.M_askPage;
 
 /**
- * Servlet implementation class ResultListServlet
+ * Servlet implementation class AskListServlet
  */
-@WebServlet("/manager/m_result_list")
-public class ResultListServlet extends HttpServlet {
+@WebServlet("/manager/m_ask_list")
+public class M_askListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ResultListServlet() {
+    public M_askListServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -41,13 +40,15 @@ public class ResultListServlet extends HttpServlet {
 		}else {
 			currentPage = Integer.parseInt(getCurrentPage);
 		}
-		M_FilePage fPd = new M_resultService().printAllResult(currentPage);
-		List<M_result> fList = fPd.getfPdList();
-		if(!fList.isEmpty()) {
-			request.setAttribute("fList", fList);
-			request.getRequestDispatcher("/WEB-INF/manager/manager_result/m_result_list.jsp").forward(request, response);
+		M_askPage pageData = new M_askService().printAllAsk(currentPage);
+		List<M_ask> aList = pageData.getaPdList();
+		if(!aList.isEmpty()) {
+			request.setAttribute("aList", aList);
+			request.setAttribute("pageNavi", pageData.getPageNavi());
+			request.getRequestDispatcher("/WEB-INF/manager/manager_ask/m_ask_list.jsp").forward(request, response);
 		}else {
-			request.getRequestDispatcher("/WEB-INF/manager/manager_fail/m_search_fail.jsp").forward(request, response);
+			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/manager_fail/m_search_fail.jsp");
+			view.forward(request, response);
 		}
 	}
 
