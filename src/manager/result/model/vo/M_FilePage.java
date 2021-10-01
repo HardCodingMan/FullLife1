@@ -5,7 +5,7 @@ import java.util.List;
 public class M_FilePage {
 
 	private List<M_result> fPdList;
-	private String pageNavi;
+	private String fPageNavi;
 	
 	public M_FilePage() {}
 
@@ -18,16 +18,16 @@ public class M_FilePage {
 	}
 
 	public String getPageNavi() {
-		return pageNavi;
+		return fPageNavi;
 	}
 
 	public void setPageNavi(String pageNavi) {
-		this.pageNavi = pageNavi;
+		this.fPageNavi = pageNavi;
 	}
 
 	@Override
 	public String toString() {
-		return "M_FilePage [fPdList=" + fPdList + ", pageNavi=" + pageNavi + "]";
+		return "M_FilePage [fPdList=" + fPdList + ", fPageNavi=" + fPageNavi + "]";
 	}
 	
 	
