@@ -31,13 +31,21 @@ public class FastDonateServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int firstRank = Integer.parseInt(request.getParameter("rank1"));
 		int secondRank = Integer.parseInt(request.getParameter("rank2"));
-		double percentage1 = 0;
-		double percentage2 = 0;
+		int percentage1 = 0;
+		int percentage2 = 0;
 		Support firstSupport = new SupportService().getFirstSupportNotice(firstRank);
 		Support secondSupport = new SupportService().getSecondSupportNotice(secondRank);
-		
-		System.out.println(firstSupport.getNoticeTitle()+","+firstSupport.getNeedSupport()+","+firstSupport.getNowSupport()+","+firstSupport.getViews()+","+firstSupport.getPicPath());
-		System.out.println(secondSupport.getNoticeTitle()+","+secondSupport.getNeedSupport()+","+secondSupport.getNowSupport()+","+secondSupport.getViews()+","+secondSupport.getPicPath());
+		/*
+		 	int x = 33;
+			int y = 100;
+			System.out.println( (double) x / (double) y * 100.0 + "%");
+		 */
+		double nowSupport1 = firstSupport.getNowSupport();
+		double nowSupport2 = secondSupport.getNowSupport();
+		double needSupport1 = firstSupport.getNeedSupport();
+		double needSupport2 = secondSupport.getNeedSupport();
+		percentage1 = (int) (nowSupport1 / needSupport1 * 100);
+		percentage2 = (int) (nowSupport2 / needSupport2 * 100);
 		
 		if(firstSupport != null && secondSupport != null) {
 			request.setAttribute("firstSupport", firstSupport);
