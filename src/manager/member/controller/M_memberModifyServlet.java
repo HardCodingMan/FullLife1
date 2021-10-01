@@ -46,7 +46,9 @@ public class M_memberModifyServlet extends HttpServlet {
 		String mZumin = request.getParameter("member-zumin");
 		String mAddr = request.getParameter("member-addr");
 		String mPhone = request.getParameter("member-phone");
-		M_member member = new M_member(mId, mPwd, mName, mZumin, mAddr, mPhone);
+		int mPoint = Integer.parseInt(request.getParameter("member-totalPoint"));
+		String mEmail = request.getParameter("member-email");
+		M_member member = new M_member(mId, mPwd, mName, mZumin, mAddr, mPhone, mPoint, mEmail);
 		
 		int result = new M_memberService().modifyMember(member);
 		if(result > 0) {

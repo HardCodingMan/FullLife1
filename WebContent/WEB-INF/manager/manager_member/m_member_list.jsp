@@ -58,6 +58,7 @@
                             <th>주소</th>
                             <th>전화번호</th>
                             <th>포인트</th>
+                            <th>이메일</th>
                             <th>가입날짜</th>
                             <th>수정</th>
                             <th>삭제</th>
@@ -70,7 +71,8 @@
                             <td>${member.zumin }</td>
                             <td>${member.addr }</td>
                             <td>${member.phone }</td>
-                            <td>${member.point }</td>
+                            <td>${member.totalPoint }</td>
+                            <td>${member.email }</td>
                             <td>${member.regDate }</td>
                             <td>
                                 <button type="submit" class="bt1"><a href="/manager/m_member_modify?userNo=${member.userNo }">수정</a></button>
