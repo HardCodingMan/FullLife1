@@ -58,7 +58,7 @@ public class M_resultDAO {
 		return fList;
 	}
 
-	public String getPageNavi(Connection conn, int currentPage) {
+	public String getFileNavi(Connection conn, int currentPage) {
 		int pageCountPerView = 5;
 		int viewTotalCount = totalCount(conn);
 		int viewCountPerPage = 10;
@@ -86,7 +86,7 @@ public class M_resultDAO {
 		
 		StringBuilder sb = new StringBuilder();
 		if(needPrev) {
-			sb.append("<a href='/manager/m_result_list?currentPage="+(startNavi-1)+"'> [이전] </a>");	
+			sb.append("<a href='/manager/m_result_list?currentPage="+(startNavi-1)+"'> [이전] </a>");
 		}
 		for(int i = startNavi; i<=endNavi; i++) {
 			if(i==currentPage) {
@@ -98,7 +98,7 @@ public class M_resultDAO {
 		if(needNext) {
 			sb.append("<a href='/manager/m_result_list?currentPage="+(endNavi+1)+"'> [다음] </a>");
 		}
-		
+
 		return sb.toString();
 	}
 	
