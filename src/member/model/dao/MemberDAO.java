@@ -27,7 +27,7 @@ public class MemberDAO {
 				member.setUserPwd(rset.getString("USER_PWD"));
 				member.setUserNo(rset.getInt("USER_NO"));
 				member.setUserName(rset.getString("USER_NAME"));
-				member.setTotalPoint(rset.getInt("POINT"));
+				member.setTotalPoint(rset.getInt("TOTALPOINT"));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
