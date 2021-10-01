@@ -167,7 +167,6 @@ header{
         }
         #table-div table{
             width: 95%;
-            height: 50%;
             table-layout: fixed;
             text-align: center;
         }
@@ -190,4 +189,7 @@ header{
                 text-decoration: none;
                 display: block;
             }
+            table tr:last-child a{
+				display:inline;
+			}
         
