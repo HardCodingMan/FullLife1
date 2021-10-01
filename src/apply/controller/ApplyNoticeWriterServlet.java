@@ -53,7 +53,7 @@ public class ApplyNoticeWriterServlet extends HttpServlet {
 		/////////////// 사진///////////
 		String uploadFilePath = request.getServletContext().getRealPath("fileupload");
 		System.out.println(uploadFilePath);
-		int uploadFileLimit = 5*1024*1024; // 5mb m > 10^6
+		int uploadFileLimit = 50*1024*1024;
 		String encType = "UTF-8";
 		MultipartRequest multi = new MultipartRequest(request, uploadFilePath, uploadFileLimit, encType, new DefaultFileRenamePolicy());
 		File uploadFile = multi.getFile("apply-File");
