@@ -16,8 +16,17 @@ public class ApplyNotice {
 	private int picSize;
 	private String picPath;
 	private String mngCheck;
+	private int replyCount;
 	
-	// 댓글
+	public int getReplyCount() {
+		return replyCount;
+	}
+
+	public void setReplyCount(int replyCount) {
+		this.replyCount = replyCount;
+	}
+
+		// 댓글
 		private List<ApplyNoticeReply> replist;
 		
 		public ApplyNotice(List<ApplyNoticeReply> replist) {
@@ -134,8 +143,11 @@ public class ApplyNotice {
 	public String toString() {
 		return "ApplyNotice [applyNo=" + applyNo + ", applyTitle=" + applyTitle + ", applyContents=" + applyContents
 				+ ", enrollDate=" + enrollDate + ", applyLike=" + applyLike + ", applyViews=" + applyViews + ", userId="
-				+ userId + ", picSize=" + picSize + ", picPath=" + picPath + ", mngCheck=" + mngCheck + "]";
+				+ userId + ", picSize=" + picSize + ", picPath=" + picPath + ", mngCheck=" + mngCheck + ", replyCount="
+				+ replyCount + ", replist=" + replist + "]";
 	}
+
+	
 	
 	
 }
