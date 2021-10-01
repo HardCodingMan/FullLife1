@@ -195,19 +195,19 @@ text-align: center;
         width: 5%;
     }
     table tr th:nth-child(2){
-        width: 15%;
+        width: 10%;
     }
     table tr th:nth-child(3){
-        width: 12%;
+        width: 10%;
     }
     table tr th:nth-child(4){
-        width: 15%;
+        width: 10%;
     }
     table tr th:nth-child(5){
-        width: 15%;
+        width: 12%;
     }
     table tr th:nth-child(6){
-        width: 15%;
+        width: 12%;
     }
     table tr th:nth-child(7){
         width: 7%;

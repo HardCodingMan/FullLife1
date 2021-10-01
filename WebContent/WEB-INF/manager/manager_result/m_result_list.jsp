@@ -50,7 +50,7 @@
                 </div>
            </div>
             <form action="/manager/m_file_down" method="post">
-                   <input type="submit" value="업로드">
+                   <input type="submit" id="upload-btn" value="업로드">
            </form>
             <div id="table-div">
                     <table border="1" cellspacing="0">

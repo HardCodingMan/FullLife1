@@ -43,7 +43,7 @@ public class M_resultService {
 		try {
 			conn=jdbcTemplate.createConnection();
 			fPd.setfPdList(rDao.selectAllResult(conn, currentPage));
-			fPd.setPageNavi(rDao.getPageNavi(conn, currentPage));
+			fPd.setPageNavi(rDao.getFileNavi(conn, currentPage));
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {

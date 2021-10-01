@@ -57,6 +57,10 @@
                     <input type="text" name="member-addr" style="width: 305px; height: 25px;" value="${member.addr }"><br><br>
                     <label for="">전화번호</label><br>
                     <input type="text" name="member-phone" style="width: 305px; height: 25px;" value="${member.phone }"><br><br>
+                    <label for="">포인트</label><br>
+                    <input type="text" name="member-totalPoint" style="width: 305px; height: 25px;" value="${member.totalPoint }"><br><br>
+                    <label for="">이메일</label><br>
+                    <input type="text" name="member-email" style="width: 305px; height: 25px;" value="${member.email }"><br><br>
                 </div>
             </div>
             <div id="btn-div">
