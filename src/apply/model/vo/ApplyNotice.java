@@ -15,7 +15,7 @@ public class ApplyNotice {
 	private String userId;
 	private int picSize;
 	private String picPath;
-	private String mngCheck;
+	private char mngCheck;
 	private int replyCount;
 	
 		// 댓글
@@ -37,7 +37,7 @@ public class ApplyNotice {
 	public ApplyNotice() {};
 	
 	public ApplyNotice(int applyNo, String applyTitle, String applyContents, Date enrollDate, int applyLike,
-			int applyViews, String userId, int picSize, String picPath, String mngCheck) {
+			int applyViews, String userId, int picSize, String picPath, char mngCheck) {
 		super();
 		this.applyNo = applyNo;
 		this.applyTitle = applyTitle;
@@ -123,11 +123,11 @@ public class ApplyNotice {
 		this.picPath = picPath;
 	}
 
-	public String getMngCheck() {
+	public char getMngCheck() {
 		return mngCheck;
 	}
 
-	public void setMngCheck(String mngCheck) {
+	public void setMngCheck(char mngCheck) {
 		this.mngCheck = mngCheck;
 	}
 	
