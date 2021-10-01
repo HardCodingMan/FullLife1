@@ -25,7 +25,7 @@
             </div>
             <div id="notice-wirte">
             <!-- 게시판 양식 -->
-                <form action="/Notice/Apply/ApplyNoticeWriter" method="post">
+                <form action="/Notice/Apply/ApplyNoticeWriter" method="post" enctype="multipart/form-data">
                     <p>제목</p><input type="text" size="100" placeholder="제목을 입력하세요" name="apply-notice-sub" class="box"><br>
                     <p>내용</p><textarea rows="30" cols="100" placeholder="내용을 입력하세요" name="apply-notice-contents" class="box"></textarea><br>
                     <p>사진첨부</p><input type="file" name="" id="apply-UpLoad" class="box">

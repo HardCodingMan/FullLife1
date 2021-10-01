@@ -42,17 +42,17 @@
                             <tr>
                                 <th id="th-id">아이디</th><th id="th-contents">내용</th><th id="th-enroll">작성일</th>
                             </tr>
-                            <c:forEach items="${aOne }" var="aOne">
+                            <c:forEach items="${aOne.replist }" var="aOne">
                             <tr>
                                 <td>${aOne.replyUserId }</td>
                                 <td>${aOne.replyContents }</td>
-                                <td>${replyDate }</td>
+                                <td>${aOne.replyDate }</td>
                             </tr>
                             </c:forEach>
                             <tr id="reply-input">
-                                <form action="/noticeReply/write" method="post">
+                                <form action="/Notice/Apply/ApplyNoticeReplyWriter" method="post">
                                     <td>댓글 작성 : </td> <td><input type="text" name="replyContents" placeholder="댓글을 작성해보세요" id="text-input"></td>
-                                        <td><input type="hidden" name="noticeNo" value="${noticeOne.noticeNo }">
+                                        <td><input type="hidden" name="applyNo" value="${aOne.applyNo }">
                                         <input type="submit" value="작성"></td>
                                 </form>    
                             </tr>
