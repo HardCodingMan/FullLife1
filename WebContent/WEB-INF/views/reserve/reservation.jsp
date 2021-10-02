@@ -89,16 +89,20 @@ window.onload = function() {
                         <select id="region">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         	<option value="" selected>----- 병원 선택 ------</option>
 =======
 >>>>>>> origin/Hyunseok
 =======
 >>>>>>> 5c3b789bfc223a181bc4cdbbe572cac4e2184544
+=======
+>>>>>>> origin/Hyunseok
                             <option value="seoul"<c:if test="${metroCity eq  'seoul'}">selected</c:if>>서울
                             <option value="daejeon"<c:if test="${metroCity eq 'daejeon' }">selected</c:if>>대전</option>
                             <option value="daegu" <c:if test="${metroCity eq 'daegu' }">selected</c:if>>대구</option>
                             <option value="busan" <c:if test="${metroCity eq 'busan' }">selected</c:if>>부산</option>
                             <option value="gwangju"<c:if test="${metroCity eq 'gwangju' }">selected</c:if>>광주</option>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <!--                         	<option value="" selected>----- 병원 선택 ------</option> -->
@@ -119,6 +123,8 @@ window.onload = function() {
                             <option value="gwangju">광주</option>
 >>>>>>> e656fdeda676b8b971d3033e5531efe878fb775c
 >>>>>>> 5c3b789bfc223a181bc4cdbbe572cac4e2184544
+=======
+>>>>>>> origin/Hyunseok
                         </select>
                     </td>           
                 </tr>

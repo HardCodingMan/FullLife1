@@ -1,4 +1,4 @@
-	package member.controller;
+package member.member.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
