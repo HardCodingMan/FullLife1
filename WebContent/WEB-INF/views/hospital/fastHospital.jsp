@@ -26,12 +26,8 @@
 				result = locationTag.value;
 				location.href="/hospital/listAll?location="+result;	
             });
+            
 
-            var hospitalNo = "";
-			document.querySelector("input[name=chosen-hospital]").addEventListener("change", function(){
-				hospitalNo = this.value;
-			});
-// 			document.querySelector("#")
         }
     </script>
     <header>
@@ -47,10 +43,10 @@
                 <div class="input-footer">
                     <p>가까운 병원 찾기</p>
                     <h6>지역을 선택해주세요.</h6>
-                    <c:if test="${sessionScope.userId ne null }">
+                    <c:if test="${sessionScope.userId ne null or requestScope.location ne null }">
                     <form action="/reserve/reservation" method="get">
                     </c:if>
-                    <c:if test="${sessionScope.userId eq null }">
+                    <c:if test="${sessionScope.userId eq null or requestScope.location eq null }">
                     <form action="/member/login" method="get">
                     </c:if>
                         <div class="select">
@@ -112,7 +108,7 @@
         </section>
         <section class="intro-section">
             <div class="pic-div">
-                <img src="../../../	img/aside.png" alt="" style="width: 100%; height: 100%;">
+                <img src="../../../img/aside.png" alt="" style="width: 100%; height: 100%;">
             </div>
             <p style="color:gray;">
          평균 생존율은 1년 95%, 5년 92% , FullLife는 언제나 최고의 연구진과 함께합니다.</p>
