@@ -30,8 +30,12 @@ public class HistoryService {
 		}finally {
 			JDBCTemplate.close(conn);
 		}
+<<<<<<< HEAD
 <<<<<<< HEAD:src/mypageHistory/model/service/HistoryService.java
 		return his;
+=======
+		return hisPage;
+>>>>>>> origin/JaeWon
 	}
 
 	public BookedHospitalInfo getBookedHospitalInfo(String userId) {
@@ -48,7 +52,9 @@ public class HistoryService {
 			JDBCTemplate.close(conn);
 		}
 		
+		
 		return info;
+<<<<<<< HEAD
 	}
 
 =======
@@ -56,5 +62,8 @@ public class HistoryService {
 		return hisPage;
 	} 
 >>>>>>> ccf2c619516a4e187ffd1b1f1312edd819d99d05:src/mypageHistory/service/HistoryService.java
+=======
+	} 
+>>>>>>> origin/JaeWon
 	
 }
