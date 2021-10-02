@@ -51,7 +51,11 @@ public class HistoryDAO {
 		return hList;
 		
 	}
+<<<<<<< HEAD
 <<<<<<< HEAD:src/mypageHistory/model/dao/HistoryDAO.java
+=======
+
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
 
 	public BookedHospitalInfo getBookedHospitalInfo(String userId, Connection conn) {
 		PreparedStatement pstmt = null;
@@ -81,6 +85,7 @@ public class HistoryDAO {
 		return info;
 	}
 	
+<<<<<<< HEAD
 	
 	
 	
@@ -88,6 +93,8 @@ public class HistoryDAO {
 	
 	
 =======
+=======
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
 	public String getPageNavi(Connection conn, int historyPage) {
 		int pageCountPerView = 5;
 		int viewTotalCount = totalCount(conn);
@@ -154,5 +161,8 @@ public class HistoryDAO {
 		return totalValue; 
 	}
 
+<<<<<<< HEAD
 >>>>>>> ccf2c619516a4e187ffd1b1f1312edd819d99d05:src/mypageHistory/dao/HistoryDAO.java
+=======
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
 }
