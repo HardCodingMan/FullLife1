@@ -11,7 +11,7 @@
 <body>
 <header>
         <div id="logo">
-            <img src="/img/HSfulllife로고3 (1).png" alt="">
+            <a href="/index.jsp"><img src="/img/HSfulllife로고3 (1).png" alt=""></a>
         </div>
         <div id="blank"></div>
         <div id="header-menu">
@@ -28,7 +28,7 @@
                 <li class="main-menu">
                     <a href="/ask/list">상담</a> 
                     <ul class="serv-menu">
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="/faq/FAQ">FAQ</a></li>
                         <li><a href="#">문의하기</a></li>
                     </ul>
                 </li>
