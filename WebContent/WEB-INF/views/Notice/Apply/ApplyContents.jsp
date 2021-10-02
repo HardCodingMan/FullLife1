@@ -62,8 +62,9 @@
                         </table>
                     </div>
                 </div>
-                <div id="list">
-                    <a href="/Notice/Apply/ApplyNotice"><button>목록</button></a>
+                <div id="bottom-butn">
+                    <a href="/Notice/Apply/ApplyNotice"><button id="list">목록</button></a>
+                    <a href="/Notice/Apply/ApplyNoticeDelete?applyNo=${aOne.applyNo }"><button id="delete">삭제</button></a>
                 </div>
             </section>
             </div>

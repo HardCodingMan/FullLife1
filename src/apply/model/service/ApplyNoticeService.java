@@ -68,7 +68,6 @@ public class ApplyNoticeService {
 		try {
 			conn = jdbcTemplate.createConnection();
 			applyNotice = applyDAO.selectOneByNo(conn, applyNoticeNo);
-			System.out.println(applyNoticeNo);
 			aList = applyDAO.selectAllNoticeReply(conn, applyNoticeNo);
 			applyNotice.setReplist(aList);
 		} catch (SQLException e) {
@@ -87,6 +86,27 @@ public class ApplyNoticeService {
 		try {
 			conn = jdbcTemplate.createConnection();
 			result =  new ApplyNoticeDAO().insertNoticeReply(conn, replyContents, applyNo, userId);
+			if(result > 0) {
+				JDBCTemplate.commit(conn);
+			}else {
+				JDBCTemplate.rollback(conn);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(conn);
+		}
+		return result;
+	}
+
+	public int removeNotice(int applyNoticeNo) {
+		int result = 0;
+		Connection conn = null;
+		
+		try {
+			conn = jdbcTemplate.createConnection();
+			result = new ApplyNoticeDAO().deleteApply(conn, applyNoticeNo);
 			if(result > 0) {
 				JDBCTemplate.commit(conn);
 			}else {

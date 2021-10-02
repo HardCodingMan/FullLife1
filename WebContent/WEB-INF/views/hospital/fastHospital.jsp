@@ -26,6 +26,7 @@
 				result = locationTag.value;
 				location.href="/hospital/listAll?location="+result;	
             });
+<<<<<<< HEAD
             document.querySelector("input[name='chosen-hospital']").addEventListener("change", function(){
             	console.log(this.value);
             });
@@ -33,6 +34,10 @@
 
 			var BtnTag = querySelector("#submitBtn");
 			
+=======
+            
+
+>>>>>>> origin/Hyunseok
         }
     </script>
     <header>
@@ -65,7 +70,7 @@
                             </select>
                         </div>
                         <br><br><br>
-                        <input type="submit" value="바로 예약하기" onclick="sendHospitalNo()">
+                        <input type="submit" value="바로 예약하기">
                     </form>
                 </div>
             </div>
@@ -81,10 +86,14 @@
                 </div>
                 <div id="hospital-result">
                 	<c:forEach items="${requestScope.hospitals }" var="hospital" varStatus="index">
+<<<<<<< HEAD
                 		<label>
                 		<input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }">
                 		<b style="font-size:25px">${hospital.hospitalName }</b>
                 		</label>
+=======
+                		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
+>>>>>>> origin/Hyunseok
                 		<h4 style="margin:10px">${hospital.hospitalAddr }</h4>
                 		<a href="#"><h5 style="margin: 0 0 40px 30px">${hospital.hospitalPhone }</h5></a>
                 	</c:forEach>
