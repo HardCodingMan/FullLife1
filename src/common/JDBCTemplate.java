@@ -40,7 +40,7 @@ public class JDBCTemplate {
 	public static void close(Connection conn) {
 		try {
 			if(conn != null && !conn.isClosed()) {
-			conn.close();
+				conn.close();
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -68,7 +68,7 @@ public class JDBCTemplate {
 	public static void close(ResultSet rset) {
 		try {
 			if(rset != null && !rset.isClosed()) {
-			rset.close();
+				rset.close();
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -77,7 +77,7 @@ public class JDBCTemplate {
 	public static void close(Statement stmt) {
 		try {
 			if(stmt != null && !stmt.isClosed()) {
-			stmt.close();
+				stmt.close();
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

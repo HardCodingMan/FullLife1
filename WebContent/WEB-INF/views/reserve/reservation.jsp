@@ -148,15 +148,14 @@ window.onload = function() {
                      </div>
 =======
     				<div id="result">
-<<<<<<< HEAD
     				<c:forEach items="${requestScope.hospitals }" var="hospital" varStatus="index" >
     				<label><input type="radio" id="hospital-name" name="chosen-hospital"><b style="font-size:25px">${hospital.hospitalName }</b>
                 		<h4 style="margin:10px">${hospital.hospitalAddr }</h4></label>  <button onclick=>위치보기</button>
-=======
+
     				<c:forEach items="${requestScope.hospitals}" var="hospital" varStatus="index" >
     				<label><input type="radio" id="hospital-name" name="chosen-hospital" hidden><b style="font-size:25px">${hospital.hospitalName }</b>
                 		<h4 style="margin:10px">${hospital.hospitalAddr }</h4></label>  <button onclick="selectHospital(${hospital.hospitalAddr}})">위치보기</button>
->>>>>>> ccf2c619516a4e187ffd1b1f1312edd819d99d05
+
            			 </c:forEach>
            			 </div>
 >>>>>>> ac4285a89d941351d66e2a882df6d149a4df2806
