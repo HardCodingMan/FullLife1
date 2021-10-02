@@ -1,9 +1,10 @@
-package mypageHistory.service;
+package mypageHistory.model.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import common.JDBCTemplate;
-import mypageHistory.dao.HistoryDAO;
+import mypageHistory.model.dao.HistoryDAO;
+import mypageHistory.model.vo.BookedHospitalInfo;
 import mypageHistory.model.vo.HistoryPage;
 
 public class HistoryService {
@@ -29,8 +30,31 @@ public class HistoryService {
 		}finally {
 			JDBCTemplate.close(conn);
 		}
+<<<<<<< HEAD:src/mypageHistory/service/HistoryService.java
 		
 		return hisPage;
 	} 
+=======
+		return his;
+	}
+
+	public BookedHospitalInfo getBookedHospitalInfo(String userId) {
+		BookedHospitalInfo info = null;
+		Connection conn = null;
+		
+		try {
+			conn = jdbcTemplate.createConnection();
+			info = new HistoryDAO().getBookedHospitalInfo(userId, conn);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			JDBCTemplate.close(conn);
+		}
+		
+		return info;
+	}
+
+>>>>>>> 7aa522b4c02514daf6fcc743b8d1c6137416f71f:src/mypageHistory/model/service/HistoryService.java
 	
 }

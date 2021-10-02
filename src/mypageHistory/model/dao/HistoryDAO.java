@@ -1,4 +1,4 @@
-package mypageHistory.dao;
+package mypageHistory.model.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import common.JDBCTemplate;
+import mypageHistory.model.vo.BookedHospitalInfo;
 import mypageHistory.model.vo.History;
 
 public class HistoryDAO {
@@ -50,6 +51,7 @@ public class HistoryDAO {
 		return hList;
 		
 	}
+<<<<<<< HEAD:src/mypageHistory/dao/HistoryDAO.java
 	public String getPageNavi(Connection conn, int historyPage) {
 		int pageCountPerView = 5;
 		int viewTotalCount = totalCount(conn);
@@ -116,4 +118,41 @@ public class HistoryDAO {
 		return totalValue; 
 	}
 
+=======
+
+	public BookedHospitalInfo getBookedHospitalInfo(String userId, Connection conn) {
+		PreparedStatement pstmt = null;
+		BookedHospitalInfo info = null;
+		ResultSet rset = null;
+		String query = "SELECT * FROM BOOKED_HOSPITAL_INFO JOIN ORGAN USING(ORGAN_NO) JOIN HOSPITAL USING(HOSPITAL_NO) JOIN RESULT USING(USER_ID) WHERE USER_ID = ?";
+	
+		try {
+			pstmt = conn.prepareStatement(query);
+			pstmt.setString(1, userId);
+			rset = pstmt.executeQuery();
+			if(rset.next()) {
+				info = new BookedHospitalInfo();
+				info.setHospitalAddr(rset.getString("HOSPITAL_ADDR"));
+				info.setHospitalName(rset.getString("HOSPITAL_NAME"));
+				info.setCheckDate(rset.getString("CHECK_DATE"));
+				info.setHospitalTime(rset.getDate("HOSPITAL_TIME"));
+				info.setOrgan(rset.getString("ORGAN_NAME"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			JDBCTemplate.close(rset);
+			JDBCTemplate.close(pstmt);
+		}
+		return info;
+	}
+	
+	
+	
+	
+	
+	
+	
+>>>>>>> 7aa522b4c02514daf6fcc743b8d1c6137416f71f:src/mypageHistory/model/dao/HistoryDAO.java
 }
