@@ -1,4 +1,4 @@
-package member.model.service;
+package member.member.model.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;

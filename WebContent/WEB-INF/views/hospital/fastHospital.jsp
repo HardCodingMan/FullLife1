@@ -28,11 +28,17 @@
             });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             
 
 =======
 =======
 >>>>>>> origin/JaeWon
+=======
+            
+
+=======
+>>>>>>> origin/Hyunseok
             document.querySelector("input[name='chosen-hospital']").addEventListener("change", function(){
             	console.log(this.value);
             });
@@ -41,11 +47,14 @@
 			var BtnTag = querySelector("#submitBtn");
 			
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7f17ff42baf25563595b9152103373b9fc4b11f9
 =======
 =======
             
 
+>>>>>>> origin/Hyunseok
+=======
 >>>>>>> origin/Hyunseok
 >>>>>>> origin/JaeWon
         }
@@ -98,19 +107,27 @@
                 	<c:forEach items="${requestScope.hospitals }" var="hospital" varStatus="index">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
 =======
 =======
 >>>>>>> origin/JaeWon
+=======
+                		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
+=======
+>>>>>>> origin/Hyunseok
                 		<label>
                 		<input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }">
                 		<b style="font-size:25px">${hospital.hospitalName }</b>
                 		</label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7f17ff42baf25563595b9152103373b9fc4b11f9
 =======
 =======
                 		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
+>>>>>>> origin/Hyunseok
+=======
 >>>>>>> origin/Hyunseok
 >>>>>>> origin/JaeWon
                 		<h4 style="margin:10px">${hospital.hospitalAddr }</h4>
