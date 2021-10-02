@@ -87,18 +87,24 @@ window.onload = function() {
                 <tr>
                     <td>
                         <select id="region">
+<<<<<<< HEAD
                         	<option value="" selected>----- 병원 선택 ------</option>
+=======
+>>>>>>> origin/Hyunseok
                             <option value="seoul"<c:if test="${metroCity eq  'seoul'}">selected</c:if>>서울
                             <option value="daejeon"<c:if test="${metroCity eq 'daejeon' }">selected</c:if>>대전</option>
                             <option value="daegu" <c:if test="${metroCity eq 'daegu' }">selected</c:if>>대구</option>
                             <option value="busan" <c:if test="${metroCity eq 'busan' }">selected</c:if>>부산</option>
                             <option value="gwangju"<c:if test="${metroCity eq 'gwangju' }">selected</c:if>>광주</option>
+<<<<<<< HEAD
 <!--                         	<option value="" selected>----- 병원 선택 ------</option> -->
 <!--                             <option value="seoul">서울</option> -->
 <!--                             <option value="daejeon">대전</option> -->
 <!--                             <option value="daegu">대구</option> -->
 <!--                             <option value="busan">부산</option> -->
 <!--                             <option value="gwangju">광주</option> -->
+=======
+>>>>>>> origin/Hyunseok
                         </select>
                     </td>           
                 </tr>
@@ -107,6 +113,7 @@ window.onload = function() {
             <div id="hosDetail">
                 <div id="viewHos">
                     <h4>병원명</h4>
+<<<<<<< HEAD
     				<div id="result">
     				<c:forEach items="${requestScope.hospitals }" var="hospital" varStatus="index" >
     				<label><input type="radio" id="hospital-name" name="chosen-hospital"><b style="font-size:25px">${hospital.hospitalName }</b>
@@ -149,6 +156,45 @@ window.onload = function() {
 				            });    
 		            </script>
 		            </div>         
+=======
+                <div id="result">
+                <c:forEach items="${requestScope.hospitals}" var="hospital" varStatus="index" >
+                <label><input type="radio" id="hospital-name" name="chosen-hospital" hidden><b style="font-size:25px">${hospital.hospitalName }</b>
+                      <h4 style="margin:10px">${hospital.hospitalAddr }</h4></label>  <button onclick="selectHospital(${hospital.hospitalAddr}})">위치보기</button>
+                     </c:forEach>
+                     </div>
+                </div>
+                <div id="dateTime">
+                   <div id="map" style="width:500px;height:400px;">
+                   <h4>지도</h4>
+               <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=977b62db984a36094fb13c99f6a75050&libraries=services"></script>
+               <script>
+                        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                        mapOption = {
+                            center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                            level: 3 
+                        };  
+                        
+                        var map = new kakao.maps.Map(mapContainer, mapOption); 
+                        var geocoder = new kakao.maps.services.Geocoder();
+                        geocoder.addressSearch('서울 서초구 반포대로 222', function(result, status) {
+                            if (status === kakao.maps.services.Status.OK) {
+                                var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+                                
+                                var marker = new kakao.maps.Marker({
+                                    map: map,
+                                    position: coords
+                                });
+                                var infowindow = new kakao.maps.InfoWindow({
+                                    content: '<div style="width:150px;text-align:center;padding:6px 0;">서울성모병원</div>'
+                                });
+                                infowindow.open(map, marker);
+                                map.setCenter(coords);
+                            } 
+                        });    
+                  </script>
+                  </div>         
+>>>>>>> origin/Hyunseok
                     <div id="selectTime">
                         <h4>시간</h4>
                         <div id="timeBtns">
