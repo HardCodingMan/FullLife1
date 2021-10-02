@@ -26,7 +26,7 @@
             </ul>
         </aside>
         <article>
-            <form id="order" action="/mypage/hispory" method="post" name="mypageHistory">
+            <form id="order" action="/mypage/history" method="post" name="mypageHistory">
                 <h3>주문내역</h3>
                 <table class="jumun">
                     <tr>
@@ -50,7 +50,7 @@
                     </tr>
                 	 </c:forEach>
                 	 <tr>
-                	 <td>${pageNavi}</td>
+                	 <td colspan="7" align="center">${pageNavi}</td>
                 	 <tr>
                 </table>
             </form>
