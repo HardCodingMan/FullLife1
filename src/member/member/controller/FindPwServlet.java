@@ -1,4 +1,4 @@
-package manager.member.controller;
+package member.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -6,21 +6,21 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import manager.member.model.service.M_memberService;
+import member.model.service.MemberService;
+import member.model.vo.Member;
 
 /**
- * Servlet implementation class M_memberRemove
+ * Servlet implementation class FindPwServlet
  */
-@WebServlet("/manager/m_member_remove")
-public class M_memberRemove extends HttpServlet {
+@WebServlet("/member/findPw")
+public class FindPwServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public M_memberRemove() {
+    public FindPwServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,22 +29,22 @@ public class M_memberRemove extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		HttpSession session = request.getSession();
-//		String mId = (String)session.getAttribute("userId");
-		String mId = request.getParameter("userId");
-		int result = new M_memberService().deleteMember(mId);
-//		System.out.println(result);
-		if(result > 0) {
-			response.sendRedirect("/manager/m_member_list");
-		}else {
-			request.getRequestDispatcher("/WEB-INF/manager/manager_fail/m_search_fail.jsp").forward(request, response);
-		}
+		request.getRequestDispatcher("/WEB-INF/views/member/findPw.jsp").forward(request, response);
 	}
-
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	}	
+		request.setCharacterEncoding("utf-8");
+		String userName = request.getParameter("user-name");
+		String userId = request.getParameter("user-id");
+		String userPwd = new MemberService().getOneMemberForPw(userName, userId);
+		System.out.println(userPwd);
+		if(userPwd != "") {
+			request.setAttribute("userPwd", userPwd);
+		}
+		request.getRequestDispatcher("/WEB-INF/views/member/pwFoundResult.jsp").forward(request, response);
+	}
+
 }
