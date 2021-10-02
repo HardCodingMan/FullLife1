@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,169 +43,35 @@
             <div id="line-div"></div>
             <div id="contents">
                 <div id="list-div">
-                    <div class="list">
-                        <div class="list-img">
-                            <img src="/img/insta1.jpg" alt="후원1">
-                        </div>
-                        <div class="list-text">
-                            <a href="/manager/m_apply_reply">우리 동생이..</a> 
-                        </div>
-                        <div id="list-text2">
-                            <div>조회수 : 200 <br>추천수 : 100</div>
-                            <div>심사중</div>
-                        </div>
-                        <div class="list-btn">
-                            <form action="">
-                                <input type="submit" value="심사완료">&nbsp;&nbsp;
-                                <input type="submit" value="삭제">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <div class="list-img">
-                            <img src="/img/insta2.jpg" alt="후원1">
-                        </div>
-                        <div class="list-text">
-                            <a href="/manager/m_apply_reply">돈이 없어 수술을..</a> 
-                        </div>
-                        <div id="list-text2">
-                            <div>조회수 : 200 <br>추천수 : 100</div>
-                            <div>심사중</div>
-                        </div>
-                        <div class="list-btn">
-                            <form action="">
-                                <input type="submit" value="심사완료">&nbsp;&nbsp;
-                                <input type="submit" value="삭제">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <div class="list-img">
-                            <img src="/img/insta3.jpg" alt="후원1">
-                        </div>
-                        <div class="list-text">
-                            <a href="/manager/m_apply_reply">기부금이..</a> 
-                        </div>
-                        <div id="list-text2">
-                            <div>조회수 : 200 <br>추천수 : 100</div>
-                            <div>심사중</div>
-                        </div>
-                        <div class="list-btn">
-                            <form action="">
-                                <input type="submit" value="심사완료">&nbsp;&nbsp;
-                                <input type="submit" value="삭제">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <div class="list-img">
-                            <img src="/img/insta4.jpg" alt="후원1">
-                        </div>
-                        <div class="list-text">
-                            <a href="/manager/m_apply_reply">우리 오빠가..</a> 
-                        </div>
-                        <div id="list-text2">
-                            <div>조회수 : 200 <br>추천수 : 100</div>
-                            <div>심사중</div>
-                        </div>
-                        <div class="list-btn">
-                            <form action="">
-                                <input type="submit" value="심사완료">&nbsp;&nbsp;
-                                <input type="submit" value="삭제">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <div class="list-img">
-                            <img src="/img/insta5.jpg" alt="후원1">
-                        </div>
-                        <div class="list-text">
-                            <a href="/manager/m_apply_reply">이쁜 우리 언니..</a> 
-                        </div>
-                        <div id="list-text2">
-                            <div>조회수 : 200 <br>추천수 : 100</div>
-                            <div>심사중</div>
-                        </div>
-                        <div class="list-btn">
-                            <form action="">
-                                <input type="submit" value="심사완료">&nbsp;&nbsp;
-                                <input type="submit" value="삭제">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <div class="list-img">
-                            <img src="/img/insta6.jpg" alt="후원1">
-                        </div>
-                        <div class="list-text">
-                            <a href="/manager/m_apply_reply">모델 출신 오빠가..</a> 
-                        </div>
-                        <div id="list-text2">
-                            <div>조회수 : 200 <br>추천수 : 100</div>
-                            <div>심사중</div>
-                        </div>
-                        <div class="list-btn">
-                            <form action="">
-                                <input type="submit" value="심사완료">&nbsp;&nbsp;
-                                <input type="submit" value="삭제">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <div class="list-img">
-                            <img src="/img/insta7.jpg" alt="후원1">
-                        </div>
-                        <div class="list-text">
-                            <a href="/manager/m_apply_reply">사랑해요</a> 
-                        </div>
-                        <div id="list-text2">
-                            <div>조회수 : 200 <br>추천수 : 100</div>
-                            <div>심사중</div>
-                        </div>
-                        <div class="list-btn">
-                            <form action="">
-                                <input type="submit" value="심사완료">&nbsp;&nbsp;
-                                <input type="submit" value="삭제">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <div class="list-img">
-                            <img src="/img/insta8.jpg" alt="후원1">
-                        </div>
-                        <div class="list-text">
-                            <a href="/manager/m_apply_reply">힘들어요</a> 
-                        </div>
-                        <div id="list-text2">
-                            <div>조회수 : 200 <br>추천수 : 100</div>
-                            <div>심사중</div>
-                        </div>
-                        <div class="list-btn">
-                            <form action="">
-                                <input type="submit" value="심사완료">&nbsp;&nbsp;
-                                <input type="submit" value="삭제">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <div class="list-img">
-                            <img src="/img/insta9.jpg" alt="후원1">
-                        </div>
-                        <div class="list-text">
-                            <a href="/manager/m_apply_reply">이제 그만..</a> 
-                        </div>
-                        <div id="list-text2">
-                            <div>조회수 : 200 <br>추천수 : 100</div>
-                            <div>심사중</div>
-                        </div>
-                        <div class="list-btn">
-                            <form action="">
-                                <input type="submit" value="심사완료">&nbsp;&nbsp;
-                                <input type="submit" value="삭제">
-                            </form>
-                        </div>
-                    </div>
+                <div class="search-div">
+                    <form>
+                    <input type="text" id="search" value="제목을 검색하세요">&nbsp;&nbsp;&nbsp;
+                    <input type="submit" id="search-btn" value="검색">
+                    </form>    
                 </div>
+                    <c:forEach items="${requestScope.apList }" var="apply" varStatus="index">
+                    <div class="list">
+                        <div class="list-img">
+                            <img src="${apply.picPath }" alt="후원1">
+                        </div>
+                        <div class="list-text">
+                            <a href="/manager/m_apply_reply?applyNo=${apply.applyNo }">${ask.applyTitle }</a> 
+                        </div>
+                        <div id="list-text2">
+                            <div>조회수 : ${apply.applyViews } <br>추천수 : ${apply.applyLike }</div>
+                            <div>심사중</div>
+                        </div>
+                        <div class="list-btn">
+                                <button type="submit">심사완료</button>&nbsp;&nbsp;
+                                <button type="submit" class="bt1"><a href="/manager/m_apply_remove?applyNo=${apply.applyNo }">삭제</a></button>
+                        </div>
+                    </div>
+                    </c:forEach>
+                </div>
+                    <div id="page-div">
+                    	${pageNavi }
+                    </div>
+            
             </div>
         </div>
 </body>

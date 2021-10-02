@@ -42,6 +42,12 @@
         <div id="line-div"></div>
         <div id="contents">
                 <div id="list-div">
+                <div class="search-div">
+                    <form>
+                    <input type="text" id="search" value="제목을 검색하세요">&nbsp;&nbsp;&nbsp;
+                    <input type="submit" id="search-btn" value="검색">
+                    </form>    
+                </div>
                     <div class="list">
                         <div class="list-img">
                             <img src="/img/insta1.jpg" alt="후원1">
