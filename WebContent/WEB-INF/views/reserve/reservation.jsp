@@ -93,6 +93,7 @@ window.onload = function() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                         	<option value="" selected>----- 병원 선택 ------</option>
 =======
@@ -104,6 +105,11 @@ window.onload = function() {
                         	<option value="" selected>----- 병원 선택 ------</option>
 >>>>>>> origin/JaeWon
 =======
+                        	<option value="" selected>----- 병원 선택 ------</option>
+=======
+>>>>>>> origin/Hyunseok
+>>>>>>> origin/JaeWon
+=======
 >>>>>>> 5c3b789bfc223a181bc4cdbbe572cac4e2184544
 =======
 >>>>>>> origin/Hyunseok
@@ -112,6 +118,7 @@ window.onload = function() {
                             <option value="daegu" <c:if test="${metroCity eq 'daegu' }">selected</c:if>>대구</option>
                             <option value="busan" <c:if test="${metroCity eq 'busan' }">selected</c:if>>부산</option>
                             <option value="gwangju"<c:if test="${metroCity eq 'gwangju' }">selected</c:if>>광주</option>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -150,14 +157,29 @@ window.onload = function() {
 >>>>>>> ccf2c619516a4e187ffd1b1f1312edd819d99d05
 >>>>>>> ac4285a89d941351d66e2a882df6d149a4df2806
 =======
+=======
+>>>>>>> origin/JaeWon
 <!--                         	<option value="" selected>----- 병원 선택 ------</option> -->
 <!--                             <option value="seoul">서울</option> -->
 <!--                             <option value="daejeon">대전</option> -->
 <!--                             <option value="daegu">대구</option> -->
 <!--                             <option value="busan">부산</option> -->
 <!--                             <option value="gwangju">광주</option> -->
+<<<<<<< HEAD
 >>>>>>> origin/JaeWon
 =======
+=======
+=======
+>>>>>>> origin/Hyunseok
+=======
+=======
+                        	<option value="" selected>----- 병원 선택 ------</option>
+                            <option value="seoul">서울</option>
+                            <option value="daejeon">대전</option>
+                            <option value="daegu">대구</option>
+                            <option value="busan">부산</option>
+                            <option value="gwangju">광주</option>
+>>>>>>> origin/JaeWon
 >>>>>>> e656fdeda676b8b971d3033e5531efe878fb775c
 >>>>>>> 5c3b789bfc223a181bc4cdbbe572cac4e2184544
 =======
@@ -173,6 +195,7 @@ window.onload = function() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/Hyunseok
                 <div id="result">
@@ -183,6 +206,8 @@ window.onload = function() {
                      </div>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/JaeWon
 =======
 >>>>>>> origin/JaeWon
     				<div id="result">
@@ -232,6 +257,15 @@ window.onload = function() {
 		            </script>
 		            </div>         
 =======
+<<<<<<< HEAD
+=======
+                <div id="result">
+                <c:forEach items="${requestScope.hospitals}" var="hospital" varStatus="index" >
+                <label><input type="radio" id="hospital-name" name="chosen-hospital" hidden><b style="font-size:25px">${hospital.hospitalName }</b>
+                      <h4 style="margin:10px">${hospital.hospitalAddr }</h4></label>  <button onclick="selectHospital(${hospital.hospitalAddr}})">위치보기</button>
+                     </c:forEach>
+                     </div>
+>>>>>>> origin/JaeWon
                 </div>
                 <div id="dateTime">
                    <div id="map" style="width:500px;height:400px;">
