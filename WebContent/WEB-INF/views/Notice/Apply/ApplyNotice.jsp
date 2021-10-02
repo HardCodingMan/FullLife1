@@ -27,7 +27,7 @@
                         <a href="/Notice/Apply/ApplyContents?applyNo=${aOne.applyNo }" class="notice-link">
                             <div>
                                 <div class="list-img">
-                                    <img src="img/newsofa.jpg" alt="후원1" class="li-img">
+                                    <img src="/fileupload/${aOne.picName }" alt="${aOne.picName }" class="li-img">
                                 </div>
                                 <div class="list-text">
                                     <p class="notice-title">${aOne.applyTitle }</p>
