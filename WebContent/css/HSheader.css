@@ -69,7 +69,7 @@ header{
         }
         #btn-div{
             height: 25%;
-            width: 7%;
+            width: 10%;
             float: right;
             margin-top: -8%;
             margin-right: 20px;
@@ -114,3 +114,5 @@ header{
                     text-decoration: none;
                     color: black;
                 }
+                
+.logout{padding-top: 5px;float:right;}

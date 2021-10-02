@@ -3,11 +3,13 @@ package mypagecontroller;
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.jsp.tagext.PageData;
 
 import mypageHistory.model.service.HistoryService;
 import mypageHistory.model.vo.History;
@@ -35,17 +37,19 @@ public class HistoryServlet extends HttpServlet {
 		int historyPage = 0;
 		String getHistoryPage = request.getParameter("historyPage");
 		if(getHistoryPage == null) {
-			historyPage = 1;
+			historyPage = 1; 
 		}else {
 			historyPage = Integer.parseInt(getHistoryPage);
 		}
-		HistoryPage his = new HistoryService().printAllList(historyPage);
-		List<History> hList = his.gethList();
+		HistoryPage hisPage = new HistoryService().printAllList(historyPage);
+		List<History> hList = hisPage.gethList();
 		if(!hList.isEmpty()) {
-			request.setAttribute("hLisst", hList);
+			request.setAttribute("hList", hList);
+			request.setAttribute("pageNavi", hisPage.getPageNavi());
 			request.getRequestDispatcher("/WEB-INF/views/mypage/mypageHistory.jsp").forward(request, response);
 		}else {
-			request.getRequestDispatcher("/WEB-INF/views/mypage/mypageHistory.jsp").forward(request, response);
+			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/mypage/mypageHistory.jsp");
+			view.forward(request, response);
 		}
 	}
 

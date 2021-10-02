@@ -13,11 +13,11 @@ public class ApplyNotice {
 	private int applyLike;
 	private int applyViews;
 	private String userId;
-	private int picSize;
+	private long picSize;
 	private String picPath;
 	private char mngCheck;
 	private int replyCount;
-	
+	private String picName;
 		// 댓글
 		private List<ApplyNoticeReply> replist;
 		
@@ -37,7 +37,7 @@ public class ApplyNotice {
 	public ApplyNotice() {};
 	
 	public ApplyNotice(int applyNo, String applyTitle, String applyContents, Date enrollDate, int applyLike,
-			int applyViews, String userId, int picSize, String picPath, char mngCheck) {
+			int applyViews, String userId, long picSize, String picPath, char mngCheck) {
 		super();
 		this.applyNo = applyNo;
 		this.applyTitle = applyTitle;
@@ -107,11 +107,11 @@ public class ApplyNotice {
 		this.userId = userId;
 	}
 
-	public int getPicSize() {
+	public long getPicSize() {
 		return picSize;
 	}
 
-	public void setPicSize(int picSize) {
+	public void setPicSize(long picSize) {
 		this.picSize = picSize;
 	}
 
@@ -137,6 +137,14 @@ public class ApplyNotice {
 
 	public void setReplyCount(int replyCount) {
 		this.replyCount = replyCount;
+	}
+	
+	public String getPicName() {
+		return picName;
+	}
+
+	public void setPicName(String picName) {
+		this.picName = picName;
 	}
 
 	@Override

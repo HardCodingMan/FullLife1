@@ -52,14 +52,13 @@ public class ApplyNoticeWriterServlet extends HttpServlet {
 		String writeId = (String)session.getAttribute("userId");
 		/////////////// 사진///////////
 		String uploadFilePath = request.getServletContext().getRealPath("fileupload");
-		System.out.println(uploadFilePath);
 		int uploadFileLimit = 50*1024*1024;
 		String encType = "UTF-8";
 		MultipartRequest multi = new MultipartRequest(request, uploadFilePath, uploadFileLimit, encType, new DefaultFileRenamePolicy());
 		File uploadFile = multi.getFile("apply-File");
+		String fileName = multi.getFilesystemName("apply-File");
 		String filePath = uploadFile.getPath();
 		long fileSize = uploadFile.length();
-		System.out.println(uploadFilePath);
 		///////////////////////////////
 		String subject = multi.getParameter("apply-notice-sub");
 		String Contents = multi.getParameter("apply-notice-contents");
@@ -69,10 +68,10 @@ public class ApplyNoticeWriterServlet extends HttpServlet {
 		applyNotice.setApplyContents(Contents);
 		applyNotice.setUserId(writeId);
 		//ApplyNoticeFile 객체에 사진 정보 세팅
-		ApplyNoticeFile fileData = new ApplyNoticeFile();
-		fileData.setFilePath(filePath);
-		fileData.setFileSize(fileSize);
-		int result = new ApplyNoticeService().noticeWrite(applyNotice ,fileData);
+		applyNotice.setPicPath(filePath);
+		applyNotice.setPicSize(fileSize);
+		applyNotice.setPicName(fileName);
+		int result = new ApplyNoticeService().noticeWrite(applyNotice);
 		if(result > 0) {
 			response.sendRedirect("/Notice/Apply/ApplyNotice");
 		}else {

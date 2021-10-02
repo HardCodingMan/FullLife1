@@ -29,8 +29,10 @@ public class ApplyContentsServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
 		int applyNoticeNo = Integer.parseInt(request.getParameter("applyNo"));
 		ApplyNotice aOne = new ApplyNoticeService().printOneByNo(applyNoticeNo);
+		System.out.println(aOne.getPicPath());
 		if(aOne != null) {
 			request.setAttribute("aOne", aOne);
 			// NoticeReply setAttribute 해줌

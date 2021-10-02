@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,16 +38,20 @@
                         <th>결제일자</th>
                         <th>구매날짜</th>
                     </tr>
+                      <c:forEach items="${requestScope.hList}" var="history" varStatus="index">
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>${history.historyNo}</td>
+                        <td>${history.organNo}</td>
+                        <td>${history.organQuantity}</td>
+                        <td>${history.hospitalNo}</td>
+                        <td>${history.payment}</td>
+                        <td>${history.paymentDate}</td>
+                        <td>${history.historyDate}</td>
                     </tr>
-                
+                	 </c:forEach>
+                	 <tr>
+                	 <td>${pageNavi}</td>
+                	 <tr>
                 </table>
             </form>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
