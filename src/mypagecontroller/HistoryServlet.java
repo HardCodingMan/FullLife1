@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.jsp.tagext.PageData;
 
-import mypageHistory.model.service.HistoryService;
 import mypageHistory.model.vo.History;
 import mypageHistory.model.vo.HistoryPage;
+import mypageHistory.service.HistoryService;
 
 /**
  * Servlet implementation class MypageHistory

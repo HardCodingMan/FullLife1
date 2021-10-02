@@ -156,11 +156,14 @@ public class ApplyNoticeDAO {
 				applyNotice.setUserId(rset.getString("USER_ID"));
 				applyNotice.setEnrollDate(rset.getDate("ENROLL_DATE"));
 				applyNotice.setApplyLike(rset.getInt("APPLY_LIKE"));
-				applyNotice.setApplyViews(rset.getInt("APPLY_VIEWS"));
+				int viewsCount = rset.getInt("APPLY_VIEWS");
+				applyNotice.setApplyViews(viewsCount);
+				viewsCount++;
 				applyNotice.setPicSize(rset.getInt("PIC_SIZE"));
 				applyNotice.setPicPath(rset.getString("PIC_PATH"));
 				applyNotice.setMngCheck(rset.getString("MNG_CHECK").charAt(0));
 				applyNotice.setPicName(rset.getString("PIC_NAME"));
+				countUpdate(conn, viewsCount, applyNoticeNo);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -170,6 +173,27 @@ public class ApplyNoticeDAO {
 			JDBCTemplate.close(rset);
 		}
 		return applyNotice;
+	}
+
+	private int countUpdate(Connection conn, int viewsCount, int applyNoticeNo) {
+		int updateViews = 0;
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String query = "UPDATE APPLY_NOTICE SET APPLY_VIEWS = ? WHERE APPLY_NO = ?";
+		
+		try {
+			pstmt = conn.prepareStatement(query);
+			pstmt.setInt(1, viewsCount);
+			pstmt.setInt(2, applyNoticeNo);
+			rset = pstmt.executeQuery();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(rset);
+			JDBCTemplate.close(pstmt);
+		}
+		return updateViews;
 	}
 
 	public List<ApplyNoticeReply> selectAllNoticeReply(Connection conn, int applyNoticeNo) {

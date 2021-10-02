@@ -1,4 +1,4 @@
-package mypageHistory.model.dao;
+package mypageHistory.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,7 +8,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import common.JDBCTemplate;
-import mypageHistory.model.vo.BookedHospitalInfo;
 import mypageHistory.model.vo.History;
 
 public class HistoryDAO {
@@ -51,6 +50,7 @@ public class HistoryDAO {
 		return hList;
 		
 	}
+<<<<<<< HEAD:src/mypageHistory/model/dao/HistoryDAO.java
 <<<<<<< HEAD:src/mypageHistory/dao/HistoryDAO.java
 	public String getPageNavi(Connection conn, int historyPage) {
 		int pageCountPerView = 5;
@@ -153,6 +153,8 @@ public class HistoryDAO {
 	
 	
 	
+=======
+>>>>>>> parent of 7aa522b (16번째 커밋!!!!!!!!!!!):src/mypageHistory/dao/HistoryDAO.java
 	
 >>>>>>> 7aa522b4c02514daf6fcc743b8d1c6137416f71f:src/mypageHistory/model/dao/HistoryDAO.java
 }
