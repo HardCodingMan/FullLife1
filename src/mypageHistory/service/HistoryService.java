@@ -1,10 +1,9 @@
-package mypageHistory.model.service;
+package mypageHistory.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import common.JDBCTemplate;
-import mypageHistory.model.dao.HistoryDAO;
-import mypageHistory.model.vo.BookedHospitalInfo;
+import mypageHistory.dao.HistoryDAO;
 import mypageHistory.model.vo.HistoryPage;
 
 public class HistoryService {
@@ -38,6 +37,7 @@ public class HistoryService {
 		return his;
 	}
 
+<<<<<<< HEAD:src/mypageHistory/model/service/HistoryService.java
 	public BookedHospitalInfo getBookedHospitalInfo(String userId) {
 		BookedHospitalInfo info = null;
 		Connection conn = null;
@@ -56,5 +56,7 @@ public class HistoryService {
 	}
 
 >>>>>>> 7aa522b4c02514daf6fcc743b8d1c6137416f71f:src/mypageHistory/model/service/HistoryService.java
+=======
+>>>>>>> parent of 7aa522b (16번째 커밋!!!!!!!!!!!):src/mypageHistory/service/HistoryService.java
 	
 }
