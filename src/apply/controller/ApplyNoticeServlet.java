@@ -41,6 +41,7 @@ public class ApplyNoticeServlet extends HttpServlet {
 		}
 		ApplyPage applyPage = new ApplyNoticeService().printAllApply(currentPage);
 		List<ApplyNotice> aList = applyPage.getaList(); 
+		System.out.println(aList.toString());
 		if(!aList.isEmpty()) {
 			request.setAttribute("aList", aList);
 			request.setAttribute("pageNavi", applyPage.getPageNavi());

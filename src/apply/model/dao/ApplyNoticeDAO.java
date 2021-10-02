@@ -40,7 +40,7 @@ public class ApplyNoticeDAO {
 	public List<ApplyNotice> pageAllNotice(Connection conn, int currentPage) {
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
-		String query = "SELECT * FROM(SELECT ROW_NUMBER() OVER(ORDER BY APPLY_NO DESC) AS NUM, APPLY_NO, APPLY_TITLE, APPLY_CONTENTS,ENROLL_DATE ,USER_ID,APPLY_VIEWS, APPLY_LIKE FROM APPLY_NOTICE) WHERE NUM BETWEEN ? AND ?";
+		String query = "SELECT * FROM(SELECT ROW_NUMBER() OVER(ORDER BY APPLY_NO DESC) AS NUM, APPLY_NO, APPLY_TITLE, APPLY_CONTENTS,ENROLL_DATE ,USER_ID,APPLY_VIEWS, APPLY_LIKE, PIC_PATH, PIC_NAME FROM APPLY_NOTICE) WHERE NUM BETWEEN ? AND ?";
 		List<ApplyNotice> aList = null;
 		
 		try {
@@ -62,6 +62,8 @@ public class ApplyNoticeDAO {
 				applyNotice.setUserId(rset.getString("USER_ID"));
 				applyNotice.setApplyViews(rset.getInt("APPLY_VIEWS"));
 				applyNotice.setApplyLike(rset.getInt("APPLY_LIKE"));
+				applyNotice.setPicPath(rset.getString("PIC_PATH"));
+				applyNotice.setPicName(rset.getString("PIC_NAME"));
 				aList.add(applyNotice);
 			}
 		} catch (SQLException e) {
