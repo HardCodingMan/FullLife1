@@ -105,11 +105,19 @@ main{
             height: 50px;
         }
         
-    #list{
-        height: 30px;
-        width: 50px;
-        margin: 20px;
+    #bottom-butn{
+        height: 50px;
     }
+        #list{
+            margin-top: 20px;
+            margin-left: 20px;
+            float: left;
+        }
+        #delete{
+            float: right;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
 #footer{
     height: 150px;
 }
