@@ -1,4 +1,4 @@
-package mypageHistory.dao;
+package mypage.model.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,9 +8,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import common.JDBCTemplate;
-import mypageHistory.model.vo.History;
+import mypage.model.vo.History;
 
-public class HistoryDAO {
+public class MypageDAO {
    
 
    public List<History> selectAllList(Connection conn, int historyPage) {
@@ -50,6 +50,7 @@ public class HistoryDAO {
       return hList;
       
    }
+   
    public String getPageNavi(Connection conn, int historyPage) {
       int pageCountPerView = 5;
       int viewTotalCount = totalCount(conn);
@@ -90,6 +91,7 @@ public class HistoryDAO {
       if(needNext) {
          sb.append("<a href='/mypage/mypageHistory?historyPage="+(endNavi+1)+"'> [다음] </a>");
       }
+
 
       return sb.toString();
    }

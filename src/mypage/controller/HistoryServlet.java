@@ -10,10 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.jsp.tagext.PageData;
-
-import mypageHistory.model.vo.History;
-import mypageHistory.model.vo.HistoryPage;
-import mypageHistory.service.HistoryService;
+import mypage.model.service.MypageService;
+import mypage.model.vo.History;
+import mypage.model.vo.HistoryPage;
 
 /**
  * Servlet implementation class MypageHistory
@@ -41,7 +40,7 @@ public class HistoryServlet extends HttpServlet {
 		}else {
 			historyPage = Integer.parseInt(getHistoryPage);
 		}
-		HistoryPage hisPage = new HistoryService().printAllList(historyPage);
+		HistoryPage hisPage = new MypageService().printAllList(historyPage);
 		List<History> hList = hisPage.gethList();
 		if(!hList.isEmpty()) {
 			request.setAttribute("hList", hList);

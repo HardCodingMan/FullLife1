@@ -30,15 +30,21 @@ public class ReservationServlet extends HttpServlet {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 //		System.out.println(hospitalNo);
 >>>>>>> 7f17ff42baf25563595b9152103373b9fc4b11f9
 =======
+=======
+>>>>>>> origin/JaeWon
 	<<<<<<< HEAD
 	//		System.out.println(hospitalNo);
 	=======
 	>>>>>>> origin/Hyunseok
+<<<<<<< HEAD
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+=======
+>>>>>>> origin/JaeWon
 =======
 >>>>>>> origin/Hyunseok
 		request.setAttribute("metroCity", metroCity);

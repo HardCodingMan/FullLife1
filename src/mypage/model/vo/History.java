@@ -1,4 +1,4 @@
-package mypageHistory.model.vo;
+package mypage.model.vo;
 
 import java.sql.Date;
 
