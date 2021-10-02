@@ -89,11 +89,24 @@ window.onload = function() {
                         <select id="region">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                        	<option value="" selected>----- 병원 선택 ------</option>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> ccf2c619516a4e187ffd1b1f1312edd819d99d05
+>>>>>>> ac4285a89d941351d66e2a882df6d149a4df2806
                             <option value="seoul"<c:if test="${metroCity eq  'seoul'}">selected</c:if>>서울
                             <option value="daejeon"<c:if test="${metroCity eq 'daejeon' }">selected</c:if>>대전</option>
                             <option value="daegu" <c:if test="${metroCity eq 'daegu' }">selected</c:if>>대구</option>
                             <option value="busan" <c:if test="${metroCity eq 'busan' }">selected</c:if>>부산</option>
                             <option value="gwangju"<c:if test="${metroCity eq 'gwangju' }">selected</c:if>>광주</option>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ac4285a89d941351d66e2a882df6d149a4df2806
 =======
 =======
 >>>>>>> origin/mooooo
@@ -114,6 +127,10 @@ window.onload = function() {
 <%--                             <option value="gwangju"<c:if test="${metroCity eq 'gwangju' }">selected</c:if>>광주</option> --%>
 
 >>>>>>> origin/mooooo
+<<<<<<< HEAD
+=======
+>>>>>>> ccf2c619516a4e187ffd1b1f1312edd819d99d05
+>>>>>>> ac4285a89d941351d66e2a882df6d149a4df2806
                         </select>
                     </td>           
                 </tr>
@@ -122,12 +139,27 @@ window.onload = function() {
             <div id="hosDetail">
                 <div id="viewHos">
                     <h4>병원명</h4>
+<<<<<<< HEAD
                 <div id="result">
                 <c:forEach items="${requestScope.hospitals}" var="hospital" varStatus="index" >
                 <label><input type="radio" id="hospital-name" name="chosen-hospital" hidden><b style="font-size:25px">${hospital.hospitalName }</b>
                       <h4 style="margin:10px">${hospital.hospitalAddr }</h4></label>  <button onclick="selectHospital(${hospital.hospitalAddr}})">위치보기</button>
                      </c:forEach>
                      </div>
+=======
+    				<div id="result">
+<<<<<<< HEAD
+    				<c:forEach items="${requestScope.hospitals }" var="hospital" varStatus="index" >
+    				<label><input type="radio" id="hospital-name" name="chosen-hospital"><b style="font-size:25px">${hospital.hospitalName }</b>
+                		<h4 style="margin:10px">${hospital.hospitalAddr }</h4></label>  <button onclick=>위치보기</button>
+=======
+    				<c:forEach items="${requestScope.hospitals}" var="hospital" varStatus="index" >
+    				<label><input type="radio" id="hospital-name" name="chosen-hospital" hidden><b style="font-size:25px">${hospital.hospitalName }</b>
+                		<h4 style="margin:10px">${hospital.hospitalAddr }</h4></label>  <button onclick="selectHospital(${hospital.hospitalAddr}})">위치보기</button>
+>>>>>>> ccf2c619516a4e187ffd1b1f1312edd819d99d05
+           			 </c:forEach>
+           			 </div>
+>>>>>>> ac4285a89d941351d66e2a882df6d149a4df2806
                 </div>
                 <div id="dateTime">
                    <div id="map" style="width:500px;height:400px;">
