@@ -152,8 +152,10 @@ public class ApplyNotice {
 		return "ApplyNotice [applyNo=" + applyNo + ", applyTitle=" + applyTitle + ", applyContents=" + applyContents
 				+ ", enrollDate=" + enrollDate + ", applyLike=" + applyLike + ", applyViews=" + applyViews + ", userId="
 				+ userId + ", picSize=" + picSize + ", picPath=" + picPath + ", mngCheck=" + mngCheck + ", replyCount="
-				+ replyCount + ", replist=" + replist + "]";
+				+ replyCount + ", picName=" + picName + ", replist=" + replist + "]";
 	}
+
+	
 
 	
 	
