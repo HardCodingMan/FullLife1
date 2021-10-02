@@ -26,10 +26,12 @@
 				result = locationTag.value;
 				location.href="/hospital/listAll?location="+result;	
             });
+            document.querySelector("input[name='chosen-hospital']").addEventListener("change", function(){
+            	console.log(this.value);
+            });
+//             console.log(document.querySelector("input[name='chosen-hospital']:checked").value);
 
-			function sendHospitalNo(){
-				$("#hospital-no").value.submit();
-			}
+			var BtnTag = querySelector("#submitBtn");
 			
         }
     </script>
@@ -80,9 +82,7 @@
                 <div id="hospital-result">
                 	<c:forEach items="${requestScope.hospitals }" var="hospital" varStatus="index">
                 		<label>
-                		<form action="/reserve/reservation" method="post" id="hospital-no">
-                			<input type="radio" name="hospital-no" value="${hospital.hospitalNo }">
-                		</form>
+                		<input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }">
                 		<b style="font-size:25px">${hospital.hospitalName }</b>
                 		</label>
                 		<h4 style="margin:10px">${hospital.hospitalAddr }</h4>
