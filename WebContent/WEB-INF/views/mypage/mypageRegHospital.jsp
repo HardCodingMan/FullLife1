@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,23 +31,50 @@
                     <table id="book1">
                         <tr>
                             <td>예약병원 |</td>
-                            <td><input class="bookbox" type="text" name=""></td>
+                            <td>
+                            <input class="bookbox" type="text" name="" value="${requestScope.bookedInfo.hospitalName }">
+                            </td>
                         </tr>
                         <tr>
                             <td>병원위치 |</td>
-                            <td><input class="bookbox" type="text" name=""></td>
+                            <td>
+                            <input class="bookbox" type="text" name="" value="${requestScope.bookedInfo.hospitalAddr }">
+                            </td>
                         </tr>
                         <tr>
                             <td>검사날짜 |</td>
-                            <td><input class="bookbox" type="text" name=""></td>
+                            <td>
+                            <input class="bookbox" type="text" name="" value="${requestScope.bookedInfo.checkDate}">
+                            </td>
                         </tr>
                         <tr>
                             <td>예약시간 |</td>
-                            <td><input class="bookbox" type="text" name=""></td>
+                            <td>
+                            <input class="bookbox" type="text" name="" value="${requestScope.bookedInfo.hospitalTime }">
+                            </td>
                         </tr>
                         <tr>
                             <td>이식장기 |</td>
-                            <td><input class="bookbox" type="text" name=""></td>
+                            <td>
+                            <c:if test="${requestScope.bookedInfo.organ eq 'LIVER'}" >
+                            <input class="bookbox" type="text" name="" value="간">
+                            </c:if>
+                            <c:if test="${requestScope.bookedInfo.organ eq 'HEART'}" >
+                            <input class="bookbox" type="text" name="" value="심장">
+                            </c:if>
+                            <c:if test="${requestScope.bookedInfo.organ eq 'TOOTH'}" >
+                            <input class="bookbox" type="text" name="" value="치아">
+                            </c:if>
+                            <c:if test="${requestScope.bookedInfo.organ eq 'BONE'}" >
+                            <input class="bookbox" type="text" name="" value="뼈">
+                            </c:if>
+                            <c:if test="${requestScope.bookedInfo.organ eq 'LUNG'}" >
+                            <input class="bookbox" type="text" name="" value="폐">
+                            </c:if>
+                            <c:if test="${requestScope.bookedInfo.organ eq null}" >
+                            <input class="bookbox" type="text" name="" value="없음">
+                            </c:if>
+                            </td>
                         </tr>
                     </table>
                     <input type="submit" value="예약취소" class="bookbt">
