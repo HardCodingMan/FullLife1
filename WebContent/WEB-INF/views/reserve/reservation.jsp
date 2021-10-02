@@ -92,6 +92,7 @@ window.onload = function() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                         	<option value="" selected>----- 병원 선택 ------</option>
 =======
@@ -104,11 +105,14 @@ window.onload = function() {
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
 =======
 >>>>>>> origin/Hyunseok
+=======
+>>>>>>> origin/Hyunseok
                             <option value="seoul"<c:if test="${metroCity eq  'seoul'}">selected</c:if>>서울
                             <option value="daejeon"<c:if test="${metroCity eq 'daejeon' }">selected</c:if>>대전</option>
                             <option value="daegu" <c:if test="${metroCity eq 'daegu' }">selected</c:if>>대구</option>
                             <option value="busan" <c:if test="${metroCity eq 'busan' }">selected</c:if>>부산</option>
                             <option value="gwangju"<c:if test="${metroCity eq 'gwangju' }">selected</c:if>>광주</option>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -148,6 +152,8 @@ window.onload = function() {
 <!--                             <option value="busan">부산</option> -->
 <!--                             <option value="gwangju">광주</option> -->
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+=======
+>>>>>>> origin/Hyunseok
 =======
 >>>>>>> origin/Hyunseok
                         </select>
