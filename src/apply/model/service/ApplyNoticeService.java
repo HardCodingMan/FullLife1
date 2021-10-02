@@ -21,13 +21,13 @@ public class ApplyNoticeService {
 		jdbcTemplate = JDBCTemplate.getConnection();
 	}
 	
-	public int noticeWrite(ApplyNotice applyNotice, ApplyNoticeFile fileData) {
+	public int noticeWrite(ApplyNotice applyNotice) {
 		Connection conn = null;
 		int result = 0;
 		
 		try {
 			conn = jdbcTemplate.createConnection();
-			result = new ApplyNoticeDAO().insertNotice(conn, applyNotice, fileData);
+			result = new ApplyNoticeDAO().insertNotice(conn, applyNotice);
 			if(result > 0) {
 				JDBCTemplate.commit(conn);
 			}else {
@@ -68,6 +68,7 @@ public class ApplyNoticeService {
 		try {
 			conn = jdbcTemplate.createConnection();
 			applyNotice = applyDAO.selectOneByNo(conn, applyNoticeNo);
+			System.out.println(applyNoticeNo);
 			aList = applyDAO.selectAllNoticeReply(conn, applyNoticeNo);
 			applyNotice.setReplist(aList);
 		} catch (SQLException e) {
