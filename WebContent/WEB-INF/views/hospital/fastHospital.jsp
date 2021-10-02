@@ -26,8 +26,18 @@
 				result = locationTag.value;
 				location.href="/hospital/listAll?location="+result;	
             });
+<<<<<<< HEAD
             
 
+=======
+            document.querySelector("input[name='chosen-hospital']").addEventListener("change", function(){
+            	console.log(this.value);
+            });
+//             console.log(document.querySelector("input[name='chosen-hospital']:checked").value);
+
+			var BtnTag = querySelector("#submitBtn");
+			
+>>>>>>> origin/JaeWon
         }
     </script>
     <header>
@@ -76,7 +86,14 @@
                 </div>
                 <div id="hospital-result">
                 	<c:forEach items="${requestScope.hospitals }" var="hospital" varStatus="index">
+<<<<<<< HEAD
                 		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
+=======
+                		<label>
+                		<input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }">
+                		<b style="font-size:25px">${hospital.hospitalName }</b>
+                		</label>
+>>>>>>> origin/JaeWon
                 		<h4 style="margin:10px">${hospital.hospitalAddr }</h4>
                 		<a href="#"><h5 style="margin: 0 0 40px 30px">${hospital.hospitalPhone }</h5></a>
                 	</c:forEach>
