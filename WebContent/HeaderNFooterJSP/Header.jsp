@@ -18,7 +18,7 @@
             <ul>
                 <li class="main-menu"><a href="#">장기이식</a></li>
                 <li class="main-menu">
-                    <a href="#">후원</a>
+                    <a href="/Notice/Support/Supportintroduce">후원</a>
                     <ul class="serv-menu">
                         <li><a href="/Notice/Support/Supportintroduce">후원</a></li>
                         <li><a href="/Notice/Support/SupportNotice">후원게시판</a></li>
