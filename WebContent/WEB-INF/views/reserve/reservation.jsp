@@ -133,7 +133,7 @@ window.onload = function() {
            			 </div>
                 </div>
                 <div id="dateTime">
-                	<div id="map" style="width:500px;height:400px;">
+                	<div id="map" style="width:500px; height:400px;">
                 	<h4>지도</h4>
 					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=977b62db984a36094fb13c99f6a75050&libraries=services"></script>
 					<script>
@@ -167,7 +167,7 @@ window.onload = function() {
                 <c:forEach items="${requestScope.hospitals}" var="hospital" varStatus="index" >
                 <label><input type="radio" id="hospital-name" name="chosen-hospital" hidden><b style="font-size:25px">${hospital.hospitalName }</b>
                       <h4 style="margin:10px">${hospital.hospitalAddr }</h4></label>  <button onclick="selectHospital(${hospital.hospitalAddr}})">위치보기</button>
-                     </c:forEach>
+                </c:forEach>
                      </div>
                 </div>
                 <div id="dateTime">
