@@ -17,7 +17,7 @@ public class HistoryDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
 		List<History>hList = null;
-		String query = "SELECT * FROM HISTORY";
+		String query = "SELECT * FROM(SELECT ROW_NUMBER() OVER(ORDER BY HISTORY_NO DESC)AS NUM, HISTORY_NO, ORGAN_NO, ORGAN_QUANTITY, HISTORY_DATE, PAYMENT, PAYMENT_DATE, USED_POINT, USER_ID, HOSPITAL_NO FROM HISTORY) WHERE NUM BETWEEN ? AND ?";
 		
 		try {
 			pstmt = conn.prepareStatement(query);
