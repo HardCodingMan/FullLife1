@@ -50,6 +50,7 @@ public class HistoryServlet extends HttpServlet {
 		}else {
 			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/mypage/mypageHistory.jsp");
 			view.forward(request, response);
+	
 		}
 	}
 
