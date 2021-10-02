@@ -69,6 +69,28 @@ public class M_askService {
 		return result;
 	}
 
+	public M_askPage printSearchAsk(String searchId, int currentPage) {
+		Connection conn = null;
+		List<M_ask> aList = null;
+		String searchPageNavi = null;
+		M_askPage pd = new M_askPage();
+		M_askDAO aDao = new M_askDAO();
+		
+		try {
+			conn = jdbcTemplate.createConnection();
+			aList = aDao.getSearchAsk(conn, searchId, currentPage);
+			searchPageNavi = aDao.getSearchPageNavi(conn, searchId, currentPage);
+			pd.setaPdList(aList);
+			pd.setPageNavi(searchPageNavi);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(conn);
+		}
+		
+		return pd;
+	}
+
 	
 	
 	

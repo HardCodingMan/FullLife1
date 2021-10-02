@@ -155,22 +155,26 @@ header{
         font-size: 20px;
         font-weight: bold;
     }
-#membersearch{
-    width: 20%;
-    height: 35px;
-    margin-left: 7%;
-    margin-top: 100px;
-}
-#search1{
-    width: 200px;
-    height: 25px;
-}
-#searchbt{
-height: 20px;
-padding-bottom: 20px;
-text-align: center;
-}
-
+.search-div{
+        width: 95%;
+        height: 13%;
+        margin-bottom: 3%;
+        border-bottom: 1px solid gray;
+    }
+        #search{
+            width: 250px;
+            height: 25px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+        #search-btn{
+            width: 60px;
+            height: 30px;
+            cursor: pointer;
+            box-shadow: 2px 2px 2px 1px rgba(128, 128, 128, 0.514);
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
 #title:after{
     content: "";
     display: block;
@@ -181,6 +185,7 @@ text-align: center;
     width: 90%;
     height: 70%;
     margin-left: 7%;
+    margin-top:5%;
 }
 #table-div table{
     width: 97%;
@@ -192,13 +197,13 @@ text-align: center;
         background-color: rgba(173, 196, 136, 0.493);
     }
     table tr th:first-child{
-        width: 5%;
+        width: 3%;
     }
     table tr th:nth-child(2){
         width: 8%;
     }
     table tr th:nth-child(3){
-        width: 10%;
+        width: 7%;
     }
     table tr th:nth-child(4){
         width: 10%;
@@ -210,13 +215,16 @@ text-align: center;
         width: 12%;
     }
     table tr th:nth-child(7){
-        width: 7%;
+        width: 5%;
     }
     table tr th:nth-child(8){
-        width: 10%;
+        width: 12%;
     }
     table tr th:nth-child(9){
-    	width: 7%;
+    	width: 10%;
+    }
+    table tr th:nth-child(10){
+    	width: 7%
     }
     table tr th:last-child{
         width: 7%;

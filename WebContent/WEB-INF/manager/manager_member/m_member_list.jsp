@@ -41,13 +41,13 @@
             <div id="title">
                 회원정보관리
             </div>
-            <div id="membersearch"> 
+            <div id="table-div">
+            <div class="search-div"> 
                 <form action="/manager/m_member_search" method="get">
-                    <input type="search" id="search1" name="searchMember" placeholder="회원아이디 입력">&nbsp;&nbsp;
-                    <input type="submit" id="searchbt" style="margin:-6px;" value="검색">
+                    <input type="text" id="search" name="searchId" placeholder="아이디를 입력하세요">&nbsp;&nbsp;
+                    <input type="submit" id="search-btn" value="검색">
                 </form>
             </div>
-            <div id="table-div">
             <form action="">
                     <table border="1" cellspacing="0">
                         <tr>

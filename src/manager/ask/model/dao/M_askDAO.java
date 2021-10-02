@@ -168,6 +168,107 @@ public class M_askDAO {
 		}
 		return result;
 	}
+
+	public List<M_ask> getSearchAsk(Connection conn, String searchId, int currentPage) {
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		List<M_ask> aList = null;
+		String query = "SELECT * FROM(SELECT ROW_NUMBER() OVER(ORDER BY ASK_NO DESC)AS NUM,ASK_NO, ASK_SUBJECT, ASK_CONTENTS, ANSWER_CONTENTS, ASK_DATE, ANSWER_DATE, USER_ID, DISCLOSURE, REPLY FROM ASK_BOARD WHERE USER_ID LIKE ?)WHERE NUM BETWEEN ? AND ?";
+		
+		try {
+			pstmt = conn.prepareStatement(query);
+			pstmt.setString(1, "%"+searchId+"%");
+			int viewCountPerPage = 10;
+			int start = currentPage*viewCountPerPage -(viewCountPerPage-1);
+			int end = currentPage * viewCountPerPage;
+			pstmt.setInt(2, start);
+			pstmt.setInt(3, end);
+			aList = new ArrayList<M_ask>();
+			rset = pstmt.executeQuery();
+			while(rset.next()) {
+				M_ask ask = new M_ask();
+				ask.setAskNo(rset.getInt("ASK_NO"));
+				ask.setAskSub(rset.getString("ASK_SUBJECT"));
+				ask.setAskCon(rset.getString("ASK_CONTENTS"));
+				ask.setAnswerCon(rset.getString("ANSWER_CONTENTS"));
+				ask.setAskDate(rset.getDate("ASK_DATE"));
+				ask.setAnswerDate(rset.getDate("ANSWER_DATE"));
+				ask.setUserId(rset.getString("USER_ID"));
+				ask.setDisclosure(rset.getString("DISCLOSURE").charAt(0));
+				ask.setReply(rset.getString("REPLY").charAt(0));
+				aList.add(ask);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(rset);
+			JDBCTemplate.close(pstmt);
+		}
+		
+		return aList;
+	}
+
+	public String getSearchPageNavi(Connection conn, String searchId, int currentPage) {
+		int pageCountPerView = 5;
+		int viewTotalCount = searchTotalCount(conn, searchId);
+		int viewCountPerPage = 10;
+		int pageTotalCount = 0;
+		if(viewTotalCount % viewCountPerPage > 0) {
+			pageTotalCount = viewTotalCount/ viewCountPerPage +1;
+		}else {
+			pageTotalCount = viewTotalCount / viewCountPerPage;
+		}
+		
+		int startNavi = ((currentPage -1)/pageCountPerView)*pageCountPerView+1;
+		int endNavi = startNavi + pageCountPerView -1;
+		if(endNavi > pageTotalCount) {
+			endNavi = pageTotalCount;
+		}
+		boolean needPrev = true;
+		boolean needNext = true;
+		if(startNavi ==1) {
+			needPrev = false;
+		}
+		if(endNavi == pageTotalCount) {
+			needNext = false;
+		}
+		StringBuilder sb = new StringBuilder();
+		if(needPrev) {
+			sb.append("<a href='/manager/m_ask_search?searchId="+searchId+"&currentPage="+(startNavi-1)+"'> [이전] </a>");
+		}
+		for(int i = startNavi; i<=endNavi; i++) {
+			sb.append("<a href='/manager/m_ask_search?searchId="+searchId+"&currentPage="+i+"'> "+i+" </a>");
+		}
+		if(needNext) {
+			sb.append("<a href='/manager/m_ask_search?searchId="+searchId+"&currentPage="+(endNavi+1)+"'> [다음] </a>");
+		}
+		
+		return sb.toString();
+	}
+	
+	
+	private int searchTotalCount(Connection conn, String searchId) {
+		int result = 0;
+		Statement stmt = null;
+		ResultSet rset = null;
+		String query = "SELECT COUNT(*) AS TOTALCOUNT FROM MEMBER WHERE USER_ID LIKE '%"+searchId+"%'";
+		
+		try {
+			stmt = conn.createStatement();
+			rset = stmt.executeQuery(query);
+			if(rset.next()) {
+				result = rset.getInt("TOTALCOUNT");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(stmt);
+			JDBCTemplate.close(rset);
+		}
+		
+		return result;
+	}
 	
 	
 	
