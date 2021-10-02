@@ -9,6 +9,7 @@ public class ApplyNoticeReply {
 	private String replyContents;
 	private Date replyDate;
 	private int applyNo;
+	private int countReply;
 	
 	public ApplyNoticeReply() {};
 	
@@ -19,6 +20,14 @@ public class ApplyNoticeReply {
 		this.replyContents = replyContents;
 		this.replyDate = replyDate;
 		this.applyNo = applyNo;
+	}
+
+	public int getCountReply() {
+		return countReply;
+	}
+
+	public void setCountReply(int countReply) {
+		this.countReply = countReply;
 	}
 
 	public int getReplyNo() {
