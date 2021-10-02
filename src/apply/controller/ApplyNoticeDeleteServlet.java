@@ -8,19 +8,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import apply.model.service.ApplyNoticeService;
-import apply.model.vo.ApplyNotice;
 
 /**
- * Servlet implementation class ApplyContentsServlet
+ * Servlet implementation class ApplyNoticeDeleteServlet
  */
-@WebServlet("/Notice/Apply/ApplyContents")
-public class ApplyContentsServlet extends HttpServlet {
+@WebServlet("/Notice/Apply/ApplyNoticeDelete")
+public class ApplyNoticeDeleteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ApplyContentsServlet() {
+    public ApplyNoticeDeleteServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,15 +28,13 @@ public class ApplyContentsServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
 		int applyNoticeNo = Integer.parseInt(request.getParameter("applyNo"));
-		ApplyNotice aOne = new ApplyNoticeService().printOneByNo(applyNoticeNo);
-		if(aOne != null) {
-			request.setAttribute("aOne", aOne);
-			// NoticeReply setAttribute 해줌
-			request.getRequestDispatcher("/WEB-INF/views/Notice/Apply/ApplyContents.jsp").forward(request, response);
+		int result = new ApplyNoticeService().removeNotice(applyNoticeNo);
+		if(result > 0) {
+			// 삭제 성공하면 게시글 리스트로 이동 
+			response.sendRedirect("/Notice/Apply/ApplyNotice");
 		}else {
-			request.getRequestDispatcher("/WEB-INF/views/Notice/ApplyError.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/views/Notice/ApplyError.jsp").forward(request, response);		
 		}
 	}
 
