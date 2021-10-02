@@ -40,16 +40,17 @@
                         <th>결제일자</th>
                         <th>구매날짜</th>
                     </tr>
+                        <c:forEach items="${requestScope.hList}" var="history" varStatus="index">
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                         <td>${history.historyNo}</td>
+                        <td>${history.organNo}</td>
+                        <td>${history.organQuantity}</td>
+                        <td>${history.hospitalNo}</td>
+                        <td>${history.payment}</td>
+                        <td>${history.paymentDate}</td>
+                        <td>${history.historyDate}</td>
                     </tr>
-                
+					</c:forEach>                
                 </table>
                 
             </form>
