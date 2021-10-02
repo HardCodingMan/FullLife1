@@ -29,7 +29,7 @@ public class HistoryPage {
 	public String toString() {
 		return "HistoryPage [hList=" + hList + ", pageNavi=" + pageNavi + "]";
 	}
-
+ 
 	
 
 	

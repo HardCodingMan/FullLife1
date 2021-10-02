@@ -113,7 +113,7 @@ public class HistoryDAO {
 			JDBCTemplate.close(stmt);
 		}
 		
-		return totalValue;
+		return totalValue; 
 	}
 
 }

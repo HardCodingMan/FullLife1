@@ -37,7 +37,7 @@ public class HistoryServlet extends HttpServlet {
 		int historyPage = 0;
 		String getHistoryPage = request.getParameter("historyPage");
 		if(getHistoryPage == null) {
-			historyPage = 1;
+			historyPage = 1; 
 		}else {
 			historyPage = Integer.parseInt(getHistoryPage);
 		}

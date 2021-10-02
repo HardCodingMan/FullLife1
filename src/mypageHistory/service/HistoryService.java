@@ -31,6 +31,6 @@ public class HistoryService {
 		}
 		
 		return hisPage;
-	}
+	} 
 	
 }
