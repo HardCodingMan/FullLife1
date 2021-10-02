@@ -9,24 +9,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 import apply.model.vo.ApplyNotice;
-import apply.model.vo.ApplyNoticeFile;
 import apply.model.vo.ApplyNoticeReply;
 import common.JDBCTemplate;
 
 public class ApplyNoticeDAO {
 
-	public int insertNotice(Connection conn, ApplyNotice applyNotice, ApplyNoticeFile fileData) {
+	public int insertNotice(Connection conn, ApplyNotice applyNotice) {
 		PreparedStatement pstmt = null;
 		int result = 0;
-		String query = "INSERT INTO APPLY_NOTICE VALUES(SEQ_APPLY_NO.NEXTVAL,?,?,DEFAULT,DEFAULT,DEFAULT,?,?,?,DEFAULT,DEFAULT)";
+		String query = "INSERT INTO APPLY_NOTICE VALUES(SEQ_APPLY_NO.NEXTVAL,?,?,DEFAULT,DEFAULT,DEFAULT,?,?,?,DEFAULT,DEFAULT,?)";
 		
 		try {
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, applyNotice.getApplyTitle());
 			pstmt.setString(2, applyNotice.getApplyContents());
 			pstmt.setString(3, applyNotice.getUserId());
-			pstmt.setLong(4, fileData.getFileSize());
-			pstmt.setString(5, fileData.getFilePath());
+			pstmt.setLong(4, applyNotice.getPicSize());
+			pstmt.setString(5, applyNotice.getPicPath());
+			pstmt.setString(6, applyNotice.getPicName());
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -158,6 +158,7 @@ public class ApplyNoticeDAO {
 				applyNotice.setPicSize(rset.getInt("PIC_SIZE"));
 				applyNotice.setPicPath(rset.getString("PIC_PATH"));
 				applyNotice.setMngCheck(rset.getString("MNG_CHECK").charAt(0));
+				applyNotice.setPicName(rset.getString("PIC_NAME"));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -202,7 +203,7 @@ public class ApplyNoticeDAO {
 	public int insertNoticeReply(Connection conn, String replyContents, int applyNo, String userId) {
 		PreparedStatement pstmt = null;
 		int result = 0;
-		String query = "INSERT INTO APPLY_REPLY VALUES(SEQ_APPLY_REPLY_NO.NEXTVAL, ?,?,DEFAULT,?)";
+		String query = "INSERT INTO APPLY_REPLY VALUES(SEQ_APPLY_REPLY_NO.NEXTVAL, ?,?,DEFAULT,?,DEFAULT)";
 		
 		try {
 			pstmt = conn.prepareStatement(query);
@@ -218,6 +219,5 @@ public class ApplyNoticeDAO {
 		}
 		return result;
 	}
-
 
 }

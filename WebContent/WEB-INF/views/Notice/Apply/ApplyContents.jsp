@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="com.oreilly.servlet.MultipartRequest" %>
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
+<%@ page import="java.io.File" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +30,7 @@
                 <div id="notice-contents-section">
                     <div id="notice-title"><p>${aOne.applyTitle }</p></div>
                     <div id="notice-contents">
-                        <div id="contents-img"><img src="img/sale.table.jpg" alt="후원 게시글 첨부사진"></div>
+                        <div id="contents-img"><img src="/fileupload/${aOne.picName }" alt="후원 게시글 첨부사진"></div>
                         <div id="contents-text"><p>${aOne.applyContents }</p></div>
                     </div>
                     <div id="notice-bottom">
@@ -36,7 +39,7 @@
                 </div>
                 <div id="notice-reply">
                     <div id="space"></div>
-                    <div id="reply-count"><h2>댓글 n개</h2></div>
+                    <div id="reply-count"><h2>댓글</h2></div>
                     <div id="reply-contents">
                         <table id="reply-table">
                             <tr>
