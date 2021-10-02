@@ -41,13 +41,13 @@
             <div id="title">
                 회원정보관리
             </div>
-            <div id="membersearch"> 
+            <div id="table-div">
+            <div class="search-div"> 
                 <form action="/manager/m_member_search" method="get">
-                    <input type="search" id="search1" name="searchId" placeholder="회원아이디 입력">&nbsp;&nbsp;
-                    <input type="submit" id="searchbt" style="margin:-6px;" value="검색">
+                    <input type="text" id="search" name="searchId" placeholder="아이디를 검색하세요">&nbsp;&nbsp;
+                    <input type="submit" id="search-btn" value="검색">
                 </form>
             </div>
-            <div id="table-div">
             <form action="">
                     <table border="1" cellspacing="0">
                         <tr>
@@ -58,10 +58,12 @@
                             <th>주소</th>
                             <th>전화번호</th>
                             <th>포인트</th>
+                            <th>이메일</th>
                             <th>가입날짜</th>
-                            <th></th>
+                            <th>수정</th>
+                            <th>삭제</th>
                         </tr>
-                        <c:forEach items="${requestScope.member}" var="member" varStatus="index">
+                        <c:forEach items="${requestScope.mList}" var="member" varStatus="index">
                         <tr>
                             <td>${member.userNo}</td>
                             <td>${member.userId}</td>
@@ -69,22 +71,26 @@
                             <td>${member.zumin}</td>
                             <td>${member.addr}</td>
                             <td>${member.phone}</td>
-                            <td>${member.point}</td>
+                            <td>${member.totalPoint}</td>
+                            <td>${member.email}</td>
                             <td>${member.regDate}</td>
                             <td>
-                            	<form>
-                                	<input type="submit" class="bt1" value="수정">&nbsp;&nbsp;&nbsp;
-                                	<input type="submit" class="bt1" value="삭제">
-                            	</form>                          
+                                <button type="submit" class="bt1"><a href="/manager/m_member_modify?userNo=${member.userNo }">수정</a></button>
+                            </td>
+                            <td>
+                            	<button type="submit" class="bt1"><a href="/manager/m_member_remove?userId=${member.userId }">삭제</a></button>
                             </td>
                         </tr>
                       </c:forEach>
+                      <tr>
+                      	<td colspan="11" align="center">
+                      		${pageNavi }
+                      	</td>
+                      </tr>
                     </table>
                     </form>
             </div>
-            <div>
-            	${pageNavi}
-            </div>
+            
         </div>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </article>

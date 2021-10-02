@@ -77,7 +77,7 @@ header{
 
 #left-aside{
     width: 15%;
-    height: 700px;
+    height: 1200px;
     float: left;
     border-right: 1px solid gray;
     box-sizing: border-box;
@@ -165,6 +165,26 @@ header{
             height: 80%;
             margin-left: 15%;
         }
+          .search-div{
+            width: 70%;
+            height: 4%;
+            margin-bottom: 3%;
+            border-bottom: 1px solid gray;
+        }
+            #search{
+                width: 250px;
+                height: 25px;
+                border-radius: 5px;
+                border: 1px solid gray;
+            }
+            #search-btn{
+                width: 60px;
+                height: 30px;
+                cursor: pointer;
+                box-shadow: 2px 2px 2px 1px rgba(128, 128, 128, 0.514);
+                border-radius: 5px;
+                border: 1px solid gray;
+            }
             .list{
                 height: 29%;
                 float: left;
@@ -212,7 +232,7 @@ header{
                     margin-top: 10%;
                     text-align: center;
                 }
-                    .list-btn input{
+                    .list-btn button{
                         width: 40%;
                         height: 30px;
                         background-color: rgba(135, 207, 235, 0.699);
@@ -222,3 +242,15 @@ header{
                         box-shadow: 2px 2px 2px 1px rgba(128, 128, 128, 0.514);
                         font-size: 15px;
                     }
+                    .list-btn a{
+                    	text-decoration: none;
+                    	color: black;
+                    }
+            #page-div{
+            	background-color: yellow;
+            	width: 100%; 
+            	hight: 10%;
+            	text-align: center;
+            }
+                    
+                    
