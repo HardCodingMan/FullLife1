@@ -5,6 +5,7 @@ import java.util.List;
 
 public class HistoryPage {
 	private List<History> hList;
+	private String pageNavi;
 	
 	public HistoryPage() {}
 
@@ -16,10 +17,20 @@ public class HistoryPage {
 		this.hList = hList;
 	}
 
+	public String getPageNavi() {
+		return pageNavi;
+	}
+
+	public void setPageNavi(String pageNavi) {
+		this.pageNavi = pageNavi;
+	}
+
 	@Override
 	public String toString() {
-		return "HistoryData [hList=" + hList + "]";
+		return "HistoryPage [hList=" + hList + ", pageNavi=" + pageNavi + "]";
 	}
+ 
+	
 
 	
 

@@ -13,21 +13,24 @@ public class HistoryService {
 		jdbcTemplate = JDBCTemplate.getConnection();
 	}
 	
-	public HistoryPage printAllList(int historyNo) {
-		HistoryPage his = new HistoryPage();
+
+
+	public HistoryPage printAllList(int historyPage) {
+		HistoryPage hisPage = new HistoryPage();
 		Connection conn = null;
-		HistoryDAO hDAO = new HistoryDAO();
+		HistoryDAO hDao = new HistoryDAO();
 		
 		try {
-			conn= jdbcTemplate.createConnection();
-			his.sethList(hDAO.selectAllList(conn, historyNo));
+			conn=jdbcTemplate.createConnection();
+			hisPage.sethList(hDao.selectAllList(conn, historyPage));
+			hisPage.setPageNavi(hDao.getPageNavi(conn, historyPage));
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
 			JDBCTemplate.close(conn);
 		}
-		return his;
-	}
-
+		
+		return hisPage;
+	} 
 	
 }
