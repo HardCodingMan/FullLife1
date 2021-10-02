@@ -6,6 +6,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import mypageHistory.model.service.HistoryService;
+import mypageHistory.model.vo.BookedHospitalInfo;
 
 /**
  * Servlet implementation class MypageRegHospital
@@ -26,7 +30,14 @@ public class RegHospitalServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/views/mypage/mypageRegHospital.jsp").forward(request, response);
+		HttpSession session = request.getSession();
+		String userId = (String)session.getAttribute("userId");
+		BookedHospitalInfo bookedInfo = new HistoryService().getBookedHospitalInfo(userId);
+		System.out.println(bookedInfo.getOrgan());
+		if(bookedInfo != null) {
+			request.setAttribute("bookedInfo", bookedInfo);
+			request.getRequestDispatcher("/WEB-INF/views/mypage/mypageRegHospital.jsp").forward(request, response);	
+		}
 	}
 
 	/**
