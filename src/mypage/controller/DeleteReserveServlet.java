@@ -1,4 +1,4 @@
-package reserve.controller;
+package mypage.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -6,18 +6,21 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import mypage.model.service.MypageService;
 
 /**
- * Servlet implementation class Reservation
+ * Servlet implementation class DeleteReserveServlet
  */
-@WebServlet("/reserve/reservation")
-public class ReservationServlet extends HttpServlet {
+@WebServlet("/mypage/delete")
+public class DeleteReserveServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ReservationServlet() {
+    public DeleteReserveServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,9 +29,15 @@ public class ReservationServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String metroCity = request.getParameter("metro-city");
-		request.setAttribute("metroCity", metroCity);
-		request.getRequestDispatcher("/WEB-INF/views/reserve/reservation.jsp").forward(request, response);
+		HttpSession session = request.getSession();
+		
+		String userId = (String)session.getAttribute("userId");
+		int result = new MypageService().deleteHospitalInfo(userId);
+		if(result > 0) {
+			response.sendRedirect("/mypage/regHospital");
+		} else {
+			System.out.println("no");
+		}
 	}
 
 	/**
