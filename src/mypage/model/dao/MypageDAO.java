@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import common.JDBCTemplate;
+import mypage.model.vo.BookedHospitalInfo;
 import mypage.model.vo.History;
 
 public class MypageDAO {
@@ -117,5 +118,54 @@ public class MypageDAO {
       
       return totalValue; 
    }
+
+    	public BookedHospitalInfo getHospitalTime(Connection conn, String userId) {
+    		BookedHospitalInfo info = null;
+    		String query = "SELECT HOSPITAL_NAME,HOSPITAL_ADDR,CHECK_DATE,HOSPITAL_TIME,ORGAN_NAME FROM BOOKED_HOSPITAL_INFO JOIN ORGAN USING(ORGAN_NO) JOIN HOSPITAL USING(HOSPITAL_NO) JOIN RESULT USING(USER_ID) WHERE USER_ID = ?";
+    		ResultSet rset = null;
+    		PreparedStatement pstmt = null;
+    		
+    		try {
+				pstmt = conn.prepareStatement(query);
+				pstmt.setString(1, userId);
+				rset = pstmt.executeQuery();
+				if(rset.next()) {
+					info = new BookedHospitalInfo();
+					info.setHospitalName(rset.getString("HOSPITAL_NAME"));
+					info.setHospitalAddr(rset.getString("HOSPITAL_ADDR"));
+					info.setCheckDate(rset.getString("CHECK_DATE"));
+					info.setHospitalTime(rset.getDate("HOSPITAL_TIME"));
+					info.setOrgan(rset.getString("ORGAN_NAME"));
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} finally {
+				JDBCTemplate.close(rset);
+				JDBCTemplate.close(pstmt);
+			}
+    		
+    		return info;
+    	}
+
+		public int deleteHospitalInfo(String userId, Connection conn) {
+			int result = 0;
+			PreparedStatement pstmt = null;
+			String query = "DELETE FROM BOOKED_HOSPITAL_INFO WHERE USER_ID = ?";
+			
+			try {
+				pstmt = conn.prepareStatement(query);
+				pstmt.setString(1, userId);
+				result = pstmt.executeUpdate();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} finally {
+				JDBCTemplate.close(pstmt);
+			}
+
+			
+			return result;
+		}
 
 }

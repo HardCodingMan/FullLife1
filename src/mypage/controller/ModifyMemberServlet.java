@@ -1,4 +1,4 @@
-package reserve.controller;
+package mypage.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Reservation
+ * Servlet implementation class ModifyMemberServlet
  */
-@WebServlet("/reserve/reservation")
-public class ReservationServlet extends HttpServlet {
+@WebServlet(name = "ModifyMemberInfoServlet", urlPatterns = { "/mypage/modify" })
+public class ModifyMemberServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ReservationServlet() {
+    public ModifyMemberServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,32 +26,8 @@ public class ReservationServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String metroCity = request.getParameter("metro-city");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-//		System.out.println(hospitalNo);
->>>>>>> 7f17ff42baf25563595b9152103373b9fc4b11f9
-=======
-=======
->>>>>>> origin/JaeWon
-	<<<<<<< HEAD
-	//		System.out.println(hospitalNo);
-	=======
-	>>>>>>> origin/Hyunseok
-<<<<<<< HEAD
->>>>>>> origin/JaeWon
-=======
->>>>>>> origin/JaeWon
-=======
->>>>>>> origin/Hyunseok
-=======
->>>>>>> 90457858296a0648f3dbceba363a27581d912d19
-		request.setAttribute("metroCity", metroCity);
-		request.getRequestDispatcher("/WEB-INF/views/reserve/reservation.jsp").forward(request, response);
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
