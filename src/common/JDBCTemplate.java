@@ -29,6 +29,7 @@ public class JDBCTemplate {
 	}
 	//연결 생성
 	public Connection createConnection() throws SQLException {
+		
 		String url = "jdbc:oracle:thin:@localhost:1521:XE";
 		String user = "WWW";
 		String password ="123";
