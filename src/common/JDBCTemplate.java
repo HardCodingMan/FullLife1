@@ -29,9 +29,15 @@ public class JDBCTemplate {
 	}
 	//연결 생성
 	public Connection createConnection() throws SQLException {
+<<<<<<< HEAD
 		String url = "jdbc:oracle:thin:@sonof.iptime.org:8521::XE";
 		String user = "FULLLIFE";
 		String password ="FULLLIFE";
+=======
+		String url = "jdbc:oracle:thin:@localhost:1521:XE";
+		String user = "WWW";
+		String password ="123";
+>>>>>>> origin/Hyunseok
 		Connection conn = DriverManager.getConnection(url,user,password);
 		conn.setAutoCommit(false);
 		return conn;

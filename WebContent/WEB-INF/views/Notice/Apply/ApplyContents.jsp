@@ -25,13 +25,13 @@
             <section id="notice-section">
                 <div id="notice-date">
                     <div><p id="notice-enroll">${aOne.enrollDate }</p></div>
-                    <div><p id="notice-views">조회수 ${aOne.applyViews }</p></div>
+                    <div><p id="notice-views">조회수 ${aOne.views }</p></div>
                 </div>
                 <div id="notice-contents-section">
-                    <div id="notice-title"><p>${aOne.applyTitle }</p></div>
+                    <div id="notice-title"><p>${aOne.noticeTitle }</p></div>
                     <div id="notice-contents">
                         <div id="contents-img"><img src="/fileupload/${aOne.picName }" alt="후원 게시글 첨부사진"></div>
-                        <div id="contents-text"><p>${aOne.applyContents }</p></div>
+                        <div id="contents-text"><p>${aOne.noticeContents }</p></div>
                     </div>
                     <div id="notice-bottom">
                         <div id="point-butn"><button>추천하기</button></div>
@@ -55,7 +55,7 @@
                             <tr id="reply-input">
                                 <form action="/Notice/Apply/ApplyNoticeReplyWriter" method="post">
                                     <td>댓글 작성 : </td> <td><input type="text" name="replyContents" placeholder="댓글을 작성해보세요" id="text-input"></td>
-                                        <td><input type="hidden" name="applyNo" value="${aOne.applyNo }">
+                                        <td><input type="hidden" name="applyNo" value="${aOne.noticeNo }">
                                         <input type="submit" value="작성"></td>
                                 </form>    
                             </tr>
@@ -64,7 +64,7 @@
                 </div>
                 <div id="bottom-butn">
                     <a href="/Notice/Apply/ApplyNotice"><button id="list">목록</button></a>
-                    <a href="/Notice/Apply/ApplyNoticeDelete?applyNo=${aOne.applyNo }"><button id="delete">삭제</button></a>
+                    <a href="/Notice/Apply/ApplyNoticeDelete?applyNo=${aOne.noticeNo }"><button id="delete">삭제</button></a>
                 </div>
             </section>
             </div>
