@@ -7,7 +7,7 @@ import java.util.List;
 import javax.servlet.jsp.tagext.PageData;
 
 import apply.model.dao.ApplyNoticeDAO;
-import apply.model.vo.ApplyNotice;
+import apply.model.vo.Notice;
 import apply.model.vo.ApplyNoticeFile;
 import apply.model.vo.ApplyNoticeReply;
 import apply.model.vo.ApplyPage;
@@ -21,13 +21,13 @@ public class ApplyNoticeService {
 		jdbcTemplate = JDBCTemplate.getConnection();
 	}
 	
-	public int noticeWrite(ApplyNotice applyNotice) {
+	public int noticeWrite(Notice notice) {
 		Connection conn = null;
 		int result = 0;
 		
 		try {
 			conn = jdbcTemplate.createConnection();
-			result = new ApplyNoticeDAO().insertNotice(conn, applyNotice);
+			result = new ApplyNoticeDAO().insertNotice(conn, notice);
 			if(result > 0) {
 				JDBCTemplate.commit(conn);
 			}else {
@@ -60,15 +60,15 @@ public class ApplyNoticeService {
 		return ap;
 	}
 
-	public ApplyNotice printOneByNo(int applyNoticeNo) {
-		ApplyNotice applyNotice = null;
+	public Notice printOneByNo(int noticeNo) {
+		Notice applyNotice = null;
 		Connection conn = null;
 		List<ApplyNoticeReply> aList = null;
 		ApplyNoticeDAO applyDAO = new ApplyNoticeDAO();
 		try {
 			conn = jdbcTemplate.createConnection();
-			applyNotice = applyDAO.selectOneByNo(conn, applyNoticeNo);
-			aList = applyDAO.selectAllNoticeReply(conn, applyNoticeNo);
+			applyNotice = applyDAO.selectOneByNo(conn, noticeNo);
+			aList = applyDAO.selectAllNoticeReply(conn, noticeNo);
 			applyNotice.setReplist(aList);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
