@@ -28,6 +28,15 @@
             });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            
+
+=======
+=======
+>>>>>>> origin/JaeWon
+=======
+>>>>>>> origin/JaeWon
 =======
             
 
@@ -41,13 +50,24 @@
 			var BtnTag = querySelector("#submitBtn");
 			
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 7f17ff42baf25563595b9152103373b9fc4b11f9
+=======
+=======
+>>>>>>> origin/JaeWon
 =======
             
 
 >>>>>>> origin/Hyunseok
 =======
+<<<<<<< HEAD
+>>>>>>> origin/Hyunseok
+>>>>>>> origin/JaeWon
+=======
 >>>>>>> origin/JaeWon
 >>>>>>> origin/Hyunseok
+>>>>>>> origin/JaeWon
         }
     </script>
     <header>
@@ -98,6 +118,14 @@
                 	<c:forEach items="${requestScope.hospitals }" var="hospital" varStatus="index">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
+=======
+=======
+>>>>>>> origin/JaeWon
+=======
+>>>>>>> origin/JaeWon
 =======
                 		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
 =======
@@ -107,12 +135,23 @@
                 		<b style="font-size:25px">${hospital.hospitalName }</b>
                 		</label>
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 7f17ff42baf25563595b9152103373b9fc4b11f9
+=======
+=======
+>>>>>>> origin/JaeWon
 =======
                 		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
 >>>>>>> origin/Hyunseok
 =======
+<<<<<<< HEAD
+>>>>>>> origin/Hyunseok
+>>>>>>> origin/JaeWon
+=======
 >>>>>>> origin/JaeWon
 >>>>>>> origin/Hyunseok
+>>>>>>> origin/JaeWon
                 		<h4 style="margin:10px">${hospital.hospitalAddr }</h4>
                 		<a href="#"><h5 style="margin: 0 0 40px 30px">${hospital.hospitalPhone }</h5></a>
                 	</c:forEach>

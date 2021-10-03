@@ -60,10 +60,6 @@
                             <td><input type="text" name="name" id="user-name" value=${requestScope.member.userName } readonly></td>
                         </tr>
                         <tr>
-                            <td>주민등록번호</td>
-                            <td><input type="password" name="zumin" id="zumin1"></td>
-                        </tr>
-                        <tr>
                             <td>연락처</td>
                             <td><input type="text" name="tel" id="tel1" size="3">&nbsp;-&nbsp;<input type="text" name="tel" id="tel2" size="3">&nbsp;-&nbsp;<input type="text" name="tel" id="tel3" size="3"></td>
                         </tr>
