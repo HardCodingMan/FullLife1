@@ -34,22 +34,12 @@
                         <div id="contents-text"><p>${aOne.noticeContents }</p></div>
                     </div>
                     <div id="notice-bottom">
-                    ${nLike.userId }
                         <div id="like-butn">
-                        	<c:if test="${nLike.userId eq null}">
-	                        	<form action="/Notice/Apply/ApplyLike" method="post">
-	                        		추천수 : ${aOne.noticeLike }<BR>
-	                        		<input type="hidden" name="noticeNo" value="${aOne.noticeNo }">
-	                        		<input type="submit" value="추천하기">
-	                        	</form>
-                        	</c:if>
-                        	<c:if test="${nLike.userId ne null }">
-                        		<form action="/Notice/Apply/ApplyLike" method="post">
-	                        		추천수 : ${aOne.noticeLike }<BR>
-	                        		<input type="hidden" name="noticeNo" value="${aOne.noticeNo }">
-	                        		<input type="submit" value="추천하기">
-	                        	</form>
-	                        </c:if>
+                        	<form action="/Notice/Apply/ApplyLike" method="post">
+                        		추천수 : ${aOne.noticeLike }<BR>
+                        		<input type="hidden" name="noticeNo" value="${aOne.noticeNo }">
+                        		<input type="submit" value="추천하기">
+                        	</form>
                         </div>
                     </div>
                 </div>
