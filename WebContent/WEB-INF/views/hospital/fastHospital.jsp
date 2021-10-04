@@ -34,7 +34,11 @@
 
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+=======
+>>>>>>> origin/JaeWon
+>>>>>>> origin/master
 =======
 >>>>>>> origin/JaeWon
 =======
@@ -65,8 +69,13 @@
 =======
 >>>>>>> origin/JaeWon
 =======
+<<<<<<< HEAD
+>>>>>>> origin/Hyunseok
+>>>>>>> origin/JaeWon
+=======
 >>>>>>> origin/JaeWon
 >>>>>>> origin/Hyunseok
+>>>>>>> origin/JaeWon
         }
     </script>
     <header>
@@ -122,7 +131,11 @@
                 		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+=======
+>>>>>>> origin/JaeWon
+>>>>>>> origin/master
 =======
 >>>>>>> origin/JaeWon
 =======
@@ -138,6 +151,11 @@
 <<<<<<< HEAD
 >>>>>>> 7f17ff42baf25563595b9152103373b9fc4b11f9
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/JaeWon
+>>>>>>> origin/master
 =======
                 		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
 >>>>>>> origin/Hyunseok
@@ -148,8 +166,13 @@
 >>>>>>> origin/Hyunseok
 >>>>>>> origin/JaeWon
 =======
+<<<<<<< HEAD
+>>>>>>> origin/Hyunseok
+>>>>>>> origin/JaeWon
+=======
 >>>>>>> origin/JaeWon
 >>>>>>> origin/Hyunseok
+>>>>>>> origin/JaeWon
                 		<h4 style="margin:10px">${hospital.hospitalAddr }</h4>
                 		<a href="#"><h5 style="margin: 0 0 40px 30px">${hospital.hospitalPhone }</h5></a>
                 	</c:forEach>

@@ -103,14 +103,19 @@ window.onload = function() {
 >>>>>>> ac4285a89d941351d66e2a882df6d149a4df2806
 =======
                         	<option value="" selected>----- 병원 선택 ------</option>
+<<<<<<< HEAD
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
 =======
 >>>>>>> origin/Hyunseok
 =======
 =======
+>>>>>>> origin/JaeWon
+>>>>>>> origin/master
+=======
                         	<option value="" selected>----- 병원 선택 ------</option>
 =======
 >>>>>>> origin/Hyunseok
+>>>>>>> origin/JaeWon
 =======
 >>>>>>> 5c3b789bfc223a181bc4cdbbe572cac4e2184544
 =======
@@ -134,12 +139,23 @@ window.onload = function() {
 =======
 >>>>>>> origin/mooooo
                            <option value="" selected>----- 병원 선택 ------</option>
+<<<<<<< HEAD
+=======
+=======
+=======
+                        	<option value="" selected>----- 병원 선택 ------</option>
+>>>>>>> 5c3b789bfc223a181bc4cdbbe572cac4e2184544
+>>>>>>> origin/master
                             <option value="seoul">서울</option>
                             <option value="daejeon">대전</option>
                             <option value="daegu">대구</option>
                             <option value="busan">부산</option>
                             <option value="gwangju">광주</option>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
 >>>>>>> e656fdeda676b8b971d3033e5531efe878fb775c
 =======
 
@@ -164,9 +180,13 @@ window.onload = function() {
 <!--                             <option value="busan">부산</option> -->
 <!--                             <option value="gwangju">광주</option> -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
 =======
 >>>>>>> origin/Hyunseok
+=======
+>>>>>>> origin/JaeWon
+>>>>>>> origin/master
 =======
 =======
 =======
@@ -179,6 +199,7 @@ window.onload = function() {
                             <option value="daegu">대구</option>
                             <option value="busan">부산</option>
                             <option value="gwangju">광주</option>
+>>>>>>> origin/JaeWon
 >>>>>>> e656fdeda676b8b971d3033e5531efe878fb775c
 >>>>>>> 5c3b789bfc223a181bc4cdbbe572cac4e2184544
 =======
@@ -207,7 +228,11 @@ window.onload = function() {
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+=======
+>>>>>>> origin/JaeWon
+>>>>>>> origin/master
 =======
 >>>>>>> origin/JaeWon
     				<div id="result">
@@ -224,7 +249,11 @@ window.onload = function() {
 <<<<<<< HEAD
 >>>>>>> ac4285a89d941351d66e2a882df6d149a4df2806
 =======
+<<<<<<< HEAD
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+=======
+>>>>>>> origin/JaeWon
+>>>>>>> origin/master
                 </div>
                 <div id="dateTime">
                 	<div id="map" style="width:500px;height:400px;">
