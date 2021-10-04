@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:src/mypage/controller/DeleteReserveServlet.java
 =======
 <<<<<<< HEAD:src/mypage/controller/ModifyMemberServlet.java
@@ -7,6 +8,9 @@ package mypage.controller;
 =======
 package manager.apply.controller;
 >>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742:src/manager/apply/controller/M_applyRemoveServlet.java
+=======
+package manager.apply.controller;
+>>>>>>> f152e77a3ef574e6a4eb307c74533b8f2e1bc621
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -18,6 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 import manager.apply.model.service.M_applyService;
 
 /**
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:src/mypage/controller/DeleteReserveServlet.java
  * Servlet implementation class DeleteReserveServlet
@@ -32,16 +37,22 @@ public class DeleteReserveServlet extends HttpServlet {
 public class ModifyMemberServlet extends HttpServlet {
 >>>>>>> origin/stitchkang
 =======
+=======
+>>>>>>> f152e77a3ef574e6a4eb307c74533b8f2e1bc621
  * Servlet implementation class M_applyRemoveServlet
  */
 @WebServlet("/manager/m_apply_remove")
 public class M_applyRemoveServlet extends HttpServlet {
+<<<<<<< HEAD
 >>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742:src/manager/apply/controller/M_applyRemoveServlet.java
+=======
+>>>>>>> f152e77a3ef574e6a4eb307c74533b8f2e1bc621
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:src/mypage/controller/DeleteReserveServlet.java
     public DeleteReserveServlet() {
@@ -52,6 +63,9 @@ public class M_applyRemoveServlet extends HttpServlet {
 =======
     public M_applyRemoveServlet() {
 >>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742:src/manager/apply/controller/M_applyRemoveServlet.java
+=======
+    public M_applyRemoveServlet() {
+>>>>>>> f152e77a3ef574e6a4eb307c74533b8f2e1bc621
         super();
         // TODO Auto-generated constructor stub
     }
@@ -60,6 +74,7 @@ public class M_applyRemoveServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:src/mypage/controller/DeleteReserveServlet.java
 		HttpSession session = request.getSession();
@@ -74,6 +89,8 @@ public class M_applyRemoveServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 >>>>>>> origin/stitchkang
 =======
+=======
+>>>>>>> f152e77a3ef574e6a4eb307c74533b8f2e1bc621
 		int notiNo = Integer.parseInt(request.getParameter("notiNo"));
 		int result = new M_applyService().deleteApply(notiNo);
 		if(result > 0) {
@@ -85,7 +102,10 @@ public class M_applyRemoveServlet extends HttpServlet {
 =======
 >>>>>>> origin/stitchkang
 		}
+<<<<<<< HEAD
 >>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742:src/manager/apply/controller/M_applyRemoveServlet.java
+=======
+>>>>>>> f152e77a3ef574e6a4eb307c74533b8f2e1bc621
 	}
 
 	/**
