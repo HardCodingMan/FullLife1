@@ -32,6 +32,9 @@ public class JDBCTemplate {
 	public Connection createConnection() throws SQLException {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/stitchkang2
 
 		String url = "jdbc:oracle:thin:@sonof.iptime.org:8521:XE";
 		String user = "FULLLIFE";
@@ -39,6 +42,7 @@ public class JDBCTemplate {
 =======
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/stitchkang
 		String url = "jdbc:oracle:thin:@sonof.iptime.org:8521:XE";
 		String user = "FULLLIFE";
@@ -48,6 +52,8 @@ public class JDBCTemplate {
 >>>>>>> 648d74181ee17f888af35bf2c751770dfec6a2c3
 =======
 >>>>>>> origin/stitchkang
+=======
+>>>>>>> origin/stitchkang2
 		Connection conn = DriverManager.getConnection(url,user,password);
 		conn.setAutoCommit(false);
 		return conn;

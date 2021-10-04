@@ -99,10 +99,14 @@ public class MypageService {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/stitchkang
 
+=======
+	
+>>>>>>> origin/stitchkang2
 	public int modifyMemberInfo(Member member) {
 		int result = 0;
 		Connection conn = null;
@@ -127,11 +131,14 @@ public class MypageService {
 		return result;
 	} 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 648d74181ee17f888af35bf2c751770dfec6a2c3
 
 =======
 >>>>>>> origin/stitchkang
+=======
+>>>>>>> origin/stitchkang2
 
 	
 }

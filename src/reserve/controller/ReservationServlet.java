@@ -30,6 +30,7 @@ public class ReservationServlet extends HttpServlet {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 648d74181ee17f888af35bf2c751770dfec6a2c3
@@ -60,13 +61,11 @@ public class ReservationServlet extends HttpServlet {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/stitchkang2
 //		System.out.println(hospitalNo);
->>>>>>> 7f17ff42baf25563595b9152103373b9fc4b11f9
-=======
-=======
->>>>>>> origin/JaeWon
-	<<<<<<< HEAD
 	//		System.out.println(hospitalNo);
+<<<<<<< HEAD
 	=======
 	>>>>>>> origin/Hyunseok
 <<<<<<< HEAD
@@ -100,6 +99,8 @@ public class ReservationServlet extends HttpServlet {
 >>>>>>> origin/stitchkang
 >>>>>>> 3981585e63b4c0fc2d020bc1fa161f35001a535e
 >>>>>>> origin/stitchkang
+=======
+>>>>>>> origin/stitchkang2
 		request.setAttribute("metroCity", metroCity);
 		request.getRequestDispatcher("/WEB-INF/views/reserve/reservation.jsp").forward(request, response);
 	}
