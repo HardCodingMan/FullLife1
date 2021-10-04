@@ -99,6 +99,25 @@ public class M_applyService {
 		return result;
 	}
 
+	public int updateApply(int notiNo) {
+		int result = 0;
+		Connection conn = null;
+		
+		try {
+			conn = jdbcTemplate.createConnection();
+			result = new M_applyDAO().removeApply(conn, notiNo);
+			if(result > 0) {
+				JDBCTemplate.commit(conn);
+			}else {
+				JDBCTemplate.rollback(conn);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+
 	
 	
 	

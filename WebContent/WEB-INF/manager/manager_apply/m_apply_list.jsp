@@ -62,7 +62,7 @@
                             <div>심사중</div>
                         </div>
                         <div class="list-btn">
-                                <button type="submit">심사완료</button>&nbsp;&nbsp;
+                                <button type="submit"><a href="/manager/m_apply_update?notiNo=${apply.notiNo }">심사완료</a></button>&nbsp;&nbsp;
                                 <button type="submit" class="bt1"><a href="/manager/m_apply_remove?notiNo=${apply.notiNo }">삭제</a></button>
                         </div>
                     </div>

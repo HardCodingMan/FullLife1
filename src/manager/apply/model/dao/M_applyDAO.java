@@ -217,6 +217,25 @@ public class M_applyDAO {
 		
 		return result;
 	}
+
+	public int removeApply(Connection conn, int notiNo) {
+		PreparedStatement pstmt = null;
+		int result = 0;
+		String query = "UPDATE NOTICE SET LEVELCHECK=? WHERE NOTICE_NO=?";
+		
+		try {
+			pstmt = conn.prepareStatement(query);
+			pstmt.setString(1, "Y");
+			pstmt.setInt(2, notiNo);
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(pstmt);
+		}
+		
+		return result;
+	}
 	
 	
 	

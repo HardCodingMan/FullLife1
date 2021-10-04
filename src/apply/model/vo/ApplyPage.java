@@ -4,16 +4,16 @@ import java.util.List;
 
 public class ApplyPage {
 
-	private List<ApplyNotice> aList;
+	private List<Notice> aList;
 	private String pageNavi; 
 	
 	public ApplyPage() {}
 
-	public List<ApplyNotice> getaList() {
+	public List<Notice> getaList() {
 		return aList;
 	}
 
-	public void setaList(List<ApplyNotice> aList) {
+	public void setaList(List<Notice> aList) {
 		this.aList = aList;
 	}
 
