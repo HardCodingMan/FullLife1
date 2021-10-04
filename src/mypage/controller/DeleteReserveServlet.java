@@ -1,4 +1,4 @@
-package member.controller;
+package mypage.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -6,21 +6,21 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import member.model.service.MemberService;
-import member.model.vo.Member;
+import mypage.model.service.MypageService;
 
 /**
- * Servlet implementation class FindIdServlet
+ * Servlet implementation class DeleteReserveServlet
  */
-@WebServlet("/member/findId")
-public class FindIdServlet extends HttpServlet {
+@WebServlet("/mypage/delete")
+public class DeleteReserveServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public FindIdServlet() {
+    public DeleteReserveServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,21 +29,21 @@ public class FindIdServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/views/member/findId.jsp").forward(request, response);
+		HttpSession session = request.getSession();
+		
+		String userId = (String)session.getAttribute("userId");
+		int result = new MypageService().deleteHospitalInfo(userId);
+		if(result > 0) {
+			response.sendRedirect("/mypage/main");
+		}
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
-		String userName = request.getParameter("user-name");
-		String email = request.getParameter("email");
-		String userId = new MemberService().getOneMemberByEmail(userName, email);
-		if(!userId.equals("")) {
-			request.setAttribute("userId", userId);
-		}
-		request.getRequestDispatcher("/WEB-INF/views/member/idFoundResult.jsp").forward(request, response);
+		// TODO Auto-generated method stub
+		doGet(request, response);
 	}
 
 }

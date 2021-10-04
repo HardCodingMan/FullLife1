@@ -27,8 +27,8 @@
         <article>
             <div id="clientupdate">
                 <h3>회원정보 수정</h3>
-                <form action="https:/www.naver.com" method="post">
-                    <input type="hidden" name="userid" value="">
+                <form action="/mypage/modify" method="post">
+<!--                     <input type="hidden" name="userid" value=""> -->
                     <div id="result-div" style="height: 30px; width: 200px; margin-left: 380px;margin-bottom: 20px;"></div>
                     <table class="cliupdateTable">
                         <tr>
@@ -47,30 +47,26 @@
                             </tr>
                             <tr>
                                 <td>신규 비밀번호</td>
-                                <td><input type="password" name="pw2" id="user-newPw"></td>
+                                <td><input type="password" name="" id="user-newPw"></td>
                             </tr>
                             <tr>
                                 <td>비밀번호 확인</td>
-                                <td><input type="password" name="pw2" id="user-reNewPw"><br></td>
+                                <td><input type="password" name="user-pw" id="user-reNewPw"><br></td>
                             </tr>
                         </table>
                         <table class="cliupdateTable3">
                         <tr>
                             <td>이름</td>
-                            <td><input type="text" name="name" id="user-name" value=${requestScope.member.userName } readonly></td>
-                        </tr>
-                        <tr>
-                            <td>주민등록번호</td>
-                            <td><input type="password" name="zumin" id="zumin1"></td>
+                            <td><input type="text" name="user-name" id="user-name" value=${requestScope.member.userName } readonly></td>
                         </tr>
                         <tr>
                             <td>연락처</td>
-                            <td><input type="text" name="tel" id="tel1" size="3">&nbsp;-&nbsp;<input type="text" name="tel" id="tel2" size="3">&nbsp;-&nbsp;<input type="text" name="tel" id="tel3" size="3"></td>
+                            <td><input type="text" name="tel1" id="tel1" size="3">&nbsp;-&nbsp;<input type="text" name="tel2" id="tel2" size="3">&nbsp;-&nbsp;<input type="text" name="tel3" id="tel3" size="3"></td>
                         </tr>
                         <tr>
                             <td>이메일</td>
                             <td><input type="text" id="email-id" name="email-id" class="email_id" value="" title="이메일 아이디" placeholder="이메일" maxlength="18" >@
-                                <select class="select" name="email-addr" title="이메일 도메인 주소 선택" id="email-addr" onclick="">
+                                <select class="select" name="email-addr" title="이메일 도메인 주소 선택" id="email-addr">
                                     <option value="">-선택-</option>
                                     <option value="naver.com">naver.com</option>
                                     <option value="gmail.com">gmail.com</option>
@@ -83,7 +79,7 @@
                         </tr>
                         <tr>
                             <td>주소</td>
-                            <td><input type="text" name="addr" id="addr"></td>
+                            <td><input type="text" name="user-addr" id="addr"></td>
                         </tr>
                        
                     </table>
@@ -116,7 +112,6 @@
         let pwRegex = /[a-zA-Z0-9$!@#%&]{8,}$/;
         let newPwRegex = /[a-zA-Z0-9$!@#%&]{8,}$/;
         let checkPwRegex = /[a-zA-Z0-9$!@#%&]{8,}$/;
-//         let zuminRegex =/^(?:[0-9]{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[1,2][0-9]|3[0,1]))[1-4][0-9]{6}$ /;
         let phRegex1 = /[010]$/;
         let phRegex2 = /[0-9]{4}$/;
         let phRegex3 = /[0-9]{4}$/;
