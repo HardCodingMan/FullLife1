@@ -8,7 +8,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import common.JDBCTemplate;
-import member.model.vo.Member;
 import mypage.model.vo.BookedHospitalInfo;
 import mypage.model.vo.CheckResult;
 import mypage.model.vo.History;
@@ -170,9 +169,8 @@ public class MypageDAO {
 			} finally {
 				JDBCTemplate.close(pstmt);
 			}
-			return result;
-		}
 
+<<<<<<< HEAD
 
 		public int modifyMemberInfo(Member member, Connection conn) {
 			int result = 0;
@@ -194,6 +192,8 @@ public class MypageDAO {
 			} finally {
 				JDBCTemplate.close(pstmt);
 			}
+=======
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 			
 			return result;
 		}

@@ -22,7 +22,6 @@ public class SupportService {
 		try {
 			conn = jdbcTemplate.createConnection();
 			firstSupport = new SupportDAO().selectFirstSupport(conn, firstRank);
-			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

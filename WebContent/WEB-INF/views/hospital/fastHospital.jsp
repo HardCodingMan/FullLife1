@@ -27,8 +27,11 @@
 				location.href="/hospital/listAll?location="+result;	
             });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,6 +39,7 @@
 
 =======
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -51,10 +55,18 @@
 >>>>>>> origin/stitchkang2
 =======
 >>>>>>> origin/JaeWon
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
+=======
+>>>>>>> origin/JaeWon
 =======
             
+<<<<<<< HEAD
 >>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
+=======
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 
+=======
+>>>>>>> origin/Hyunseok
             document.querySelector("input[name='chosen-hospital']").addEventListener("change", function(){
             	console.log(this.value);
             });
@@ -62,8 +74,11 @@
 
 			var BtnTag = querySelector("#submitBtn");
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 			
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,13 +92,23 @@
 
 >>>>>>> origin/Hyunseok
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
 =======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/Hyunseok
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 >>>>>>> origin/JaeWon
 =======
 >>>>>>> origin/JaeWon
 >>>>>>> origin/Hyunseok
+<<<<<<< HEAD
 >>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
+=======
+>>>>>>> origin/JaeWon
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
         }
     </script>
     <header>
@@ -133,14 +158,18 @@
                 <div id="hospital-result">
                 	<c:forEach items="${requestScope.hospitals }" var="hospital" varStatus="index">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
 =======
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -156,19 +185,29 @@
 >>>>>>> origin/stitchkang2
 =======
 >>>>>>> origin/JaeWon
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
+=======
+>>>>>>> origin/JaeWon
 =======
                 		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
 =======
 >>>>>>> origin/Hyunseok
+<<<<<<< HEAD
 >>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
+=======
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
                 		<label>
-                		<b style="font-size:25px">> ${hospital.hospitalName }</b>
+                		<input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }">
+                		<b style="font-size:25px">${hospital.hospitalName }</b>
                 		</label>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 		<h4 style="margin:10px">병원 주소: ${hospital.hospitalAddr }</h4>
                 		<h4 style="margin-left:10px">병원 문의 번호:<a href="#"><strong style="margin: 0 0 5px 10px"> ${hospital.hospitalPhone }</strong></a></h4>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 7f17ff42baf25563595b9152103373b9fc4b11f9
@@ -176,6 +215,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/JaeWon
@@ -191,14 +231,29 @@
 =======
 =======
                 		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
+=======
+=======
+>>>>>>> origin/JaeWon
+=======
+                		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
+>>>>>>> origin/Hyunseok
+=======
+<<<<<<< HEAD
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 >>>>>>> origin/Hyunseok
 >>>>>>> origin/JaeWon
 =======
 >>>>>>> origin/JaeWon
 >>>>>>> origin/Hyunseok
+<<<<<<< HEAD
                 		<h4 style="margin:10px">${hospital.hospitalAddr }</h4>
                 		<a href="#"><h5 style="margin: 0 0 40px 30px">${hospital.hospitalPhone }</h5></a>
 >>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
+=======
+>>>>>>> origin/JaeWon
+                		<h4 style="margin:10px">${hospital.hospitalAddr }</h4>
+                		<a href="#"><h5 style="margin: 0 0 40px 30px">${hospital.hospitalPhone }</h5></a>
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
                 	</c:forEach>
                 </div>
             </div>

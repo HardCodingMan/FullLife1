@@ -31,7 +31,7 @@
             </div>
             <div>
             	<form action="/member/login" method="get">
-                	<input type="submit" value="로그인">
+                	<input type="button" value="로그인">
                 </form>
             </div>
         </div>

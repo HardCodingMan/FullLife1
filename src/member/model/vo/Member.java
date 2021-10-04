@@ -46,14 +46,6 @@ public class Member {
    this.userEmail = userEmail;
 }
 
-public Member(String userId, String userPwd, String userPhone, String userEmail, String userAddr) {
-	this.userPwd = userPwd;
-	this.userPhone = userPhone;
-	this.userEmail = userEmail;
-	this.userAddr = userAddr;
-	this.userId = userId;
-}
-
 public String getUserId() {
       return userId;
    }

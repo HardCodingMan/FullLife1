@@ -6,21 +6,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import mypage.model.service.MypageService;
 
 /**
- * Servlet implementation class DeleteReserveServlet
+ * Servlet implementation class ModifyMemberServlet
  */
-@WebServlet("/mypage/delete")
-public class DeleteReserveServlet extends HttpServlet {
+@WebServlet(name = "ModifyMemberInfoServlet", urlPatterns = { "/mypage/modify" })
+public class ModifyMemberServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public DeleteReserveServlet() {
+    public ModifyMemberServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,15 +26,8 @@ public class DeleteReserveServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession();
-		
-		String userId = (String)session.getAttribute("userId");
-		int result = new MypageService().deleteHospitalInfo(userId);
-		if(result > 0) {
-			response.sendRedirect("/mypage/regHospital");
-		} else {
-			System.out.println("no");
-		}
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**

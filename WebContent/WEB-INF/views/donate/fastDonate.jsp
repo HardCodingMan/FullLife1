@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FullLife</title>
     
-    <link rel="stylesheet" href="/FONT/fontawesome-free-5.15.4-web/css/all.css">
-    <link rel="stylesheet" href="/css/FullLife-Donate.css">
+    <link rel="stylesheet" href="../../../FONT/fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="../../../css/FullLife-Donate.css">
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&display=swap" rel="stylesheet">
 </head>
@@ -67,26 +67,13 @@
                     <h1>후원</h1>
                 </div>
                 <div class="input-footer">
-                	<c:if test="${sessionScope.userId ne null }">
                     <p>잔여포인트</p>
-                    <p style="font-size:15px; font-family: 'Do Hyeon', sans-serif;">${requestScope.totalPoint } 포인트</p>
-                    <form action="/mypage/point">
-                        <input type="submit" value="포인트 충전하러가기" class="point-btn">
+                    <input type="text" value="1000 POINT"  style="width: 95%; height: 40px; border: none; background-color: #fafafa; font-family: 'Do Hyeon', sans-serif; font-size: 15px;" readonly>
+                    <form action="#">
+                        <p>포인트 입력</p>
+                        <input type="text" value="" placeholder="1000포인트 이상 기부 가능" style="width: 95%; height: 40px; font-family: 'Do Hyeon', sans-serif; font-size: 15px;"><br>
+                        <input type="submit" value="후원하기" id="point-btn">
                     </form>
-                    <form action="/Notice/Support/SupportNotice">
-                        <input type="submit" value="후원게시판 보러가기" class="point-btn">
-                    </form>
-                    </c:if>
-                    <c:if test="${sessionScope.userId eq null }">
-                   	<p>FullLife</p>
-                    <p style="font-size:15px; font-family: 'Do Hyeon', sans-serif;"></p>
-                    <form action="/member/enroll">
-                        <input type="submit" value="FULLLIFE 회원가입하러가기" class="point-btn">
-                    </form>
-                    <form action="/member/login">
-                        <input type="submit" value="FULLLIFE 로그인 하러가기" class="point-btn">
-                    </form>
-                    </c:if>
                 </div>
             </div>
             
@@ -97,7 +84,7 @@
                     <div class="support-percentage">
                         <p>조회수: ${requestScope.firstSupport.supportHuman }</p>
                         <p>달성금액: ${requestScope.firstSupport.nowSupport}</p>
-                        <p>달성률: ${requestScope.firstPercentage }%</p>
+                        <p>달성률: ${requestScope.firstPercentage }</p>
                         <div class="progress-bar">
                             <div class="progress-done" id="bar1" data-done="${requestScope.firstPercentage }"></div>
                         </div>
@@ -109,7 +96,7 @@
                     <div class="support-percentage">
                         <p>조회수: ${secondSupport.views }</p>
                         <p>달성금액: ${requestScope.secondSupport.nowSupport }</p>
-                        <p>달성률: ${requestScope.secondPercentage }%</p>
+                        <p>달성률: ${requestScope.secondPercentage }</p>
                         <div class="progress-bar second">
                             <div class="progress-done" id="bar2" data-done="${requestScope.secondPercentage }"></div>
                         </div>
@@ -152,7 +139,7 @@
             <img src="../../../img/aside.png" alt="" style="width: 100%; height: 100%;">
         </div>
         <p style="color:gray;">
-     	평균 생존율은 1년 95%, 5년 92% , FullLife는 언제나 최고의 연구진과 함께합니다.</p>
+     평균 생존율은 1년 95%, 5년 92% , FullLife는 언제나 최고의 연구진과 함께합니다.</p>
     </section>
     </main>
     <br>
