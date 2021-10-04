@@ -15,7 +15,7 @@ import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 import apply.model.service.ApplyNoticeService;
-import apply.model.vo.ApplyNotice;
+import apply.model.vo.Notice;
 import apply.model.vo.ApplyNoticeFile;
 
 
@@ -63,15 +63,15 @@ public class ApplyNoticeWriterServlet extends HttpServlet {
 		String subject = multi.getParameter("apply-notice-sub");
 		String Contents = multi.getParameter("apply-notice-contents");
 		//ApplyNotice 객체에 정보 세팅
-		ApplyNotice applyNotice = new ApplyNotice();
-		applyNotice.setApplyTitle(subject);
-		applyNotice.setApplyContents(Contents);
-		applyNotice.setUserId(writeId);
+		Notice notice = new Notice();
+		notice.setNoticeTitle(subject);
+		notice.setNoticeContents(Contents);
+		notice.setUserId(writeId);
 		//ApplyNoticeFile 객체에 사진 정보 세팅
-		applyNotice.setPicPath(filePath);
-		applyNotice.setPicSize(fileSize);
-		applyNotice.setPicName(fileName);
-		int result = new ApplyNoticeService().noticeWrite(applyNotice);
+		notice.setPicPath(filePath);
+		notice.setPicSize(fileSize);
+		notice.setPicName(fileName);
+		int result = new ApplyNoticeService().noticeWrite(notice);
 		if(result > 0) {
 			response.sendRedirect("/Notice/Apply/ApplyNotice");
 		}else {

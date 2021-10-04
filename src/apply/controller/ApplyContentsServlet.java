@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import apply.model.service.ApplyNoticeService;
-import apply.model.vo.ApplyNotice;
+import apply.model.vo.Notice;
 
 /**
  * Servlet implementation class ApplyContentsServlet
@@ -30,8 +30,8 @@ public class ApplyContentsServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		int applyNoticeNo = Integer.parseInt(request.getParameter("applyNo"));
-		ApplyNotice aOne = new ApplyNoticeService().printOneByNo(applyNoticeNo);
+		int noticeNo = Integer.parseInt(request.getParameter("noticeNo"));
+		Notice aOne = new ApplyNoticeService().printOneByNo(noticeNo);
 		if(aOne != null) {
 			request.setAttribute("aOne", aOne);
 			// NoticeReply setAttribute 해줌

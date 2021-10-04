@@ -8,18 +8,18 @@ public class ApplyNoticeReply {
 	private String replyUserId;
 	private String replyContents;
 	private Date replyDate;
-	private int applyNo;
+	private int noticeNo;
 	private int countReply;
 	
 	public ApplyNoticeReply() {};
 	
-	public ApplyNoticeReply(int replyNo, String replyUserId, String replyContents, Date replyDate, int applyNo) {
+	public ApplyNoticeReply(int replyNo, String replyUserId, String replyContents, Date replyDate, int noticeNo) {
 		super();
 		this.replyNo = replyNo;
 		this.replyUserId = replyUserId;
 		this.replyContents = replyContents;
 		this.replyDate = replyDate;
-		this.applyNo = applyNo;
+		this.noticeNo = noticeNo;
 	}
 
 	public int getCountReply() {
@@ -62,18 +62,18 @@ public class ApplyNoticeReply {
 		this.replyDate = replyDate;
 	}
 
-	public int getApplyNo() {
-		return applyNo;
+	public int getNoticeNo() {
+		return noticeNo;
 	}
 
-	public void setApplyNo(int applyNo) {
-		this.applyNo = applyNo;
+	public void setNoticeNo(int noticeNo) {
+		this.noticeNo = noticeNo;
 	}
 
 	@Override
 	public String toString() {
 		return "ApplyNoticeReply [replyNo=" + replyNo + ", replyUserId=" + replyUserId + ", replyContents="
-				+ replyContents + ", replyDate=" + replyDate + ", applyNo=" + applyNo + "]";
+				+ replyContents + ", replyDate=" + replyDate + ", noticeNo=" + noticeNo + "]";
 	}
 	
 }
