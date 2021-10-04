@@ -34,9 +34,7 @@ public class DeleteReserveServlet extends HttpServlet {
 		String userId = (String)session.getAttribute("userId");
 		int result = new MypageService().deleteHospitalInfo(userId);
 		if(result > 0) {
-			response.sendRedirect("/mypage/regHospital");
-		} else {
-			System.out.println("no");
+			response.sendRedirect("/mypage/main");
 		}
 	}
 

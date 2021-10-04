@@ -47,7 +47,7 @@
                         </tr>
                         <tr>
                             <td>이식장기 |</td>
-                            <td><input class="bookbox" type="text" name="" value="${requestScope.info.organ }"  readonly></td>
+                            <td><input class="bookbox" type="text" name="" value="${requestScope.bodyPart }"  readonly></td>
                         </tr>
                     </table>
                     <input type="submit" value="예약취소" class="bookbt">

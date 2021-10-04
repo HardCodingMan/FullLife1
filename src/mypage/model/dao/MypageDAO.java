@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import common.JDBCTemplate;
+import member.model.vo.Member;
 import mypage.model.vo.BookedHospitalInfo;
 import mypage.model.vo.CheckResult;
 import mypage.model.vo.History;
@@ -169,7 +170,31 @@ public class MypageDAO {
 			} finally {
 				JDBCTemplate.close(pstmt);
 			}
+			return result;
+		}
 
+
+		public int modifyMemberInfo(Member member, Connection conn) {
+			int result = 0;
+			PreparedStatement pstmt = null;
+			String query = "UPDATE MEMBER SET EMAIL = ?, PHONE = ?, USER_PWD = ?, ADDRESS = ? WHERE USER_ID = ?";
+			
+			try {
+				pstmt = conn.prepareStatement(query);
+				pstmt.setString(1, member.getUserEmail());
+				pstmt.setString(2, member.getUserPhone());
+				pstmt.setString(3, member.getUserPwd());
+				pstmt.setString(4, member.getUserAddr());
+				pstmt.setString(5, member.getUserId());
+				
+				result = pstmt.executeUpdate();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} finally {
+				JDBCTemplate.close(pstmt);
+			}
+			
 			return result;
 		}
 
