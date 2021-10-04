@@ -99,9 +99,6 @@ public class MypageService {
 		return result;
 	}
 
-<<<<<<< HEAD
-=======
-
 
 	public int modifyMemberInfo(Member member) {
 		int result = 0;
@@ -126,8 +123,6 @@ public class MypageService {
 		
 		return result;
 	} 
->>>>>>> 3981585e63b4c0fc2d020bc1fa161f35001a535e
-
 
 	
 }

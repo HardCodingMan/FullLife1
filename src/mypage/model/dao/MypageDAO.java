@@ -173,8 +173,7 @@ public class MypageDAO {
 			return result;
 		}
 
-<<<<<<< HEAD
-=======
+
 		public int modifyMemberInfo(Member member, Connection conn) {
 			int result = 0;
 			PreparedStatement pstmt = null;
@@ -196,7 +195,6 @@ public class MypageDAO {
 				JDBCTemplate.close(pstmt);
 			}
 			
->>>>>>> 3981585e63b4c0fc2d020bc1fa161f35001a535e
 			return result;
 		}
 
