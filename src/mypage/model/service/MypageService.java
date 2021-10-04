@@ -2,8 +2,6 @@ package mypage.model.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.List;
-
 import common.JDBCTemplate;
 import member.model.vo.Member;
 import mypage.model.dao.MypageDAO;
@@ -125,12 +123,3 @@ public class MypageService {
 
 	
 }
-
-
-
-
-
-
-
-
-
