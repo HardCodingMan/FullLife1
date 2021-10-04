@@ -97,6 +97,12 @@ window.onload = function() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
 =======
                         	<option value="" selected>----- 병원 선택 ------</option>
 =======
@@ -106,7 +112,14 @@ window.onload = function() {
 >>>>>>> ac4285a89d941351d66e2a882df6d149a4df2806
 =======
                         	<option value="" selected>----- 병원 선택 ------</option>
+<<<<<<< HEAD
 >>>>>>> origin/JaeWon
+=======
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+=======
+>>>>>>> origin/Hyunseok
+=======
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
 =======
                         	<option value="" selected>----- 병원 선택 ------</option>
 =======
@@ -115,6 +128,7 @@ window.onload = function() {
 =======
 >>>>>>> 5c3b789bfc223a181bc4cdbbe572cac4e2184544
 =======
+>>>>>>> origin/JaeWon
 >>>>>>> origin/Hyunseok
 >>>>>>> master
                             <option value="seoul"<c:if test="${metroCity eq  'seoul'}">selected</c:if>>서울
@@ -174,13 +188,50 @@ window.onload = function() {
 <!--                             <option value="busan">부산</option> -->
 <!--                             <option value="gwangju">광주</option> -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ac4285a89d941351d66e2a882df6d149a4df2806
+=======
+=======
+>>>>>>> origin/mooooo
+                           <option value="" selected>----- 병원 선택 ------</option>
+                            <option value="seoul">서울</option>
+                            <option value="daejeon">대전</option>
+                            <option value="daegu">대구</option>
+                            <option value="busan">부산</option>
+                            <option value="gwangju">광주</option>
+<<<<<<< HEAD
+>>>>>>> e656fdeda676b8b971d3033e5531efe878fb775c
+=======
+
+<%--                             <option value="seoul"<c:if test="${metroCity eq  'seoul'}">selected</c:if>>서울 --%>
+<%--                             <option value="daejeon"<c:if test="${metroCity eq 'daejeon' }">selected</c:if>>대전</option> --%>
+<%--                             <option value="daegu" <c:if test="${metroCity eq 'daegu' }">selected</c:if>>대구</option> --%>
+<%--                             <option value="busan" <c:if test="${metroCity eq 'busan' }">selected</c:if>>부산</option> --%>
+<%--                             <option value="gwangju"<c:if test="${metroCity eq 'gwangju' }">selected</c:if>>광주</option> --%>
+
+>>>>>>> origin/mooooo
+<<<<<<< HEAD
+=======
+>>>>>>> ccf2c619516a4e187ffd1b1f1312edd819d99d05
+>>>>>>> ac4285a89d941351d66e2a882df6d149a4df2806
+=======
+=======
+>>>>>>> origin/JaeWon
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
 <!--                         	<option value="" selected>----- 병원 선택 ------</option> -->
 <!--                             <option value="seoul">서울</option> -->
 <!--                             <option value="daejeon">대전</option> -->
 <!--                             <option value="daegu">대구</option> -->
 <!--                             <option value="busan">부산</option> -->
 <!--                             <option value="gwangju">광주</option> -->
+<<<<<<< HEAD
 <!-- >>>>>>> e656fdeda676b8b971d3033e5531efe878fb775c -->
 <!-- >>>>>>> 5c3b789bfc223a181bc4cdbbe572cac4e2184544 -->
 <!-- ======= -->
@@ -188,6 +239,12 @@ window.onload = function() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/JaeWon
+=======
+<<<<<<< HEAD
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+=======
+>>>>>>> origin/Hyunseok
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
 =======
 =======
 =======
@@ -204,6 +261,7 @@ window.onload = function() {
 >>>>>>> e656fdeda676b8b971d3033e5531efe878fb775c
 >>>>>>> 5c3b789bfc223a181bc4cdbbe572cac4e2184544
 =======
+>>>>>>> origin/JaeWon
 >>>>>>> origin/Hyunseok
 >>>>>>> master
                         </select>
@@ -215,9 +273,12 @@ window.onload = function() {
                 <div id="viewHos">
                     <h4>병원명</h4>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -232,10 +293,16 @@ window.onload = function() {
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> origin/JaeWon
 =======
 >>>>>>> origin/JaeWon
 >>>>>>> master
+=======
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+=======
+>>>>>>> origin/JaeWon
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
     				<div id="result">
     				<c:forEach items="${requestScope.hospitals }" var="hospital" varStatus="index" >
     				<label><input type="radio" id="hospital-name" name="chosen-hospital"><b style="font-size:25px">${hospital.hospitalName }</b>
@@ -250,7 +317,11 @@ window.onload = function() {
 <<<<<<< HEAD
 >>>>>>> ac4285a89d941351d66e2a882df6d149a4df2806
 =======
+<<<<<<< HEAD
 >>>>>>> origin/JaeWon
+=======
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
                 </div>
                 <div id="dateTime">
                 	<div id="map" style="width:500px; height:400px;">
@@ -288,7 +359,10 @@ window.onload = function() {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
                 <div id="result">
                 <c:forEach items="${requestScope.hospitals}" var="hospital" varStatus="index" >
                 <label><input type="radio" id="hospital-name" name="chosen-hospital" hidden><b style="font-size:25px">${hospital.hospitalName }</b>
