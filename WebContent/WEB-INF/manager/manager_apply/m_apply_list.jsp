@@ -52,18 +52,18 @@
                     <c:forEach items="${requestScope.apList }" var="apply" varStatus="index">
                     <div class="list">
                         <div class="list-img">
-                            <img src="${apply.picPath }" alt="후원1">
+                            <img src="/fileupload/${apply.picPath }" alt="후원1">
                         </div>
                         <div class="list-text">
-                            <a href="/manager/m_apply_reply?applyNo=${apply.applyNo }">${ask.applyTitle }</a> 
+                            <a href="/manager/m_apply_detail?noticeNo=${apply.notiNo }">${apply.notiTitle }</a> 
                         </div>
                         <div id="list-text2">
-                            <div>조회수 : ${apply.applyViews } <br>추천수 : ${apply.applyLike }</div>
+                            <div>조회수 : ${apply.views } <br>추천수 : ${apply.notiLike }</div>
                             <div>심사중</div>
                         </div>
                         <div class="list-btn">
                                 <button type="submit">심사완료</button>&nbsp;&nbsp;
-                                <button type="submit" class="bt1"><a href="/manager/m_apply_remove?applyNo=${apply.applyNo }">삭제</a></button>
+                                <button type="submit" class="bt1"><a href="/manager/m_apply_remove?notiNo=${apply.notiNo }">삭제</a></button>
                         </div>
                     </div>
                     </c:forEach>

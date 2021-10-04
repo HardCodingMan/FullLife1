@@ -42,7 +42,11 @@ public class ReservationServlet extends HttpServlet {
 	=======
 	>>>>>>> origin/Hyunseok
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/JaeWon
+=======
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
 =======
 >>>>>>> origin/JaeWon
 =======

@@ -103,7 +103,14 @@ window.onload = function() {
 >>>>>>> ac4285a89d941351d66e2a882df6d149a4df2806
 =======
                         	<option value="" selected>----- 병원 선택 ------</option>
+<<<<<<< HEAD
 >>>>>>> origin/JaeWon
+=======
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+=======
+>>>>>>> origin/Hyunseok
+=======
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
 =======
                         	<option value="" selected>----- 병원 선택 ------</option>
 =======
@@ -112,6 +119,7 @@ window.onload = function() {
 =======
 >>>>>>> 5c3b789bfc223a181bc4cdbbe572cac4e2184544
 =======
+>>>>>>> origin/JaeWon
 >>>>>>> origin/Hyunseok
                             <option value="seoul"<c:if test="${metroCity eq  'seoul'}">selected</c:if>>서울
                             <option value="daejeon"<c:if test="${metroCity eq 'daejeon' }">selected</c:if>>대전</option>
@@ -131,10 +139,13 @@ window.onload = function() {
 =======
 >>>>>>> origin/mooooo
                            <option value="" selected>----- 병원 선택 ------</option>
+<<<<<<< HEAD
 =======
 =======
                         	<option value="" selected>----- 병원 선택 ------</option>
 >>>>>>> 5c3b789bfc223a181bc4cdbbe572cac4e2184544
+=======
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
                             <option value="seoul">서울</option>
                             <option value="daejeon">대전</option>
                             <option value="daegu">대구</option>
@@ -142,6 +153,9 @@ window.onload = function() {
                             <option value="gwangju">광주</option>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
 >>>>>>> e656fdeda676b8b971d3033e5531efe878fb775c
 =======
 
@@ -166,7 +180,13 @@ window.onload = function() {
 <!--                             <option value="busan">부산</option> -->
 <!--                             <option value="gwangju">광주</option> -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/JaeWon
+=======
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+=======
+>>>>>>> origin/Hyunseok
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
 =======
 =======
 =======
@@ -183,6 +203,7 @@ window.onload = function() {
 >>>>>>> e656fdeda676b8b971d3033e5531efe878fb775c
 >>>>>>> 5c3b789bfc223a181bc4cdbbe572cac4e2184544
 =======
+>>>>>>> origin/JaeWon
 >>>>>>> origin/Hyunseok
                         </select>
                     </td>           
@@ -207,7 +228,11 @@ window.onload = function() {
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> origin/JaeWon
+=======
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
 =======
 >>>>>>> origin/JaeWon
     				<div id="result">
@@ -224,7 +249,11 @@ window.onload = function() {
 <<<<<<< HEAD
 >>>>>>> ac4285a89d941351d66e2a882df6d149a4df2806
 =======
+<<<<<<< HEAD
 >>>>>>> origin/JaeWon
+=======
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
                 </div>
                 <div id="dateTime">
                 	<div id="map" style="width:500px;height:400px;">

@@ -34,7 +34,11 @@
 
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> origin/JaeWon
+=======
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
 =======
 >>>>>>> origin/JaeWon
 =======
@@ -60,6 +64,10 @@
             
 
 >>>>>>> origin/Hyunseok
+<<<<<<< HEAD
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+=======
+>>>>>>> origin/JaeWon
 =======
 <<<<<<< HEAD
 >>>>>>> origin/Hyunseok
@@ -123,7 +131,11 @@
                 		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> origin/JaeWon
+=======
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
 =======
 >>>>>>> origin/JaeWon
 =======
@@ -139,11 +151,20 @@
 <<<<<<< HEAD
 >>>>>>> 7f17ff42baf25563595b9152103373b9fc4b11f9
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/JaeWon
 =======
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
+=======
                 		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
 >>>>>>> origin/Hyunseok
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+=======
+=======
+                		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
+>>>>>>> origin/Hyunseok
+>>>>>>> origin/JaeWon
 =======
 <<<<<<< HEAD
 >>>>>>> origin/Hyunseok
