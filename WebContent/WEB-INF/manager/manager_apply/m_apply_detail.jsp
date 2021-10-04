@@ -79,7 +79,7 @@
                 </div>
                 <div id="back">
                     <form action="">
-                        <input type="submit" value="목록">&nbsp;&nbsp;&nbsp;
+                        <button><a href="/manager/m_apply_list">목록</a></button>&nbsp;&nbsp;&nbsp;
                         <%-- <button><a href="/manager/m_apply_remove?notiNo=${apply.notiNo }">삭제</a></button> --%>
                     </form>
                 </div>

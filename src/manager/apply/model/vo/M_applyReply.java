@@ -9,7 +9,7 @@ public class M_applyReply {
 	private String apReCon;
 	private Date apReDate;
 	private int notiNo;
-	private int countRe;
+
 	
 	public M_applyReply() {}
 	
@@ -43,17 +43,12 @@ public class M_applyReply {
 	public void setNotiNo(int notiNo) {
 		this.notiNo = notiNo;
 	}
-	public int getCountRe() {
-		return countRe;
-	}
-	public void setCountRe(int countRe) {
-		this.countRe = countRe;
-	}
+
 
 	@Override
 	public String toString() {
 		return "M_applyReply [apReNo=" + apReNo + ", userId=" + reUserId + ", apReCon=" + apReCon + ", apReDate="
-				+ apReDate + ", notiNo=" + notiNo + ", countRe=" + countRe + "]";
+				+ apReDate + ", notiNo=" + notiNo +"]";
 	}
 	
 	

@@ -17,7 +17,7 @@ public class M_applyDAO {
 	public List<M_apply> selectAllApply(Connection conn, int currentPage) {
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
-		String query = "SELECT * FROM(SELECT ROW_NUMBER() OVER(ORDER BY NOTICE_NO DESC)AS NUM,NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENTS, VIEWS, ENROLL_DATE, NOTICE_LIKE, PIC_PATH, PIC_SIZE, PIC_NAME,USER_ID FROM NOTICE WHERE LEVELCHECK='N') WHERE NUM BETWEEN ? AND ?";
+		String query = "SELECT * FROM(SELECT ROW_NUMBER() OVER(ORDER BY NOTICE_NO DESC)AS NUM,NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENTS, VIEWS, ENROLL_DATE, NOTICE_LIKE, PIC_PATH, PIC_SIZE, PIC_NAME,LEVELCHECK,USER_ID FROM NOTICE WHERE LEVELCHECK='N') WHERE NUM BETWEEN ? AND ?";
 		List<M_apply> apList = null;
 		
 		try {
@@ -40,6 +40,7 @@ public class M_applyDAO {
 				apply.setPicPath(rset.getString("PIC_PATH"));
 				apply.setPicSize(rset.getLong("PIC_SIZE"));
 				apply.setPicName(rset.getString("PIC_NAME"));
+				apply.setLevel(rset.getString("LEVELCHECK").charAt(0));
 				apply.setUserId(rset.getString("USER_ID"));
 				apList.add(apply);
 			}
@@ -158,6 +159,7 @@ public class M_applyDAO {
 				apply.setPicPath(rset.getString("PIC_PATH"));
 				apply.setPicSize(rset.getLong("PIC_SIZE"));
 				apply.setPicName(rset.getString("PIC_NAME"));
+				apply.setLevel(rset.getString("LEVELCHECK").charAt(0));
 				apply.setUserId(rset.getString("USER_ID"));
 			}
 		} catch (SQLException e) {
