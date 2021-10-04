@@ -192,6 +192,11 @@ header{
                 border: 1px solid gray;
                 padding: 1%;
             }
+            
+           		.list-img{
+            		width: 210px;
+            		height: 210px;
+            	}
                 .list-img img{
                     width: 200px;
                     height: 200px;
