@@ -170,6 +170,7 @@ public class MypageDAO {
 				JDBCTemplate.close(pstmt);
 			}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -194,6 +195,9 @@ public class MypageDAO {
 				JDBCTemplate.close(pstmt);
 			}
 =======
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
+=======
+
 >>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 =======
 
