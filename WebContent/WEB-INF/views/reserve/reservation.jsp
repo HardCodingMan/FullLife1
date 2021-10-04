@@ -152,10 +152,19 @@ window.onload = function() {
 =======
 >>>>>>> origin/mooooo
                            <option value="" selected>----- 병원 선택 ------</option>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/stitchkang
 =======
 =======
                         	<option value="" selected>----- 병원 선택 ------</option>
 >>>>>>> 5c3b789bfc223a181bc4cdbbe572cac4e2184544
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
+>>>>>>> origin/stitchkang
                             <option value="seoul">서울</option>
                             <option value="daejeon">대전</option>
                             <option value="daegu">대구</option>
@@ -163,6 +172,12 @@ window.onload = function() {
                             <option value="gwangju">광주</option>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
+>>>>>>> origin/stitchkang
 >>>>>>> e656fdeda676b8b971d3033e5531efe878fb775c
 =======
 
@@ -187,6 +202,7 @@ window.onload = function() {
 <!--                             <option value="daegu">대구</option> -->
 <!--                             <option value="busan">부산</option> -->
 <!--                             <option value="gwangju">광주</option> -->
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -241,6 +257,10 @@ window.onload = function() {
 >>>>>>> origin/JaeWon
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/JaeWon
+=======
+>>>>>>> origin/stitchkang
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
 =======
 >>>>>>> origin/Hyunseok
@@ -294,12 +314,19 @@ window.onload = function() {
 =======
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/JaeWon
 =======
 >>>>>>> origin/JaeWon
 >>>>>>> master
 =======
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+=======
+>>>>>>> origin/JaeWon
+=======
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
+>>>>>>> origin/stitchkang
 =======
 >>>>>>> origin/JaeWon
 >>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742

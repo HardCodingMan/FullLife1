@@ -2,14 +2,12 @@ package mypage.model.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.List;
 
 import common.JDBCTemplate;
 import member.model.vo.Member;
 import mypage.model.dao.MypageDAO;
 import mypage.model.vo.BookedHospitalInfo;
 import mypage.model.vo.CheckResultPage;
-import mypage.model.vo.History;
 import mypage.model.vo.HistoryPage;
 
 public class MypageService {
@@ -100,7 +98,10 @@ public class MypageService {
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/stitchkang
 
 	public int modifyMemberInfo(Member member) {
 		int result = 0;
@@ -125,9 +126,12 @@ public class MypageService {
 		
 		return result;
 	} 
+<<<<<<< HEAD
 =======
 >>>>>>> 648d74181ee17f888af35bf2c751770dfec6a2c3
 
+=======
+>>>>>>> origin/stitchkang
 
 	
 }

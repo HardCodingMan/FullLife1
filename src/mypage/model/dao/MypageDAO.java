@@ -174,6 +174,10 @@ public class MypageDAO {
 		}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/stitchkang
 		public int modifyMemberInfo(Member member, Connection conn) {
 			int result = 0;
 			PreparedStatement pstmt = null;
@@ -195,8 +199,11 @@ public class MypageDAO {
 				JDBCTemplate.close(pstmt);
 			}
 			
+<<<<<<< HEAD
 =======
 >>>>>>> 648d74181ee17f888af35bf2c751770dfec6a2c3
+=======
+>>>>>>> origin/stitchkang
 			return result;
 		}
 
