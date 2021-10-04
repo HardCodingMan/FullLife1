@@ -63,10 +63,10 @@ main{
         #notice-bottom{
             height: 100px;
         }
-            #point-butn{
+            #like-butn{
                text-align: center;
             }
-                #point-butn button{
+                #like-butn input{
                     margin-top: 30px
                 }
     
