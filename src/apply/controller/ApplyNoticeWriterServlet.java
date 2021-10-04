@@ -62,11 +62,14 @@ public class ApplyNoticeWriterServlet extends HttpServlet {
 		///////////////////////////////
 		String subject = multi.getParameter("apply-notice-sub");
 		String Contents = multi.getParameter("apply-notice-contents");
+		int needSupport = Integer.parseInt(multi.getParameter("need-supprot"));
+//		int needSupport = Integer.parseInt(request.getParameter("needSupport"));
 		//ApplyNotice 객체에 정보 세팅
 		Notice notice = new Notice();
 		notice.setNoticeTitle(subject);
 		notice.setNoticeContents(Contents);
 		notice.setUserId(writeId);
+		notice.setNeedSupport(needSupport);
 		//ApplyNoticeFile 객체에 사진 정보 세팅
 		notice.setPicPath(filePath);
 		notice.setPicSize(fileSize);
