@@ -44,7 +44,7 @@
                         <td><input type="button" class="bt1" value="다운"></td>
                     </tr>
                     <tr>
-                    <td colspan="7" align="center">${pageNavi}</td>
+                    <td colspan="4" align="center">${pageNavi}</td>
                     </tr>
                 </table>
             </form>
