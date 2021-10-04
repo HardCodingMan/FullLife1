@@ -13,6 +13,7 @@ h3:after{content: "";display: block;width: 60px;border-bottom: 1px solid #bcbcbc
 .cliupdateTable td{text-align: left;width: 50px;font-size: 15px;}
 .cliupdateTable td>input{width:120px;}
 #clientupdate .userid1{border: none;}
+#user-name{border: none;}
 #tel1, #tel2, #tel3{width: 50px;}
 #addr{width: 250px;}
 .cliupdateTable1{margin-left: 280px;width: 400px;text-align: center;}
