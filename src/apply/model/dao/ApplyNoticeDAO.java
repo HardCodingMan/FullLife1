@@ -40,7 +40,7 @@ public class ApplyNoticeDAO {
 	public List<Notice> pageAllNotice(Connection conn, int currentPage) {
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
-		String query = "SELECT * FROM(SELECT ROW_NUMBER() OVER(ORDER BY NOTICE_NO DESC) AS NUM, NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENTS,VIEWS ,ENROLL_DATE,NOTICE_LIKE, NOW_SUPPORT, NEED_SUPPORT, SUPPORT_HUMAN, PIC_PATH, PIC_SIZE, PIC_NAME, USER_ID FROM NOTICE WHERE LEVELCHECK = 'N') WHERE NUM BETWEEN ? AND ?";
+		String query = "SELECT NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENTS, VIEWS, ENROLL_DATE,(SELECT COUNT(*) FROM NOTICE_LIKE N WHERE N.NOTICE_NO=NOTICE_NO) AS NOTICE_LIKE, PIC_PATH, PIC_SIZE, PIC_NAME, USER_ID FROM(SELECT ROW_NUMBER() OVER(ORDER BY NOTICE_NO DESC) AS NUM, NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENTS,VIEWS ,ENROLL_DATE,NOTICE_LIKE, NOW_SUPPORT, NEED_SUPPORT, SUPPORT_HUMAN, PIC_PATH, PIC_SIZE, PIC_NAME, USER_ID FROM NOTICE WHERE LEVELCHECK = 'N') WHERE NUM BETWEEN ? AND ?";
 		List<Notice> aList = null;
 		
 		try {
@@ -61,9 +61,6 @@ public class ApplyNoticeDAO {
 				notice.setViews(rset.getInt("VIEWS"));
 				notice.setEnrollDate(rset.getDate("ENROLL_DATE"));
 				notice.setNoticeLike(rset.getInt("NOTICE_LIKE"));
-				notice.setNowSupport(rset.getInt("NOW_SUPPORT"));
-				notice.setNeedSupport(rset.getInt("NEED_SUPPORT"));
-				notice.setSupportHuman(rset.getInt("SUPPORT_HUMAN"));
 				notice.setPicPath(rset.getString("PIC_PATH"));
 				notice.setPicSize(rset.getInt("PIC_SIZE"));
 				notice.setPicName(rset.getString("PIC_NAME"));
@@ -147,7 +144,7 @@ public class ApplyNoticeDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
 		Notice notice = null;
-		String query = "SELECT * FROM NOTICE WHERE NOTICE_NO = ?";
+		String query = "SELECT NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENTS, VIEWS, ENROLL_DATE,(select count(*) from NOTICE_LIKE N WHERE N.NOTICE_NO=R.NOTICE_NO) AS NOTICE_LIKE, PIC_PATH, PIC_SIZE, PIC_NAME, USER_ID FROM NOTICE R WHERE NOTICE_NO = ?";
 		try {
 			pstmt = conn.prepareStatement(query);
 			pstmt.setInt(1, noticeNo);
@@ -205,16 +202,16 @@ public class ApplyNoticeDAO {
 		return aList;
 	}
 
-	public int insertNoticeReply(Connection conn, String replyContents, int applyNo, String userId) {
+	public int insertNoticeReply(Connection conn, String replyContents, int noticeNo, String userId) {
 		PreparedStatement pstmt = null;
 		int result = 0;
-		String query = "INSERT INTO APPLY_REPLY VALUES(SEQ_APPLY_REPLY_NO.NEXTVAL, ?,?,DEFAULT,?,DEFAULT)";
+		String query = "INSERT INTO APPLY_REPLY VALUES(SEQ_APPLY_REPLY_NO.NEXTVAL,?,?,DEFAULT,?)";
 		
 		try {
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, userId);
 			pstmt.setString(2, replyContents);
-			pstmt.setInt(3, applyNo);
+			pstmt.setInt(3, noticeNo);
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -225,14 +222,14 @@ public class ApplyNoticeDAO {
 		return result;
 	}
 
-	public int deleteApply(Connection conn, int applyNoticeNo) {
+	public int deleteApply(Connection conn, int noticeNo) {
 		PreparedStatement pstmt = null;
 		int result = 0;
-		String query = "DELETE FROM APPLY_NOTICE WHERE APPLY_NO = ?";
+		String query = "DELETE FROM NOTICE WHERE NOTICE_NO = ?";
 		
 		try {
 			pstmt = conn.prepareStatement(query);
-			pstmt.setInt(1, applyNoticeNo);
+			pstmt.setInt(1, noticeNo);
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -242,5 +239,22 @@ public class ApplyNoticeDAO {
 		}
 		return result;
 	}
+
+	public int insertLike(Connection conn, String userId, int noticeNo) {
+	      PreparedStatement pstmt = null;
+	      int result = 0;
+	      String query = "INSERT INTO NOTICE_LIKE VALUES(SEQ_APPLY_LIKE.NEXTVAL,?,?)";
+	      try {
+	         pstmt = conn.prepareStatement(query);
+	         pstmt.setInt(1, noticeNo);
+	         pstmt.setString(2, userId);
+	         result = pstmt.executeUpdate();
+	      } catch (SQLException e) {
+	         e.printStackTrace();
+	      } finally {
+	         JDBCTemplate.close(pstmt);
+	      }
+	      return result;
+	   }
 
 }
