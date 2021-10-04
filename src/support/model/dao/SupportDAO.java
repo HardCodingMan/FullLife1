@@ -18,7 +18,6 @@ public class SupportDAO {
 		try {
 			pstmt = conn.prepareStatement(query);
 			pstmt.setInt(1, firstRank);
-			
 			rset = pstmt.executeQuery();
 			if(rset.next()) {
 				support = new Support();

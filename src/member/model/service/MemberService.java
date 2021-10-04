@@ -118,5 +118,26 @@ public class MemberService {
 		return member;
 	}
 	
-
+	public int joinIdCheck(String userId) {
+		int result = -1;
+		Connection conn = null;
+		
+		try {
+			conn = jdbcTemplate.createConnection();
+			result = new MemberDAO().joinIdCheck(userId,conn);
+			if(result > 0) {
+				JDBCTemplate.commit(conn);
+			} else {
+				JDBCTemplate.rollback(conn);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			JDBCTemplate.close(conn);
+		}
+		
+		
+		return result;	
+	}
 }
