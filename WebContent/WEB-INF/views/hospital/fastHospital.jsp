@@ -30,6 +30,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -41,10 +42,13 @@
 =======
 >>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
             
 
 =======
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -72,12 +76,18 @@
 >>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 =======
 >>>>>>> origin/JaeWon
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
+=======
+>>>>>>> origin/JaeWon
 =======
             
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
+=======
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 =======
 >>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 =======
@@ -97,8 +107,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 =======
 >>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 =======
@@ -121,6 +134,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
 =======
 =======
@@ -138,6 +152,11 @@
 <<<<<<< HEAD
 >>>>>>> origin/Hyunseok
 >>>>>>> parent of 3981585 (변경사항!! 받아주세요)
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/Hyunseok
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 >>>>>>> origin/JaeWon
 =======
 >>>>>>> origin/JaeWon
@@ -145,7 +164,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
+=======
+>>>>>>> origin/JaeWon
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 =======
 >>>>>>> origin/JaeWon
 >>>>>>> parent of 3981585 (변경사항!! 받아주세요)
@@ -207,6 +230,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -247,11 +271,18 @@
 >>>>>>> origin/JaeWon
 >>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 =======
+                		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
+=======
+=======
+>>>>>>> origin/JaeWon
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
+=======
 >>>>>>> origin/JaeWon
 =======
                 		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
 =======
 >>>>>>> origin/Hyunseok
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -262,10 +293,13 @@
 >>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 =======
 >>>>>>> parent of 3981585 (변경사항!! 받아주세요)
+=======
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
                 		<label>
                 		<input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }">
                 		<b style="font-size:25px">${hospital.hospitalName }</b>
                 		</label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -323,6 +357,17 @@
 >>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 =======
 >>>>>>> parent of 3981585 (변경사항!! 받아주세요)
+=======
+>>>>>>> 7f17ff42baf25563595b9152103373b9fc4b11f9
+=======
+=======
+>>>>>>> origin/JaeWon
+=======
+                		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
+>>>>>>> origin/Hyunseok
+=======
+<<<<<<< HEAD
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 >>>>>>> origin/Hyunseok
 >>>>>>> origin/JaeWon
 =======
@@ -331,9 +376,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 		<h4 style="margin:10px">${hospital.hospitalAddr }</h4>
                 		<a href="#"><h5 style="margin: 0 0 40px 30px">${hospital.hospitalPhone }</h5></a>
 >>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
+=======
+>>>>>>> origin/JaeWon
+                		<h4 style="margin:10px">${hospital.hospitalAddr }</h4>
+                		<a href="#"><h5 style="margin: 0 0 40px 30px">${hospital.hospitalPhone }</h5></a>
+>>>>>>> parent of 3981585 (변경사항!! 받아주세요)
 =======
 >>>>>>> origin/JaeWon
                 		<h4 style="margin:10px">${hospital.hospitalAddr }</h4>
