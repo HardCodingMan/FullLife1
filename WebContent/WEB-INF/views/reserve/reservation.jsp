@@ -88,6 +88,9 @@ window.onload = function() {
                     <td>
                         <select id="region">
 <<<<<<< HEAD
+                        	<option value="" selected>----- 병원 선택 ------</option>
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -130,11 +133,15 @@ window.onload = function() {
 =======
 >>>>>>> origin/JaeWon
 >>>>>>> origin/Hyunseok
+>>>>>>> master
                             <option value="seoul"<c:if test="${metroCity eq  'seoul'}">selected</c:if>>서울
                             <option value="daejeon"<c:if test="${metroCity eq 'daejeon' }">selected</c:if>>대전</option>
                             <option value="daegu" <c:if test="${metroCity eq 'daegu' }">selected</c:if>>대구</option>
                             <option value="busan" <c:if test="${metroCity eq 'busan' }">selected</c:if>>부산</option>
                             <option value="gwangju"<c:if test="${metroCity eq 'gwangju' }">selected</c:if>>광주</option>
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -196,12 +203,26 @@ window.onload = function() {
 =======
 =======
 >>>>>>> origin/JaeWon
+>>>>>>> master
 <!--                         	<option value="" selected>----- 병원 선택 ------</option> -->
 <!--                             <option value="seoul">서울</option> -->
 <!--                             <option value="daejeon">대전</option> -->
 <!--                             <option value="daegu">대구</option> -->
 <!--                             <option value="busan">부산</option> -->
 <!--                             <option value="gwangju">광주</option> -->
+<<<<<<< HEAD
+
+<!--                         	<option value="" selected>----- 병원 선택 ------</option> -->
+<!--                             <option value="seoul">서울</option> -->
+<!--                             <option value="daejeon">대전</option> -->
+<!--                             <option value="daegu">대구</option> -->
+<!--                             <option value="busan">부산</option> -->
+<!--                             <option value="gwangju">광주</option> -->
+<!-- >>>>>>> e656fdeda676b8b971d3033e5531efe878fb775c -->
+<!-- >>>>>>> 5c3b789bfc223a181bc4cdbbe572cac4e2184544 -->
+<!-- ======= -->
+<!-- >>>>>>> origin/Hyunseok -->
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -237,6 +258,7 @@ window.onload = function() {
 =======
 >>>>>>> origin/JaeWon
 >>>>>>> origin/Hyunseok
+>>>>>>> master
                         </select>
                     </td>           
                 </tr>
@@ -245,6 +267,9 @@ window.onload = function() {
             <div id="hosDetail">
                 <div id="viewHos">
                     <h4>병원명</h4>
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -274,16 +299,17 @@ window.onload = function() {
 >>>>>>> origin/stitchkang
 =======
 >>>>>>> origin/JaeWon
+>>>>>>> master
     				<div id="result">
     				<c:forEach items="${requestScope.hospitals }" var="hospital" varStatus="index" >
     				<label><input type="radio" id="hospital-name" name="chosen-hospital"><b style="font-size:25px">${hospital.hospitalName }</b>
                 		<h4 style="margin:10px">${hospital.hospitalAddr }</h4></label>  <button onclick=>위치보기</button>
-
+					</c:forEach>
     				<c:forEach items="${requestScope.hospitals}" var="hospital" varStatus="index" >
     				<label><input type="radio" id="hospital-name" name="chosen-hospital"><b style="font-size:25px">${hospital.hospitalName }</b>
                 		<h4 style="margin:10px">${hospital.hospitalAddr }</h4></label>  <button onclick="selectHospital(${hospital.hospitalAddr}})">위치보기</button>
-
-           			 </c:forEach>
+					</c:forEach>
+           			 
            			 </div>
 <<<<<<< HEAD
 >>>>>>> ac4285a89d941351d66e2a882df6d149a4df2806
@@ -302,7 +328,7 @@ window.onload = function() {
 >>>>>>> origin/stitchkang
                 </div>
                 <div id="dateTime">
-                	<div id="map" style="width:500px;height:400px;">
+                	<div id="map" style="width:500px; height:400px;">
                 	<h4>지도</h4>
 					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=977b62db984a36094fb13c99f6a75050&libraries=services"></script>
 					<script>
@@ -331,14 +357,18 @@ window.onload = function() {
 				            });    
 		            </script>
 		            </div>         
+<<<<<<< HEAD
+
+=======
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> master
                 <div id="result">
                 <c:forEach items="${requestScope.hospitals}" var="hospital" varStatus="index" >
                 <label><input type="radio" id="hospital-name" name="chosen-hospital" hidden><b style="font-size:25px">${hospital.hospitalName }</b>
                       <h4 style="margin:10px">${hospital.hospitalAddr }</h4></label>  <button onclick="selectHospital(${hospital.hospitalAddr}})">위치보기</button>
-                     </c:forEach>
+                </c:forEach>
                      </div>
 >>>>>>> origin/JaeWon
                 </div>
