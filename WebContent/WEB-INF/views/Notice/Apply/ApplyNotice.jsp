@@ -24,17 +24,17 @@
                 <ul>
                 	<c:forEach items="${aList }" var="aOne">
                     <li>
-                        <a href="/Notice/Apply/ApplyContents?applyNo=${aOne.applyNo }" class="notice-link">
+                        <a href="/Notice/Apply/ApplyContents?noticeNo=${aOne.noticeNo }" class="notice-link">
                             <div>
                                 <div class="list-img">
                                     <img src="/fileupload/${aOne.picName }" alt="${aOne.picName }" class="li-img">
                                 </div>
                                 <div class="list-text">
-                                    <p class="notice-title">${aOne.applyTitle }</p>
+                                    <p class="notice-title">${aOne.noticeTitle }</p>
                                 </div>
                                 <div id="list-text2">
-                                    <div>조회수 : ${aOne.applyViews }</div>
-                                    <div>추천수 : ${aOne.applyLike }</div>
+                                    <div>조회수 : ${aOne.views }</div>
+                                    <div>추천수 : ${aOne.noticeLike }</div>
                                 </div>
                                 <div class="list-btn">
                                     <button>자세히보기</button>
