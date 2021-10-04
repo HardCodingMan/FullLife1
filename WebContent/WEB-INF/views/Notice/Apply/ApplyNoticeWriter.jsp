@@ -27,6 +27,7 @@
             <!-- 게시판 양식 -->
                 <form action="/Notice/Apply/ApplyNoticeWriter" method="post" enctype="multipart/form-data">
                     <p>제목</p><input type="text" size="100" placeholder="제목을 입력하세요" name="apply-notice-sub" class="box"><br>
+                    <p>필요한 금액</p><input type="text" size="50" placeholder="필요 금액을 적어주세요" name="need-supprot" class="box"><br>
                     <p>내용</p><textarea rows="30" cols="100" placeholder="내용을 입력하세요" name="apply-notice-contents" class="box"></textarea><br>
                     <p>사진첨부</p><input type="file" name="apply-File" id="apply-UpLoad" class="box">
                     <p>첨부파일의 크기가 50MB 미만이여야 합니다.<br>첨부가능한 파일은 jpg.png 입니다</p>

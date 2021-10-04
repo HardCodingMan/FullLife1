@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,20 +22,21 @@
         <section id="notice-section">
             <div class="notice">
                 <ul>
+                	<c:forEach items="${sList }" var="sOne">
                     <li>
-                        <a href="/Notice/Support/SupportContents" class="notice-link">
+                        <a href="/Notice/Support/SupportContents?noticeNo=${sOne.noticeNo }" class="notice-link">
                         <div class="list">
                             <div class="list-img">
-                                <img src="img/newsofa.jpg" alt="후원1" class="list-img">
+                                <img src="/fileupload/${sOne.picName }" alt="${sOne.picName } class="list-img">
                             </div>
                             <div class="list-text">
-                                <p class="notice-title">우리 동생이 아파요</p>
+                                <p class="notice-title">${sOne.noticeTitle }</p>
                             </div>
                             <div>
-                                <p>조회수 : 1200</p>
+                                <p>조회수 : ${sOne.views }</p>
                             </div>
                             <div class="list-percent">                      
-                               	 달성률 : 
+                               	 달성률 : ${sOne.nowSupport }
                                 <div class="prog">
                                     <div class="progs" id="progressing">80%</div>
                                 </div>
@@ -45,10 +47,11 @@
                         </div>
                         </a>
                     </li>
-                    
+                    </c:forEach>
                 </ul>
             </div>
-            <div id="page">1 2 3 4 5</div>
+            <a href="/Notice/Apply/ApplyNoticeWriter"><button id="write">글쓰기</button></a>
+            <div id="page">${pageNavi }</div>
         </section>
         </div>
     </main>

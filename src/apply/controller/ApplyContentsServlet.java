@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import apply.model.service.ApplyNoticeService;
 import apply.model.vo.Notice;
+import apply.model.vo.NoticeLike;
 
 /**
  * Servlet implementation class ApplyContentsServlet
@@ -31,9 +32,11 @@ public class ApplyContentsServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		int noticeNo = Integer.parseInt(request.getParameter("noticeNo"));
+		NoticeLike nLike = new ApplyNoticeService().updateLike(noticeNo);
 		Notice aOne = new ApplyNoticeService().printOneByNo(noticeNo);
 		if(aOne != null) {
 			request.setAttribute("aOne", aOne);
+			request.setAttribute("nLike", nLike);
 			// NoticeReply setAttribute 해줌
 			request.getRequestDispatcher("/WEB-INF/views/Notice/Apply/ApplyContents.jsp").forward(request, response);
 		}else {
