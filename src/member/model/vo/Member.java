@@ -34,11 +34,12 @@ public class Member {
       this.totalPoint = totalPoint;
    }
    
-   public Member(String userId, String userPwd, String userZumin, String userPhone, String userAddr,
+   public Member(String userId, String userPwd, String userName, String userZumin, String userPhone, String userAddr,
       String userEmail) {
    super();
    this.userId = userId;
    this.userPwd = userPwd;
+   this.userName = userName;
    this.userZumin = userZumin;
    this.userPhone = userPhone;
    this.userAddr = userAddr;
