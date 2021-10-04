@@ -4,7 +4,7 @@ public class ApplyNoticeFile {
 
 	private String filePath;
 	private long fileSize;
-	private String fileName;
+	
 	public ApplyNoticeFile(String filePath, long fileSize) {
 		super();
 		this.filePath = filePath;
@@ -12,14 +12,6 @@ public class ApplyNoticeFile {
 	}
 	
 	public ApplyNoticeFile() {};
-
-	public String getFileName() {
-		return fileName;
-	}
-
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
-	}
 
 	public String getFilePath() {
 		return filePath;

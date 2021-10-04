@@ -37,13 +37,13 @@ public class ApplyNoticeReplyWriterServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		HttpSession session = request.getSession();
-		String userId = (String)session.getAttribute("userId"); 
 		String replyContents = request.getParameter("replyContents");
-		int noticeNo = Integer.parseInt(request.getParameter("noticeNo"));
-		int result = new ApplyNoticeService().registerApplyReply(replyContents, noticeNo, userId);
+		int applyNo = Integer.parseInt(request.getParameter("applyNo"));
+		String userId = (String)session.getAttribute("userId"); 
+		int result = new ApplyNoticeService().registerApplyReply(replyContents, applyNo, userId);
 		if(result > 0) {
 			//상세페이지 (댓글을 작성한 페이지로 이동)
-			response.sendRedirect("/Notice/Apply/ApplyContents?noticeNo="+noticeNo);
+			response.sendRedirect("/Notice/Apply/ApplyContents?applyNo="+applyNo);
 		}else {
 			//실패페이지
 			request.getRequestDispatcher("/WEB-INF/views/Notice/NoticeError.jsp").forward(request, response);

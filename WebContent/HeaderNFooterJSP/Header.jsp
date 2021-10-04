@@ -11,24 +11,24 @@
 <body>
 <header>
         <div id="logo">
-            <a href="/index.jsp"><img src="/img/HSfulllife로고3 (1).png" alt=""></a>
+            <img src="/img/HSfulllife로고3 (1).png" alt="">
         </div>
         <div id="blank"></div>
         <div id="header-menu">
             <ul>
                 <li class="main-menu"><a href="#">장기이식</a></li>
                 <li class="main-menu">
-                    <a href="/Notice/Support/Supportintroduce">후원</a>
+                    <a href="#">후원</a>
                     <ul class="serv-menu">
-                        <li><a href="/Notice/Support/Supportintroduce">후원</a></li>
-                        <li><a href="/Notice/Support/SupportNotice">후원게시판</a></li>
-                        <li><a href="/Notice/Apply/ApplyNotice">신청게시판</a></li>
+                        <li><a href="#">후원</a></li>
+                        <li><a href="#">후원게시판</a></li>
+                        <li><a href="#">신청게시판</a></li>
                     </ul>
                 </li>
                 <li class="main-menu">
                     <a href="/ask/list">상담</a> 
                     <ul class="serv-menu">
-                        <li><a href="/faq/FAQ">FAQ</a></li>
+                        <li><a href="#">FAQ</a></li>
                         <li><a href="#">문의하기</a></li>
                     </ul>
                 </li>

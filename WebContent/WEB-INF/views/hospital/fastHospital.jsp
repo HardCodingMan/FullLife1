@@ -26,158 +26,12 @@
 				result = locationTag.value;
 				location.href="/hospital/listAll?location="+result;	
             });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-<<<<<<< HEAD
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-<<<<<<< HEAD
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-<<<<<<< HEAD
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-            
 
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
-=======
->>>>>>> origin/JaeWon
->>>>>>> origin/master
-=======
->>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
->>>>>>> origin/stitchkang
-=======
->>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
->>>>>>> origin/stitchkang2
-=======
->>>>>>> origin/JaeWon
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> origin/JaeWon
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> origin/JaeWon
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> origin/JaeWon
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> origin/JaeWon
-=======
-            
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-
-=======
->>>>>>> origin/Hyunseok
-            document.querySelector("input[name='chosen-hospital']").addEventListener("change", function(){
-            	console.log(this.value);
-            });
-//             console.log(document.querySelector("input[name='chosen-hospital']:checked").value);
-
-			var BtnTag = querySelector("#submitBtn");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-			
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7f17ff42baf25563595b9152103373b9fc4b11f9
-=======
-=======
->>>>>>> origin/JaeWon
-=======
-            
-
->>>>>>> origin/Hyunseok
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/Hyunseok
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/Hyunseok
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/Hyunseok
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/Hyunseok
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
->>>>>>> origin/JaeWon
-=======
->>>>>>> origin/JaeWon
->>>>>>> origin/Hyunseok
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
-=======
->>>>>>> origin/JaeWon
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> origin/JaeWon
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> origin/JaeWon
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> origin/JaeWon
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
+            var hospitalNo = "";
+			document.querySelector("input[name=chosen-hospital]").addEventListener("change", function(){
+				hospitalNo = this.value;
+			});
+// 			document.querySelector("#")
         }
     </script>
     <header>
@@ -193,10 +47,10 @@
                 <div class="input-footer">
                     <p>가까운 병원 찾기</p>
                     <h6>지역을 선택해주세요.</h6>
-                    <c:if test="${sessionScope.userId ne null or requestScope.location ne null }">
+                    <c:if test="${sessionScope.userId ne null }">
                     <form action="/reserve/reservation" method="get">
                     </c:if>
-                    <c:if test="${sessionScope.userId eq null or requestScope.location eq null }">
+                    <c:if test="${sessionScope.userId eq null }">
                     <form action="/member/login" method="get">
                     </c:if>
                         <div class="select">
@@ -226,180 +80,9 @@
                 </div>
                 <div id="hospital-result">
                 	<c:forEach items="${requestScope.hospitals }" var="hospital" varStatus="index">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-<<<<<<< HEAD
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-<<<<<<< HEAD
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-<<<<<<< HEAD
                 		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
-=======
->>>>>>> origin/JaeWon
->>>>>>> origin/master
-=======
->>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
->>>>>>> origin/stitchkang
-=======
->>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
->>>>>>> origin/stitchkang2
-=======
->>>>>>> origin/JaeWon
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> origin/JaeWon
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> origin/JaeWon
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
-                		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
-=======
-=======
->>>>>>> origin/JaeWon
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> origin/JaeWon
-=======
-                		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
-=======
->>>>>>> origin/Hyunseok
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-                		<label>
-                		<input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }">
-                		<b style="font-size:25px">${hospital.hospitalName }</b>
-                		</label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                		<h4 style="margin:10px">병원 주소: ${hospital.hospitalAddr }</h4>
-                		<h4 style="margin-left:10px">병원 문의 번호:<a href="#"><strong style="margin: 0 0 5px 10px"> ${hospital.hospitalPhone }</strong></a></h4>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7f17ff42baf25563595b9152103373b9fc4b11f9
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/JaeWon
->>>>>>> origin/master
-=======
->>>>>>> origin/stitchkang
-=======
->>>>>>> origin/stitchkang2
-=======
-                		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
->>>>>>> origin/Hyunseok
->>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
-=======
-=======
-                		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 7f17ff42baf25563595b9152103373b9fc4b11f9
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> 7f17ff42baf25563595b9152103373b9fc4b11f9
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> origin/JaeWon
-=======
-                		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
->>>>>>> origin/Hyunseok
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> 7f17ff42baf25563595b9152103373b9fc4b11f9
-=======
-=======
->>>>>>> origin/JaeWon
-=======
-                		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
->>>>>>> origin/Hyunseok
-=======
-<<<<<<< HEAD
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
->>>>>>> origin/Hyunseok
->>>>>>> origin/JaeWon
-=======
->>>>>>> origin/JaeWon
->>>>>>> origin/Hyunseok
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                 		<h4 style="margin:10px">${hospital.hospitalAddr }</h4>
                 		<a href="#"><h5 style="margin: 0 0 40px 30px">${hospital.hospitalPhone }</h5></a>
->>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
-=======
->>>>>>> origin/JaeWon
-                		<h4 style="margin:10px">${hospital.hospitalAddr }</h4>
-                		<a href="#"><h5 style="margin: 0 0 40px 30px">${hospital.hospitalPhone }</h5></a>
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> origin/JaeWon
-                		<h4 style="margin:10px">${hospital.hospitalAddr }</h4>
-                		<a href="#"><h5 style="margin: 0 0 40px 30px">${hospital.hospitalPhone }</h5></a>
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> origin/JaeWon
-                		<h4 style="margin:10px">${hospital.hospitalAddr }</h4>
-                		<a href="#"><h5 style="margin: 0 0 40px 30px">${hospital.hospitalPhone }</h5></a>
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
-=======
->>>>>>> origin/JaeWon
-                		<h4 style="margin:10px">${hospital.hospitalAddr }</h4>
-                		<a href="#"><h5 style="margin: 0 0 40px 30px">${hospital.hospitalPhone }</h5></a>
->>>>>>> parent of 3981585 (변경사항!! 받아주세요)
                 	</c:forEach>
                 </div>
             </div>
@@ -429,7 +112,7 @@
         </section>
         <section class="intro-section">
             <div class="pic-div">
-                <img src="../../../img/aside.png" alt="" style="width: 100%; height: 100%;">
+                <img src="../../../	img/aside.png" alt="" style="width: 100%; height: 100%;">
             </div>
             <p style="color:gray;">
          평균 생존율은 1년 95%, 5년 92% , FullLife는 언제나 최고의 연구진과 함께합니다.</p>

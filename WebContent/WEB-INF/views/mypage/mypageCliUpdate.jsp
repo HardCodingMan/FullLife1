@@ -17,7 +17,7 @@
         </div>
         <aside id="menucontainer">
             <ul class="menu">
-          		<li><a href="/mypage/cliUpdate}">회원정보 수정</a></li>
+          		<li><a href="/mypage/cliUpdate">회원정보 수정</a></li>
                 <li><a href="/mypage/history">주문내역</a></li>
                 <li><a href="/mypage/point">포인트조회/충전</a></li>
                 <li><a href="/mypage/regHospital">병원예약조회</a></li>
@@ -33,17 +33,13 @@
                     <table class="cliupdateTable">
                         <tr>
                             <td>아이디</td>
-                            <td><input type="text" class="userid1" id="user-id" value=${sessionScope.userId } readonly></td>
+                            <td><input type="text" class="userid1" id="user-id"></td>
                         </tr>
                         </table>
                         <table class="cliupdateTable1" style="background-color: rgba(173, 196, 136, 0.445);">
                             <tr>
                                 <td>현재 비밀번호</td>
-                                <td>
-                                	<input type="password" name="pw1" id="user-currPw" >
-                                	<input type="hidden" id="origin-pwd" value=${requestScope.member.userPwd } >
-                                	<input type="hidden" id="user-zumin" value=${requestScope.member.userZumin } >
-                                </td>
+                                <td><input type="password" name="pw1" id="user-currPw"></td>
                             </tr>
                             <tr>
                                 <td>신규 비밀번호</td>
@@ -51,13 +47,17 @@
                             </tr>
                             <tr>
                                 <td>비밀번호 확인</td>
-                                <td><input type="password" name="pw2" id="user-reNewPw"><br></td>
+                                <td><input type="password" name="pw2" id="user-reNewPw"><br><input type="submit" value="확인" style="margin: 10px 0 3px 100px;width: 50px;cursor:pointer;background-color: rgb(193, 219, 152);border:1px solid rgb(153, 153, 153);border-radius: 3px;"></td>
                             </tr>
                         </table>
                         <table class="cliupdateTable3">
                         <tr>
                             <td>이름</td>
-                            <td><input type="text" name="name" id="user-name" value=${requestScope.member.userName } readonly></td>
+                            <td><input type="text" name="name" id="user-name"></td>
+                        </tr>
+                        <tr>
+                            <td>주민등록번호</td>
+                            <td><input type="text" name="zumin" id="zumin"></td>
                         </tr>
                         <tr>
                             <td>연락처</td>
@@ -98,7 +98,7 @@
         let userNewPw = document.querySelector("#user-newPw");
         let checkNewPw = document.querySelector("#user-reNewPw");
         let userName = document.querySelector("#user-name");
-        let originPwd = document.querySelector("#origin-pwd")
+        
         let phone1 = document.querySelector("#tel1");
         let phone2 = document.querySelector("#tel2");
         let phone3 = document.querySelector("#tel3");
@@ -106,13 +106,12 @@
         let address = document.querySelector("#addr");
         let resultDiv = document.querySelector("#result-div");
         let select = document.querySelector("select[name=email-addr]");
-        let zumin = document.querySelector("#zumin1");
-        let userZumin = document.querySelector("#user-zumin");
+
         let idRegex = /[a-zA-Z0-9]{5,11}$/;
         let pwRegex = /[a-zA-Z0-9$!@#%&]{8,}$/;
         let newPwRegex = /[a-zA-Z0-9$!@#%&]{8,}$/;
         let checkPwRegex = /[a-zA-Z0-9$!@#%&]{8,}$/;
-//         let zuminRegex =/^(?:[0-9]{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[1,2][0-9]|3[0,1]))[1-4][0-9]{6}$ /;
+        let zuminRegex =/\d{2}([0]\d|[1][0-2])([0][1-9]|[1-2]\d|[3][0-1])[-]*[1-4]\d{6} /;
         let phRegex1 = /[010]$/;
         let phRegex2 = /[0-9]{4}$/;
         let phRegex3 = /[0-9]{4}$/;
@@ -120,17 +119,17 @@
       
 
         function check(){
-           
+            let zumin = document.querySelector("#zumin");
             if(!idRegex.test(userId.value)){
                 alert("아이디를 입력하세요.");
                 return false;
-            } else if(!userPw.value == originPwd.value || userPw.value == ""){
+            } else if(!pwRegex.test(pwRegex.value) || pwRegex.value == ""){
                 alert("현재 비밀번호를 입력해주세요.");
                 return false;
             } else if(!newPwRegex.test(userNewPw.value) || userNewPw.value == ""){
                 alert("신규 비밀번호를 입력해주세요.");
                 return false;
-            } else if(zumin.value == ""){
+            } else if(!zuminRegex.test(zumin.value)|| zumin.value == ""){
                 alert("주민번호를 입력해주세요.");
                 return false;
             } else if(!phRegex1.test(phone1.value) || phone1.value == ""){
@@ -148,10 +147,7 @@
             } else if(address.value == ""){
                 alert("주소를 입력해주세요.");
                 return false;
-            } else if(select.value == ""){
-            	alert("이메일주소를 선택해주세요.");
-            	return false;
-            }
+            }// } else if ()
             return true;
         }
 
@@ -169,10 +165,10 @@
         });
         userPw.addEventListener("keyup", function(){
             if(this.value.length > 1){
-                if(originPwd.value !=  userPw.value){
-                	resultDiv.innerHTML = "<h5 style='color:red'>유효한 비밀번호가 아닙니다.</h5>";
+                if(!pwRegex.test(this.value)){
+                resultDiv.innerHTML = "<h5 style='color:red'>유효한 비밀번호가 아닙니다.</h5>";
                 } else {
-                    resultDiv.innerHTML = "<h5 style='color:blue'>현재 비밀번호와 일치합니다.</h5>";
+                    resultDiv.innerHTML = "<h5 style='color:blue'>유효한 비밀번호입니다.</h5>";
                 }
             }
             
@@ -196,25 +192,17 @@
                 }
         });
         zumin.addEventListener("blur", function(){
-            if(userZumin.value != zumin.value){
+            if(!zuminRegex.test(zumin.value)){
                 resultDiv.innerHTML = "<h5 style='color:red'>유효한 주민번호가 아닙니다.</h5>";
             } else {
                 resultDiv.innerHTML = "<h5 style='color:blue'>유효한 주민번호입니다.</h5>";
             }
         });
-//         zumin.addEventListener("blur", function(){
-//             if(!zuminRegex.test(zumin.value)){
-//                 resultDiv.innerHTML = "<h5 style='color:red'>유효한 주민번호가 아닙니다.</h5>";
-//             } else {
-//                 resultDiv.innerHTML = "<h5 style='color:blue'>유효한 주민번호입니다.</h5>";
-//             }
-//         });
         checkNewPw.addEventListener("blur", function(){
             if(checkNewPw.value == userNewPw.value){
                 resultDiv.innerHTML = "<h5 style='color:blue'>비밀번호가 일치합니다.</h5>"
             } else {
                 alert("비밀번호가 일치하지 않습니다.");
-                checkNewPw.value = "";
             }
         });
         phone1.addEventListener("keyup", function(){

@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,28 +25,28 @@
             </ul>
         </aside>
         <article>
-            <form id="reghospital" action="/mypage/delete" method="get">
+            <form id="reghospital">
                 <h3>병원예약 조회</h3>
                     <table id="book1">
                         <tr>
                             <td>예약병원 |</td>
-                            <td><input class="bookbox" type="text" name="" value="${requestScope.info.hospitalName }" readonly></td>
+                            <td><input class="bookbox" type="text" name=""></td>
                         </tr>
                         <tr>
                             <td>병원위치 |</td>
-                            <td><input class="bookbox" type="text" name="" value="${requestScope.info.hospitalAddr }" readonly></td>
+                            <td><input class="bookbox" type="text" name=""></td>
                         </tr>
                         <tr>
                             <td>검사날짜 |</td>
-                            <td><input class="bookbox" type="text" name="" value="${requestScope.info.checkDate }" readonly></td>
+                            <td><input class="bookbox" type="text" name=""></td>
                         </tr>
                         <tr>
                             <td>예약시간 |</td>
-                            <td><input class="bookbox" type="text" name="" value="${requestScope.info.hospitalTime }"  readonly></td>
+                            <td><input class="bookbox" type="text" name=""></td>
                         </tr>
                         <tr>
                             <td>이식장기 |</td>
-                            <td><input class="bookbox" type="text" name="" value="${requestScope.info.organ }"  readonly></td>
+                            <td><input class="bookbox" type="text" name=""></td>
                         </tr>
                     </table>
                     <input type="submit" value="예약취소" class="bookbt">

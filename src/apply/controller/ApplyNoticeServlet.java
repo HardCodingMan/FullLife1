@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import apply.model.service.ApplyNoticeService;
-import apply.model.vo.Notice;
+import apply.model.vo.ApplyNotice;
 import apply.model.vo.ApplyPage;
 
 /**
@@ -40,7 +40,7 @@ public class ApplyNoticeServlet extends HttpServlet {
 			currentPage = Integer.parseInt(getCurrentPage);
 		}
 		ApplyPage applyPage = new ApplyNoticeService().printAllApply(currentPage);
-		List<Notice> aList = applyPage.getaList(); 
+		List<ApplyNotice> aList = applyPage.getaList(); 
 		if(!aList.isEmpty()) {
 			request.setAttribute("aList", aList);
 			request.setAttribute("pageNavi", applyPage.getPageNavi());

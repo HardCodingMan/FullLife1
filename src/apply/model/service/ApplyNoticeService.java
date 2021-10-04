@@ -7,7 +7,7 @@ import java.util.List;
 import javax.servlet.jsp.tagext.PageData;
 
 import apply.model.dao.ApplyNoticeDAO;
-import apply.model.vo.Notice;
+import apply.model.vo.ApplyNotice;
 import apply.model.vo.ApplyNoticeFile;
 import apply.model.vo.ApplyNoticeReply;
 import apply.model.vo.ApplyPage;
@@ -21,13 +21,13 @@ public class ApplyNoticeService {
 		jdbcTemplate = JDBCTemplate.getConnection();
 	}
 	
-	public int noticeWrite(Notice notice) {
+	public int noticeWrite(ApplyNotice applyNotice, ApplyNoticeFile fileData) {
 		Connection conn = null;
 		int result = 0;
 		
 		try {
 			conn = jdbcTemplate.createConnection();
-			result = new ApplyNoticeDAO().insertNotice(conn, notice);
+			result = new ApplyNoticeDAO().insertNotice(conn, applyNotice, fileData);
 			if(result > 0) {
 				JDBCTemplate.commit(conn);
 			}else {
@@ -60,15 +60,15 @@ public class ApplyNoticeService {
 		return ap;
 	}
 
-	public Notice printOneByNo(int noticeNo) {
-		Notice applyNotice = null;
+	public ApplyNotice printOneByNo(int applyNoticeNo) {
+		ApplyNotice applyNotice = null;
 		Connection conn = null;
 		List<ApplyNoticeReply> aList = null;
 		ApplyNoticeDAO applyDAO = new ApplyNoticeDAO();
 		try {
 			conn = jdbcTemplate.createConnection();
-			applyNotice = applyDAO.selectOneByNo(conn, noticeNo);
-			aList = applyDAO.selectAllNoticeReply(conn, noticeNo);
+			applyNotice = applyDAO.selectOneByNo(conn, applyNoticeNo);
+			aList = applyDAO.selectAllNoticeReply(conn, applyNoticeNo);
 			applyNotice.setReplist(aList);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -79,55 +79,13 @@ public class ApplyNoticeService {
 		return applyNotice;
 	}
 
-	public int registerApplyReply(String replyContents, int noticeNo, String userId) {
+	public int registerApplyReply(String replyContents, int applyNo, String userId) {
 		Connection conn = null;
 		int result = 0;
 		
 		try {
 			conn = jdbcTemplate.createConnection();
-			result =  new ApplyNoticeDAO().insertNoticeReply(conn, replyContents, noticeNo, userId);
-			if(result > 0) {
-				JDBCTemplate.commit(conn);
-			}else {
-				JDBCTemplate.rollback(conn);
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}finally {
-			JDBCTemplate.close(conn);
-		}
-		return result;
-	}
-
-	public int removeNotice(int noticeNo) {
-		int result = 0;
-		Connection conn = null;
-		
-		try {
-			conn = jdbcTemplate.createConnection();
-			result = new ApplyNoticeDAO().deleteApply(conn, noticeNo);
-			if(result > 0) {
-				JDBCTemplate.commit(conn);
-			}else {
-				JDBCTemplate.rollback(conn);
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}finally {
-			JDBCTemplate.close(conn);
-		}
-		return result;
-	}
-
-	public int insertLike(String userId, int noticeNo) {
-		Connection conn = null;
-		int result = 0;
-		
-		try {
-			conn = jdbcTemplate.createConnection();
-			result = new ApplyNoticeDAO().insertLike(conn, userId, noticeNo);
+			result =  new ApplyNoticeDAO().insertNoticeReply(conn, replyContents, applyNo, userId);
 			if(result > 0) {
 				JDBCTemplate.commit(conn);
 			}else {

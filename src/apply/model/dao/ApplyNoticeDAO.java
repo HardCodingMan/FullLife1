@@ -8,25 +8,25 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import apply.model.vo.Notice;
+import apply.model.vo.ApplyNotice;
+import apply.model.vo.ApplyNoticeFile;
 import apply.model.vo.ApplyNoticeReply;
 import common.JDBCTemplate;
 
 public class ApplyNoticeDAO {
 
-	public int insertNotice(Connection conn, Notice notice) {
+	public int insertNotice(Connection conn, ApplyNotice applyNotice, ApplyNoticeFile fileData) {
 		PreparedStatement pstmt = null;
 		int result = 0;
-		String query = "INSERT INTO NOTICE VALUES(SEQ_NOTICE_NO.NEXTVAL,?,?,DEFAULT,DEFAULT,DEFAULT,DEFAULT,DEFAULT,DEFAULT,?,?,?,DEFAULT,?)";
+		String query = "INSERT INTO APPLY_NOTICE VALUES(SEQ_APPLY_NO.NEXTVAL,?,?,DEFAULT,DEFAULT,DEFAULT,?,?,?,DEFAULT,DEFAULT)";
 		
 		try {
 			pstmt = conn.prepareStatement(query);
-			pstmt.setString(1, notice.getNoticeTitle());
-			pstmt.setString(2, notice.getNoticeContents());
-			pstmt.setString(3, notice.getPicPath());
-			pstmt.setLong(4, notice.getPicSize());
-			pstmt.setString(5, notice.getPicName());
-			pstmt.setString(6, notice.getUserId());
+			pstmt.setString(1, applyNotice.getApplyTitle());
+			pstmt.setString(2, applyNotice.getApplyContents());
+			pstmt.setString(3, applyNotice.getUserId());
+			pstmt.setLong(4, fileData.getFileSize());
+			pstmt.setString(5, fileData.getFilePath());
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -37,11 +37,11 @@ public class ApplyNoticeDAO {
 		return result;
 	}
 
-	public List<Notice> pageAllNotice(Connection conn, int currentPage) {
+	public List<ApplyNotice> pageAllNotice(Connection conn, int currentPage) {
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
-		String query = "SELECT NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENTS, VIEWS, ENROLL_DATE,(SELECT COUNT(*) FROM NOTICE_LIKE N WHERE N.NOTICE_NO=NOTICE_NO) AS NOTICE_LIKE, PIC_PATH, PIC_SIZE, PIC_NAME, USER_ID FROM(SELECT ROW_NUMBER() OVER(ORDER BY NOTICE_NO DESC) AS NUM, NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENTS,VIEWS ,ENROLL_DATE,NOTICE_LIKE, NOW_SUPPORT, NEED_SUPPORT, SUPPORT_HUMAN, PIC_PATH, PIC_SIZE, PIC_NAME, USER_ID FROM NOTICE WHERE LEVELCHECK = 'N') WHERE NUM BETWEEN ? AND ?";
-		List<Notice> aList = null;
+		String query = "SELECT * FROM(SELECT ROW_NUMBER() OVER(ORDER BY APPLY_NO DESC) AS NUM, APPLY_NO, APPLY_TITLE, APPLY_CONTENTS,ENROLL_DATE ,USER_ID,APPLY_VIEWS, APPLY_LIKE FROM APPLY_NOTICE) WHERE NUM BETWEEN ? AND ?";
+		List<ApplyNotice> aList = null;
 		
 		try {
 			pstmt = conn.prepareStatement(query);
@@ -52,20 +52,17 @@ public class ApplyNoticeDAO {
 			pstmt.setInt(1, start);
 			pstmt.setInt(2, end);
 			rset = pstmt.executeQuery();
-			aList = new ArrayList<Notice>();
+			aList = new ArrayList<ApplyNotice>();
 			while(rset.next()) {
-				Notice notice = new Notice();
-				notice.setNoticeNo(rset.getInt("NOTICE_NO"));
-				notice.setNoticeTitle(rset.getString("NOTICE_TITLE"));
-				notice.setNoticeContents(rset.getString("NOTICE_CONTENTS"));
-				notice.setViews(rset.getInt("VIEWS"));
-				notice.setEnrollDate(rset.getDate("ENROLL_DATE"));
-				notice.setNoticeLike(rset.getInt("NOTICE_LIKE"));
-				notice.setPicPath(rset.getString("PIC_PATH"));
-				notice.setPicSize(rset.getInt("PIC_SIZE"));
-				notice.setPicName(rset.getString("PIC_NAME"));
-				notice.setUserId(rset.getString("USER_ID"));
-				aList.add(notice);
+				ApplyNotice applyNotice = new ApplyNotice();
+				applyNotice.setApplyNo(rset.getInt("APPLY_NO"));
+				applyNotice.setApplyTitle(rset.getString("APPLY_TITLE"));
+				applyNotice.setApplyContents(rset.getString("APPLY_CONTENTS"));
+				applyNotice.setEnrollDate(rset.getDate("ENROLL_DATE"));
+				applyNotice.setUserId(rset.getString("USER_ID"));
+				applyNotice.setApplyViews(rset.getInt("APPLY_VIEWS"));
+				applyNotice.setApplyLike(rset.getInt("APPLY_LIKE"));
+				aList.add(applyNotice);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -122,7 +119,7 @@ public class ApplyNoticeDAO {
 		int totalValue = 0;
 		Statement stmt = null;
 		ResultSet rset = null;
-		String query = "SELECT COUNT(*) AS TOTALCOUNT FROM NOTICE";
+		String query = "SELECT COUNT(*) AS TOTALCOUNT FROM APPLY_NOTICE";
 		try {
 			stmt = conn.createStatement();
 			rset = stmt.executeQuery(query);
@@ -140,27 +137,27 @@ public class ApplyNoticeDAO {
 		return totalValue;
 	}
 
-	public Notice selectOneByNo(Connection conn, int noticeNo) {
+	public ApplyNotice selectOneByNo(Connection conn, int applyNoticeNo) {
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
-		Notice notice = null;
-		String query = "SELECT NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENTS, VIEWS, ENROLL_DATE,(select count(*) from NOTICE_LIKE N WHERE N.NOTICE_NO=R.NOTICE_NO) AS NOTICE_LIKE, PIC_PATH, PIC_SIZE, PIC_NAME, USER_ID FROM NOTICE R WHERE NOTICE_NO = ?";
+		ApplyNotice applyNotice = null;
+		String query = "SELECT * FROM APPLY_NOTICE WHERE APPLY_NO = ?";
 		try {
 			pstmt = conn.prepareStatement(query);
-			pstmt.setInt(1, noticeNo);
+			pstmt.setInt(1, applyNoticeNo);
 			rset = pstmt.executeQuery();
 			if(rset.next()) {
-				notice = new Notice();
-				notice.setNoticeNo(rset.getInt("NOTICE_NO"));
-				notice.setNoticeTitle(rset.getString("NOTICE_TITLE"));
-				notice.setNoticeContents(rset.getString("NOTICE_CONTENTS"));
-				notice.setViews(rset.getInt("VIEWS"));
-				notice.setEnrollDate(rset.getDate("ENROLL_DATE"));
-				notice.setNoticeLike(rset.getInt("NOTICE_LIKE"));
-				notice.setPicPath(rset.getString("PIC_PATH"));
-				notice.setPicSize(rset.getLong("PIC_SIZE"));
-				notice.setPicName(rset.getString("PIC_NAME"));
-				notice.setUserId(rset.getString("USER_ID"));
+				applyNotice = new ApplyNotice();
+				applyNotice.setApplyNo(rset.getInt("APPLY_NO"));
+				applyNotice.setApplyTitle(rset.getString("APPLY_TITLE"));
+				applyNotice.setApplyContents(rset.getString("APPLY_CONTENTS"));
+				applyNotice.setUserId(rset.getString("USER_ID"));
+				applyNotice.setEnrollDate(rset.getDate("ENROLL_DATE"));
+				applyNotice.setApplyLike(rset.getInt("APPLY_LIKE"));
+				applyNotice.setApplyViews(rset.getInt("APPLY_VIEWS"));
+				applyNotice.setPicSize(rset.getInt("PIC_SIZE"));
+				applyNotice.setPicPath(rset.getString("PIC_PATH"));
+				applyNotice.setMngCheck(rset.getString("MNG_CHECK").charAt(0));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -169,27 +166,27 @@ public class ApplyNoticeDAO {
 			JDBCTemplate.close(pstmt);
 			JDBCTemplate.close(rset);
 		}
-		return notice;
+		return applyNotice;
 	}
 
-	public List<ApplyNoticeReply> selectAllNoticeReply(Connection conn, int noticeNo) {
+	public List<ApplyNoticeReply> selectAllNoticeReply(Connection conn, int applyNoticeNo) {
 		PreparedStatement pstmt = null;
 		ResultSet rset= null;
 		List<ApplyNoticeReply> aList = null;
-		String query = "SELECT * FROM APPLY_REPLY WHERE NOTICE_NO = ?";
+		String query = "SELECT * FROM APPLY_REPLY WHERE APPLY_NO = ?";
 		
 		try {
 			pstmt = conn.prepareStatement(query);
-			pstmt.setInt(1, noticeNo);
+			pstmt.setInt(1, applyNoticeNo);
 			aList = new ArrayList<ApplyNoticeReply>();
 			rset = pstmt.executeQuery();
 			while(rset.next()) {
 				ApplyNoticeReply applyReply = new ApplyNoticeReply();
-				applyReply.setReplyNo(rset.getInt("APPLY_REPLY_NO"));
+				applyReply.setReplyNo(rset.getInt("REPLY_NO"));
 				applyReply.setReplyUserId(rset.getString("USER_ID"));
-				applyReply.setReplyContents(rset.getString("APPLY_REPLY_CONTENTS"));
-				applyReply.setReplyDate(rset.getDate("APPLY_REPLY_DATE"));
-				applyReply.setNoticeNo(rset.getInt("NOTICE_NO"));
+				applyReply.setReplyContents(rset.getString("REPLY_CONTENTS"));
+				applyReply.setReplyDate(rset.getDate("REPLY_DATE"));
+				applyReply.setApplyNo(rset.getInt("APPLY_NO"));
 				aList.add(applyReply);
 			}
 		} catch (SQLException e) {
@@ -202,16 +199,16 @@ public class ApplyNoticeDAO {
 		return aList;
 	}
 
-	public int insertNoticeReply(Connection conn, String replyContents, int noticeNo, String userId) {
+	public int insertNoticeReply(Connection conn, String replyContents, int applyNo, String userId) {
 		PreparedStatement pstmt = null;
 		int result = 0;
-		String query = "INSERT INTO APPLY_REPLY VALUES(SEQ_APPLY_REPLY_NO.NEXTVAL,?,?,DEFAULT,?)";
+		String query = "INSERT INTO APPLY_REPLY VALUES(SEQ_APPLY_REPLY_NO.NEXTVAL, ?,?,DEFAULT,?)";
 		
 		try {
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, userId);
 			pstmt.setString(2, replyContents);
-			pstmt.setInt(3, noticeNo);
+			pstmt.setInt(3, applyNo);
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -222,39 +219,5 @@ public class ApplyNoticeDAO {
 		return result;
 	}
 
-	public int deleteApply(Connection conn, int noticeNo) {
-		PreparedStatement pstmt = null;
-		int result = 0;
-		String query = "DELETE FROM NOTICE WHERE NOTICE_NO = ?";
-		
-		try {
-			pstmt = conn.prepareStatement(query);
-			pstmt.setInt(1, noticeNo);
-			result = pstmt.executeUpdate();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}finally {
-			JDBCTemplate.close(pstmt);
-		}
-		return result;
-	}
-
-	public int insertLike(Connection conn, String userId, int noticeNo) {
-	      PreparedStatement pstmt = null;
-	      int result = 0;
-	      String query = "INSERT INTO NOTICE_LIKE VALUES(SEQ_APPLY_LIKE.NEXTVAL,?,?)";
-	      try {
-	         pstmt = conn.prepareStatement(query);
-	         pstmt.setInt(1, noticeNo);
-	         pstmt.setString(2, userId);
-	         result = pstmt.executeUpdate();
-	      } catch (SQLException e) {
-	         e.printStackTrace();
-	      } finally {
-	         JDBCTemplate.close(pstmt);
-	      }
-	      return result;
-	   }
 
 }
