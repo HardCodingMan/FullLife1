@@ -8,6 +8,8 @@ public class HistoryPage {
 	private String pageNavi;
 	
 	public HistoryPage() {}
+	
+
 
 	public List<History> gethList() {
 		return hList;
@@ -25,13 +27,23 @@ public class HistoryPage {
 		this.pageNavi = pageNavi;
 	}
 
+
+
 	@Override
 	public String toString() {
 		return "HistoryPage [hList=" + hList + ", pageNavi=" + pageNavi + "]";
 	}
+
+
+	}
+
+
+
+
+	
  
 	
 
 	
 
-}
+
