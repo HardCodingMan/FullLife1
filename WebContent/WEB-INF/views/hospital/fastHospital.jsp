@@ -38,6 +38,7 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
 =======
 >>>>>>> origin/JaeWon
@@ -45,6 +46,9 @@
 =======
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
 >>>>>>> origin/stitchkang
+=======
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+>>>>>>> origin/stitchkang2
 =======
 >>>>>>> origin/JaeWon
 =======
@@ -139,6 +143,7 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
 =======
 >>>>>>> origin/JaeWon
@@ -146,6 +151,9 @@
 =======
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
 >>>>>>> origin/stitchkang
+=======
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+>>>>>>> origin/stitchkang2
 =======
 >>>>>>> origin/JaeWon
 =======
@@ -167,12 +175,15 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/JaeWon
 >>>>>>> origin/master
 =======
 >>>>>>> origin/stitchkang
+=======
+>>>>>>> origin/stitchkang2
 =======
                 		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
 >>>>>>> origin/Hyunseok

@@ -97,7 +97,11 @@ public class MypageService {
 		return result;
 	}
 
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> origin/stitchkang2
 	public int modifyMemberInfo(Member member) {
 		int result = 0;
 		Connection conn = null;
