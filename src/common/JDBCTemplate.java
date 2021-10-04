@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 public class JDBCTemplate {
 
-	//싱글톤 패턴 적용
+	//싱글톤 패턴 적
 	private static JDBCTemplate instance;
 	
 	public JDBCTemplate() {
@@ -29,10 +29,17 @@ public class JDBCTemplate {
 	}
 	//연결 생성
 	public Connection createConnection() throws SQLException {
+<<<<<<< HEAD
 
 		String url = "jdbc:oracle:thin:@sonof.iptime.org:8521:XE";
 		String user = "FULLLIFE";
 		String password ="FULLLIFE";
+=======
+		String url = "jdbc:oracle:thin:@sonof.iptime.org:8521:XE";
+		String user = "FULLLIFE";
+		String password ="FULLLIFE";
+
+>>>>>>> 648d74181ee17f888af35bf2c751770dfec6a2c3
 		Connection conn = DriverManager.getConnection(url,user,password);
 		conn.setAutoCommit(false);
 		return conn;

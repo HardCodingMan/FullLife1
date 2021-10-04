@@ -2,10 +2,14 @@ package mypage.model.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
+
 import common.JDBCTemplate;
 import member.model.vo.Member;
 import mypage.model.dao.MypageDAO;
 import mypage.model.vo.BookedHospitalInfo;
+import mypage.model.vo.CheckResultPage;
+import mypage.model.vo.History;
 import mypage.model.vo.HistoryPage;
 
 public class MypageService {
@@ -33,6 +37,24 @@ public class MypageService {
 		}
 		return hisPage;
 	}
+	
+	public CheckResultPage printCheckResult(int checkResultPage) {
+		CheckResultPage checkPage = new CheckResultPage();
+		Connection conn = null;
+		MypageDAO cDao = new MypageDAO();
+		
+		try {
+			conn=jdbcTemplate.createConnection();
+			checkPage.setcList(cDao.selectCheckResult(conn, checkResultPage));
+			checkPage.setPageNavi(cDao.getPageNavi(conn, checkResultPage));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(conn);
+		}
+		return checkPage;
+	}
+
 
 
 
@@ -77,6 +99,7 @@ public class MypageService {
 		return result;
 	}
 
+<<<<<<< HEAD
 
 
 	public int modifyMemberInfo(Member member) {
@@ -102,11 +125,17 @@ public class MypageService {
 		
 		return result;
 	} 
+=======
+>>>>>>> 648d74181ee17f888af35bf2c751770dfec6a2c3
 
 
-	
 	
 }
+
+
+
+
+
 
 
 
