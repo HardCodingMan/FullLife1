@@ -12,7 +12,7 @@ public class Support {
 	private int needSupport;
 	private int supportHuman;
 	private String picPath;
-	private double picSize;
+	private long picSize;
 	private String userId;
 	private int percentage;
 	
@@ -110,7 +110,7 @@ public class Support {
 		return picSize;
 	}
 
-	public void setPicSize(double picSize) {
+	public void setPicSize(long picSize) {
 		this.picSize = picSize;
 	}
 

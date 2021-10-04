@@ -29,6 +29,10 @@ public class ReservationServlet extends HttpServlet {
 		String metroCity = request.getParameter("metro-city");
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> 3981585e63b4c0fc2d020bc1fa161f35001a535e
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,8 +52,12 @@ public class ReservationServlet extends HttpServlet {
 >>>>>>> origin/JaeWon
 =======
 >>>>>>> origin/Hyunseok
+<<<<<<< HEAD
 =======
 >>>>>>> 90457858296a0648f3dbceba363a27581d912d19
+=======
+>>>>>>> origin/stitchkang
+>>>>>>> 3981585e63b4c0fc2d020bc1fa161f35001a535e
 		request.setAttribute("metroCity", metroCity);
 		request.getRequestDispatcher("/WEB-INF/views/reserve/reservation.jsp").forward(request, response);
 	}

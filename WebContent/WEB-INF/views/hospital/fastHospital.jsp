@@ -26,48 +26,14 @@
 				result = locationTag.value;
 				location.href="/hospital/listAll?location="+result;	
             });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            
 
-=======
-=======
->>>>>>> origin/JaeWon
-=======
->>>>>>> origin/JaeWon
-=======
-            
-
-=======
->>>>>>> origin/Hyunseok
             document.querySelector("input[name='chosen-hospital']").addEventListener("change", function(){
             	console.log(this.value);
             });
 //             console.log(document.querySelector("input[name='chosen-hospital']:checked").value);
 
 			var BtnTag = querySelector("#submitBtn");
-			
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7f17ff42baf25563595b9152103373b9fc4b11f9
-=======
-=======
->>>>>>> origin/JaeWon
-=======
-            
 
->>>>>>> origin/Hyunseok
-=======
-<<<<<<< HEAD
->>>>>>> origin/Hyunseok
->>>>>>> origin/JaeWon
-=======
->>>>>>> origin/JaeWon
->>>>>>> origin/Hyunseok
->>>>>>> origin/JaeWon
         }
     </script>
     <header>
@@ -116,44 +82,11 @@
                 </div>
                 <div id="hospital-result">
                 	<c:forEach items="${requestScope.hospitals }" var="hospital" varStatus="index">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
-=======
-=======
->>>>>>> origin/JaeWon
-=======
->>>>>>> origin/JaeWon
-=======
-                		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
-=======
->>>>>>> origin/Hyunseok
                 		<label>
-                		<input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }">
-                		<b style="font-size:25px">${hospital.hospitalName }</b>
+                		<b style="font-size:25px">> ${hospital.hospitalName }</b>
                 		</label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7f17ff42baf25563595b9152103373b9fc4b11f9
-=======
-=======
->>>>>>> origin/JaeWon
-=======
-                		<label><input type="radio" name="chosen-hospital" value="${hospital.hospitalNo }"><b style="font-size:25px">${hospital.hospitalName }</b></label>
->>>>>>> origin/Hyunseok
-=======
-<<<<<<< HEAD
->>>>>>> origin/Hyunseok
->>>>>>> origin/JaeWon
-=======
->>>>>>> origin/JaeWon
->>>>>>> origin/Hyunseok
->>>>>>> origin/JaeWon
-                		<h4 style="margin:10px">${hospital.hospitalAddr }</h4>
-                		<a href="#"><h5 style="margin: 0 0 40px 30px">${hospital.hospitalPhone }</h5></a>
+                		<h4 style="margin:10px">병원 주소: ${hospital.hospitalAddr }</h4>
+                		<h4 style="margin-left:10px">병원 문의 번호:<a href="#"><strong style="margin: 0 0 5px 10px"> ${hospital.hospitalPhone }</strong></a></h4>
                 	</c:forEach>
                 </div>
             </div>
