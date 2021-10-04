@@ -34,7 +34,13 @@
                         <div id="contents-text"><p>${aOne.noticeContents }</p></div>
                     </div>
                     <div id="notice-bottom">
-                        <div id="point-butn"><button>추천하기</button></div>
+                        <div id="like-butn">
+                        	<form action="/Notice/Apply/ApplyLike" method="post">
+                        		추천수 : ${aOne.noticeLike }<BR>
+                        		<input type="hidden" name="noticeNo" value="${aOne.noticeNo }">
+                        		<input type="submit" value="추천하기">
+                        	</form>
+                        </div>
                     </div>
                 </div>
                 <div id="notice-reply">
@@ -55,7 +61,7 @@
                             <tr id="reply-input">
                                 <form action="/Notice/Apply/ApplyNoticeReplyWriter" method="post">
                                     <td>댓글 작성 : </td> <td><input type="text" name="replyContents" placeholder="댓글을 작성해보세요" id="text-input"></td>
-                                        <td><input type="hidden" name="applyNo" value="${aOne.noticeNo }">
+                                        <td><input type="hidden" name="noticeNo" value="${aOne.noticeNo }">
                                         <input type="submit" value="작성"></td>
                                 </form>    
                             </tr>
@@ -64,7 +70,7 @@
                 </div>
                 <div id="bottom-butn">
                     <a href="/Notice/Apply/ApplyNotice"><button id="list">목록</button></a>
-                    <a href="/Notice/Apply/ApplyNoticeDelete?applyNo=${aOne.noticeNo }"><button id="delete">삭제</button></a>
+                    <a href="/Notice/Apply/ApplyNoticeDelete?noticeNo=${aOne.noticeNo }"><button id="delete">삭제</button></a>
                 </div>
             </section>
             </div>
