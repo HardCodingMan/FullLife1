@@ -9,19 +9,18 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import mypage.model.service.MypageService;
-import mypage.model.vo.BookedHospitalInfo;
 
 /**
- * Servlet implementation class MypageRegHospital
+ * Servlet implementation class DeleteReserveServlet
  */
-@WebServlet("/mypage/regHospital")
-public class RegHospitalServlet extends HttpServlet {
+@WebServlet("/mypage/delete")
+public class DeleteReserveServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public RegHospitalServlet() {
+    public DeleteReserveServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,11 +30,14 @@ public class RegHospitalServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
+		
 		String userId = (String)session.getAttribute("userId");
-		System.out.println(userId);
-		BookedHospitalInfo info = new MypageService().getBookedHospitalInfo(userId);
-		request.setAttribute("info", info);
-		request.getRequestDispatcher("/WEB-INF/views/mypage/mypageRegHospital.jsp").forward(request, response);
+		int result = new MypageService().deleteHospitalInfo(userId);
+		if(result > 0) {
+			response.sendRedirect("/mypage/regHospital");
+		} else {
+			System.out.println("no");
+		}
 	}
 
 	/**
