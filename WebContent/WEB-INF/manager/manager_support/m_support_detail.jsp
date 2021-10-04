@@ -81,7 +81,7 @@
                             <tr>
                                 <th>${reply.reUserId }</th>
                                 <th>${reply.supReCon }</th>
-                                <th><button><a href="/manager/m_support_reply_remove?noticeNo=${hList.notiNo }&supReNo=${reply.supReNo}">삭제</a></button></th>
+                                <th><button><a href="/manager/m_support_reply_remove?notiNo=${hList.notiNo }&supReNo=${reply.supReNo}">삭제</a></button></th>
                             </tr>
                             </c:forEach>
                        </table>

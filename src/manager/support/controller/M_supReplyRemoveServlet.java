@@ -28,14 +28,12 @@ public class M_supReplyRemoveServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int notiNo = Integer.parseInt(request.getParameter("noticeNo"));
+		int notiNo = Integer.parseInt(request.getParameter("notiNo"));
 		int replyNo = Integer.parseInt(request.getParameter("supReNo"));
 		int result = new M_supService().removeReplyOne(replyNo);
 		if(result > 0) {
-			System.out.println(replyNo);
 			response.sendRedirect("/manager/m_support_detail?noticeNo="+notiNo);
 		}else {
-			System.out.println(replyNo);
 			request.getRequestDispatcher("/WEB-INF/manager/manager_fail/m_search_fail.jsp").forward(request, response);
 		}
 	}
