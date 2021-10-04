@@ -173,15 +173,7 @@ public class MypageDAO {
 			return result;
 		}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/stitchkang
-=======
-
->>>>>>> origin/stitchkang2
 		public int modifyMemberInfo(Member member, Connection conn) {
 			int result = 0;
 			PreparedStatement pstmt = null;
@@ -202,15 +194,6 @@ public class MypageDAO {
 			} finally {
 				JDBCTemplate.close(pstmt);
 			}
-			
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 648d74181ee17f888af35bf2c751770dfec6a2c3
-=======
->>>>>>> origin/stitchkang
-=======
->>>>>>> origin/stitchkang2
 			return result;
 		}
 
@@ -246,8 +229,6 @@ public class MypageDAO {
 		         JDBCTemplate.close(rset);
 		         JDBCTemplate.close(pstmt);
 		      }
-		      
-		      
 		      return cList;
 	}
 		public String getresPageNavi(Connection conn, int checkResultPage) {
