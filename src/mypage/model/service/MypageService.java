@@ -2,10 +2,16 @@ package mypage.model.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+<<<<<<< HEAD
+=======
+import java.util.List;
+
+>>>>>>> parent of 572b74a (수정사항 !!)
 import common.JDBCTemplate;
 import mypage.model.dao.MypageDAO;
 import mypage.model.vo.BookedHospitalInfo;
 import mypage.model.vo.CheckResultPage;
+import mypage.model.vo.History;
 import mypage.model.vo.HistoryPage;
 
 public class MypageService {
