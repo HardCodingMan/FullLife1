@@ -99,6 +99,48 @@ public class M_applyService {
 		return result;
 	}
 
+	public int updateApply(int notiNo) {
+		int result = 0;
+		Connection conn = null;
+		
+		try {
+			conn = jdbcTemplate.createConnection();
+			result = new M_applyDAO().levelCheckApply(conn, notiNo);
+			if(result > 0) {
+				JDBCTemplate.commit(conn);
+			}else {
+				JDBCTemplate.rollback(conn);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+
+	public M_applyPage printSearchApply(String keyword, int currentPage) {
+		Connection conn = null;
+		List<M_apply> apList = null;
+		String searchPageNavi = null;
+		M_applyPage pd = new M_applyPage();
+		M_applyDAO aDao = new M_applyDAO();
+		
+		try {
+			conn = jdbcTemplate.createConnection();
+			apList = aDao.getSearchApply(conn, keyword, currentPage);
+			searchPageNavi = aDao.getSearchPageNavi(conn, keyword, currentPage);
+			pd.setApList(apList);
+			pd.setPageNavi(searchPageNavi);
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(conn);
+		}
+		
+		return pd;
+	}
+
 	
 	
 	
