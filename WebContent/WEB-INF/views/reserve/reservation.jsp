@@ -108,18 +108,31 @@ window.onload = function() {
                         	<option value="" selected>----- 병원 선택 ------</option>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/JaeWon
 =======
 >>>>>>> origin/stitchkang
+=======
+>>>>>>> origin/JaeWon
+=======
+=======
+>>>>>>> f152e77a3ef574e6a4eb307c74533b8f2e1bc621
+>>>>>>> 08230fdaf7261b175f5901d2ae79ffb1e3a548ae
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
 =======
 >>>>>>> origin/Hyunseok
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
+=======
+>>>>>>> 08230fdaf7261b175f5901d2ae79ffb1e3a548ae
 =======
 >>>>>>> origin/JaeWon
 >>>>>>> origin/master
+>>>>>>> f152e77a3ef574e6a4eb307c74533b8f2e1bc621
 =======
 >>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
 >>>>>>> origin/stitchkang
@@ -159,17 +172,29 @@ window.onload = function() {
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> origin/stitchkang
+=======
+>>>>>>> f152e77a3ef574e6a4eb307c74533b8f2e1bc621
+>>>>>>> 08230fdaf7261b175f5901d2ae79ffb1e3a548ae
 =======
 =======
                         	<option value="" selected>----- 병원 선택 ------</option>
 >>>>>>> 5c3b789bfc223a181bc4cdbbe572cac4e2184544
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/master
 =======
 =======
 >>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
 >>>>>>> origin/stitchkang
+=======
+=======
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
+=======
+>>>>>>> origin/master
+>>>>>>> f152e77a3ef574e6a4eb307c74533b8f2e1bc621
+>>>>>>> 08230fdaf7261b175f5901d2ae79ffb1e3a548ae
                             <option value="seoul">서울</option>
                             <option value="daejeon">대전</option>
                             <option value="daegu">대구</option>
@@ -178,6 +203,7 @@ window.onload = function() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/master
@@ -186,6 +212,16 @@ window.onload = function() {
 =======
 >>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
 >>>>>>> origin/stitchkang
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
+>>>>>>> f152e77a3ef574e6a4eb307c74533b8f2e1bc621
+>>>>>>> 08230fdaf7261b175f5901d2ae79ffb1e3a548ae
 >>>>>>> e656fdeda676b8b971d3033e5531efe878fb775c
 =======
 
@@ -226,12 +262,21 @@ window.onload = function() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/JaeWon
+=======
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+=======
+>>>>>>> origin/Hyunseok
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
+=======
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
 =======
 >>>>>>> origin/Hyunseok
 =======
 >>>>>>> origin/JaeWon
 >>>>>>> origin/master
+>>>>>>> f152e77a3ef574e6a4eb307c74533b8f2e1bc621
 =======
 >>>>>>> origin/JaeWon
 =======
@@ -287,10 +332,19 @@ window.onload = function() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/JaeWon
+=======
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
+=======
+>>>>>>> 08230fdaf7261b175f5901d2ae79ffb1e3a548ae
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
 =======
 >>>>>>> origin/JaeWon
 >>>>>>> origin/master
+>>>>>>> f152e77a3ef574e6a4eb307c74533b8f2e1bc621
 =======
 >>>>>>> origin/JaeWon
 =======
@@ -316,16 +370,28 @@ window.onload = function() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/JaeWon
+=======
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
+=======
+>>>>>>> 08230fdaf7261b175f5901d2ae79ffb1e3a548ae
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
 =======
 >>>>>>> origin/JaeWon
 >>>>>>> origin/master
+<<<<<<< HEAD
 =======
 >>>>>>> origin/JaeWon
 =======
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
 >>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
 >>>>>>> origin/stitchkang
+=======
+>>>>>>> f152e77a3ef574e6a4eb307c74533b8f2e1bc621
+>>>>>>> 08230fdaf7261b175f5901d2ae79ffb1e3a548ae
                 </div>
                 <div id="dateTime">
                 	<div id="map" style="width:500px; height:400px;">

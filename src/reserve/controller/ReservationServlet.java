@@ -29,6 +29,12 @@ public class ReservationServlet extends HttpServlet {
 		String metroCity = request.getParameter("metro-city");
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f152e77a3ef574e6a4eb307c74533b8f2e1bc621
+>>>>>>> 08230fdaf7261b175f5901d2ae79ffb1e3a548ae
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -63,10 +69,19 @@ public class ReservationServlet extends HttpServlet {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/JaeWon
+=======
+>>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
+>>>>>>> b3a7e139a4285fcf944c479c1a0ee6ade1760742
+=======
+>>>>>>> 08230fdaf7261b175f5901d2ae79ffb1e3a548ae
 >>>>>>> cbeb7513c6a7aa4151cefce6d693fd4009b3b87b
 =======
 >>>>>>> origin/JaeWon
 >>>>>>> origin/master
+>>>>>>> f152e77a3ef574e6a4eb307c74533b8f2e1bc621
 =======
 >>>>>>> origin/JaeWon
 =======
@@ -79,6 +94,7 @@ public class ReservationServlet extends HttpServlet {
 >>>>>>> origin/Hyunseok
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/stitchkang
 =======
 =======
@@ -86,13 +102,19 @@ public class ReservationServlet extends HttpServlet {
 >>>>>>> 648d74181ee17f888af35bf2c751770dfec6a2c3
 =======
 =======
+>>>>>>> 08230fdaf7261b175f5901d2ae79ffb1e3a548ae
+=======
 >>>>>>> 90457858296a0648f3dbceba363a27581d912d19
 =======
 >>>>>>> origin/stitchkang
+<<<<<<< HEAD
 >>>>>>> 3981585e63b4c0fc2d020bc1fa161f35001a535e
 >>>>>>> origin/stitchkang
 =======
 >>>>>>> origin/stitchkang2
+=======
+>>>>>>> f152e77a3ef574e6a4eb307c74533b8f2e1bc621
+>>>>>>> 08230fdaf7261b175f5901d2ae79ffb1e3a548ae
 		request.setAttribute("metroCity", metroCity);
 		request.getRequestDispatcher("/WEB-INF/views/reserve/reservation.jsp").forward(request, response);
 	}

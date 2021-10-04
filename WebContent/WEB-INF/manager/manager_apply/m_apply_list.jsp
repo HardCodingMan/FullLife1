@@ -44,8 +44,8 @@
             <div id="contents">
                 <div id="list-div">
                 <div class="search-div">
-                    <form action="/manager/m_apply_search" method="get">
-                    <input type="text" id="search" name="searchKeyword" placeholder="제목을 검색하세요">&nbsp;&nbsp;&nbsp;
+                    <form>
+                    <input type="text" id="search" value="제목을 검색하세요">&nbsp;&nbsp;&nbsp;
                     <input type="submit" id="search-btn" value="검색">
                     </form>    
                 </div>
